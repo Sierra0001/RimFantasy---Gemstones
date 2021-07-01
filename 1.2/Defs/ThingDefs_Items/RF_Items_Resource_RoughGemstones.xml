@@ -2,11 +2,11 @@
 <Defs>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutDiamond</defName>
-    <label>uncut diamond</label>
+    <defName>RF_RoughDiamond</defName>
+    <label>Rough diamond</label>
     <description>A hard, white stone. Because of its beauty and rarity, diamond is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Diamond/Uncut/RF_UncutDiamond</texPath>
+      <texPath>Things/Item/Resource/Diamond/Rough/RF_RoughDiamond</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -26,7 +26,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -59,11 +59,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutRuby</defName>
-    <label>uncut ruby</label>
+    <defName>RF_RoughRuby</defName>
+    <label>Rough ruby</label>
     <description>A hard, red stone. Because of its beauty and rarity, ruby is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Ruby/Uncut/RF_UncutRuby</texPath>
+      <texPath>Things/Item/Resource/Ruby/Rough/RF_RoughRuby</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -83,7 +83,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -116,11 +116,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutCarnelian</defName>
-    <label>uncut carnelian</label>
+    <defName>RF_RoughCarnelian</defName>
+    <label>Rough carnelian</label>
     <description>A hard, orange stone. Because of its beauty and rarity, carnelian is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Carnelian/Uncut/RF_UncutCarnelian</texPath>
+      <texPath>Things/Item/Resource/Carnelian/Rough/RF_RoughCarnelian</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -140,7 +140,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -173,11 +173,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutTopaz</defName>
-    <label>uncut topaz</label>
+    <defName>RF_RoughTopaz</defName>
+    <label>Rough topaz</label>
     <description>A hard, yellow stone. Because of its beauty and rarity, topaz is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Topaz/Uncut/RF_UncutTopaz</texPath>
+      <texPath>Things/Item/Resource/Topaz/Rough/RF_RoughTopaz</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -197,7 +197,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -230,11 +230,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutPeridot</defName>
-    <label>uncut peridot</label>
+    <defName>RF_RoughPeridot</defName>
+    <label>Rough peridot</label>
     <description>A hard, green stone. Because of its beauty and rarity, peridot is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Peridot/Uncut/RF_UncutPeridot</texPath>
+      <texPath>Things/Item/Resource/Peridot/Rough/RF_RoughPeridot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -254,7 +254,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -287,11 +287,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutEmerald</defName>
-    <label>uncut emerald</label>
+    <defName>RF_RoughEmerald</defName>
+    <label>Rough emerald</label>
     <description>A hard, green stone. Because of its beauty and rarity, emerald is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Emerald/Uncut/RF_UncutEmerald</texPath>
+      <texPath>Things/Item/Resource/Emerald/Rough/RF_RoughEmerald</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -311,7 +311,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -344,11 +344,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutLapisLazuli</defName>
-    <label>uncut lapis lazuli</label>
+    <defName>RF_RoughLapisLazuli</defName>
+    <label>Rough lapis lazuli</label>
     <description>A hard, blue stone. Because of its beauty and rarity, lapis lazuli is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/LapisLazuli/Uncut/RF_UncutLapisLazuli</texPath>
+      <texPath>Things/Item/Resource/LapisLazuli/Rough/RF_RoughLapisLazuli</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -368,7 +368,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -401,11 +401,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutSapphire</defName>
-    <label>uncut sapphire</label>
+    <defName>RF_RoughSapphire</defName>
+    <label>Rough sapphire</label>
     <description>A hard, blue stone. Because of its beauty and rarity, sapphire is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Sapphire/Uncut/RF_UncutSapphire</texPath>
+      <texPath>Things/Item/Resource/Sapphire/Rough/RF_RoughSapphire</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -425,7 +425,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -458,11 +458,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutAmethyst</defName>
-    <label>uncut amethyst</label>
+    <defName>RF_RoughAmethyst</defName>
+    <label>Rough amethyst</label>
     <description>A hard, purple stone. Because of its beauty and rarity, amethyst is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Amethyst/Uncut/RF_UncutAmethyst</texPath>
+      <texPath>Things/Item/Resource/Amethyst/Rough/RF_RoughAmethyst</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -482,7 +482,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -515,11 +515,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutKunzite</defName>
-    <label>uncut kunzite</label>
+    <defName>RF_RoughKunzite</defName>
+    <label>Rough kunzite</label>
     <description>A hard, pink stone. Because of its beauty and rarity, kunzite is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Kunzite/Uncut/RF_UncutKunzite</texPath>
+      <texPath>Things/Item/Resource/Kunzite/Rough/RF_RoughKunzite</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -539,7 +539,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>
@@ -572,11 +572,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_UncutOnyx</defName>
-    <label>uncut onyx</label>
+    <defName>RF_RoughOnyx</defName>
+    <label>Rough onyx</label>
     <description>A hard, black stone. Because of its beauty and rarity, onyx is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Onyx/Uncut/RF_UncutOnyx</texPath>
+      <texPath>Things/Item/Resource/Onyx/Rough/RF_RoughOnyx</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -596,7 +596,7 @@
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
-      <li>RF_UncutGemstones</li>
+      <li>RF_RoughGemstones</li>
     </thingCategories>
     <deepCommonality>0.5</deepCommonality>
     <deepCountPerPortion>12</deepCountPerPortion>

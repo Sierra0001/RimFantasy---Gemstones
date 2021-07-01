@@ -4,7 +4,7 @@
   <ResearchProjectDef>
     <defName>RF_TableGemCutting</defName>
     <label>gem cutting</label>
-    <description>Cut and polish raw gems into beautiful, beautiful gems.</description>
+    <description>Cut and polish rough gems into beautiful, beautiful gems.</description>
     <baseCost>400</baseCost>
     <techLevel>Neolithic</techLevel>
     <researchViewX>0.00</researchViewX>
@@ -14,7 +14,7 @@
   <ResearchProjectDef>
     <defName>RF_TableAdvancedGemCutting</defName>
     <label>advanced gem cutting</label>
-    <description>Harness the power of light and use it to cut raw gems into beautiful, beautiful gems.</description>
+    <description>Harness the power of light and use it to cut rough gems into beautiful, beautiful gems.</description>
     <baseCost>3000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>

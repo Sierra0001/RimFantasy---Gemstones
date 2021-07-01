@@ -2,10 +2,10 @@
 <Defs>
 
   <ThingCategoryDef>
-    <defName>RF_UncutGemstones</defName>
-    <label>uncut gemstones</label>
+    <defName>RF_RoughGemstones</defName>
+    <label>rough gemstones</label>
     <parent>ResourcesRaw</parent>
-    <iconPath>UI/Icons/ThingCategories/RF_UncutGemstones</iconPath>
+    <iconPath>UI/Icons/ThingCategories/RF_RoughGemstones</iconPath>
     <resourceReadoutRoot>true</resourceReadoutRoot>
   </ThingCategoryDef>
 
