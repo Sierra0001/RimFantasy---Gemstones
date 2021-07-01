@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>RimFantasy - Gemstones</name>
+	<author>Sierra</author>
+	<packageId>Sierra.RFGS</packageId>
+	<url></url>
+	<supportedVersions>
+		<li>1.2</li>
+	</supportedVersions>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+	</loadAfter>
+	<description>
+[h1]Supported Versions:[/h1]
+[b]Rimworld 1.2[/b]
+
+
+
+
+[b]Recommended Mods:[/b]
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2244594116]RimTraits - Vanilla Trait Colours[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1916352291]RimTraits - Medieval Talent[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2206957172]RimTraits - General Traits[/url]
+[/list]
+
+
+[b]Mod Compatibility:[/b]
+[list]
+[*]None Known.
+[/list]
+
+
+
+[b]Balance:[/b]
+Balance? What balance? This is a mod about rocks!
+
+
+[url=https://discord.gg/rimworld]Click here to join us on the Community Discord![/url]
+
+
+[h1]Credits:[/h1]
+[list]
+[*]SirLalaPyon for his amazing, high quality vanilla styled art.
+[/list]
+
+
+[h1]Recent Changes:[/h1]
+[b]v1.0: Initial Release[/b]
+[list]
+[*]What changes? This is a new mod.
+[/list]
+	</description>
+</ModMetaData>
