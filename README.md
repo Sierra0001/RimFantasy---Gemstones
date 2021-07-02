@@ -1,4 +1,4 @@
-# RimFantasy - Temperature Pylons
+# RimFantasy - Gemstones
 
 This mod adds 11 new gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
 
@@ -6,11 +6,13 @@ Raw gemstones can be used to craft stuffable furniture and blunt weapons the sam
 
 ### Balance
 
-Balance? What balance? This is a mod about rocks!
+Gems are intentionally sparse and not easy to obtain through natural means, but can be obtained through trades and from salvaging certain objects.
 
 ### Features
 
-- Every pawn will spawn with a talent along with a set of stats that improves their survivability in a medieval world.
+- 11 Gem Stones (Rough/Cut)
+- 2 Worktables (Unpowered/Powered)
+- 2 Researches (Unlocks Worktables)
 
 ### Compatibility
 
