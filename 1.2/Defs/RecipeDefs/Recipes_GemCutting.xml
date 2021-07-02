@@ -36,7 +36,7 @@
       <RF_Diamond>1</RF_Diamond>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -75,7 +75,7 @@
       <RF_Diamond>1</RF_Diamond>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -114,7 +114,7 @@
       <RF_Carnelian>1</RF_Carnelian>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -153,7 +153,7 @@
       <RF_Topaz>1</RF_Topaz>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -192,7 +192,7 @@
       <RF_Peridot>1</RF_Peridot>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -231,7 +231,7 @@
       <RF_Emerald>1</RF_Emerald>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -270,7 +270,7 @@
       <RF_Aquamarine>1</RF_Aquamarine>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -309,7 +309,7 @@
       <RF_Sapphire>1</RF_Sapphire>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -348,7 +348,7 @@
       <RF_Amethyst>1</RF_Amethyst>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -387,7 +387,7 @@
       <RF_Kunzite>1</RF_Kunzite>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
@@ -426,7 +426,7 @@
       <RF_Onyx>1</RF_Onyx>
     </products>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
     </skillRequirements>
   </RecipeDef>
 
