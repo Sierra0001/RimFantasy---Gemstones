@@ -6,7 +6,7 @@ Raw gemstones can be used to craft stuffable furniture and blunt weapons the sam
 
 ### Features
 
-- 11 Gem Stones (Rough/Cut)
+- 11 Gemstones (x11 Rough/x11 Cut)
 - 2 Worktables (Unpowered/Powered)
 - 2 Researches (Unlocks Worktables)
 
