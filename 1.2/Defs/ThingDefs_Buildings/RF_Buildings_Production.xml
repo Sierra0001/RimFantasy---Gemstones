@@ -18,6 +18,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <!--<castEdgeShadows>true</castEdgeShadows>-->
     <!--<staticSunShadowHeight>0.20</staticSunShadowHeight>-->
     <costStuffCount>50</costStuffCount>
@@ -80,6 +81,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <!--<castEdgeShadows>true</castEdgeShadows>-->
     <!--<staticSunShadowHeight>0.20</staticSunShadowHeight>-->
     <costStuffCount>75</costStuffCount>

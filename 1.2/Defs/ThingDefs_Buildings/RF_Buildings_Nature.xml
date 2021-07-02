@@ -20,7 +20,7 @@
       <mineableThing>RF_RoughDiamond</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -43,7 +43,7 @@
       <mineableThing>RF_RoughRuby</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -66,7 +66,7 @@
       <mineableThing>RF_RoughCarnelian</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -89,7 +89,7 @@
       <mineableThing>RF_RoughTopaz</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -112,7 +112,7 @@
       <mineableThing>RF_RoughPeridot</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -135,7 +135,7 @@
       <mineableThing>RF_RoughEmerald</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -158,7 +158,7 @@
       <mineableThing>RF_RoughAquamarine</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -181,7 +181,7 @@
       <mineableThing>RF_RoughSapphire</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -204,7 +204,7 @@
       <mineableThing>RF_RoughAmethyst</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -227,7 +227,7 @@
       <mineableThing>RF_RoughKunzite</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -250,7 +250,7 @@
       <mineableThing>RF_RoughOnyx</mineableThing>
       <mineableYield>36</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 

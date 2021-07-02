@@ -55,7 +55,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -112,7 +112,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -169,7 +169,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -226,7 +226,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -283,7 +283,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -340,7 +340,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -397,7 +397,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -454,7 +454,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -511,7 +511,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -568,7 +568,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -625,7 +625,7 @@
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
 </Defs>
