@@ -32,7 +32,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -89,7 +89,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -146,7 +146,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -203,7 +203,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -260,7 +260,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -317,7 +317,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -344,11 +344,11 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>RF_RoughLapisLazuli</defName>
-    <label>Rough lapis lazuli</label>
-    <description>A hard, blue stone. Because of its beauty and rarity, lapis lazuli is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
+    <defName>RF_RoughAquamarine</defName>
+    <label>Rough aquamarine</label>
+    <description>A hard, blue stone. Because of its beauty and rarity, aquamarine is often used for ornaments and decorations. While its hardness and density also makes it a good material for blunt weapons, its true value lies in its ability to hold a tremendous amount of magical energy and is a popular material in arcane recipes.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/LapisLazuli/Rough/RF_RoughLapisLazuli</texPath>
+      <texPath>Things/Item/Resource/Aquamarine/Rough/RF_RoughAquamarine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <useHitPoints>true</useHitPoints>
@@ -374,7 +374,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -431,7 +431,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -488,7 +488,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -545,7 +545,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -602,7 +602,7 @@
     <deepCountPerPortion>12</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>false</smeltable>
+    <smeltable>true</smeltable>
     <stuffProps>
       <categories>
         <li>Stony</li>

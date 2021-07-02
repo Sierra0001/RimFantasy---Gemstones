@@ -236,10 +236,10 @@
   </RecipeDef>
 
   <RecipeDef>
-    <defName>RF_CutLapisLazuli</defName>
-    <label>cut rough lapis lazuli</label>
-    <description>Cut and polish a rough lapis lazuli into a cut lapis lazuli.</description>
-    <jobString>Cutting lapis lazuli.</jobString>
+    <defName>RF_CutAquamarine</defName>
+    <label>cut rough aquamarine</label>
+    <description>Cut and polish a rough aquamarine into a cut aquamarine.</description>
+    <jobString>Cutting aquamarine.</jobString>
     <workAmount>2700</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
@@ -255,7 +255,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>RF_RoughLapisLazuli</li>
+						<li>RF_RoughAquamarine</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -263,11 +263,11 @@
 		</ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>RF_RoughLapisLazuli</li>
+        <li>RF_RoughAquamarine</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_LapisLazuli>1</RF_LapisLazuli>
+      <RF_Aquamarine>1</RF_Aquamarine>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
