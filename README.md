@@ -26,7 +26,7 @@ Gems are intentionally sparse and not easy to obtain through natural means, but 
 
 ### Credits
 
-SirLalaPyon for his amazing, high quality vanilla styled art.
+SirLalaPyon for his amazing, high-quality vanilla styled art.
 
 ### Recent Changes
 
