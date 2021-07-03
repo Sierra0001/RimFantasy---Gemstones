@@ -20,7 +20,7 @@ Gems are intentionally sparse and not easy to obtain through natural means, but 
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0003/RimFantasy---Gemstones/releases/tag/v0.3.2b)
+- [Current Version](https://github.com/Sierra0003/RimFantasy---Gemstones/releases/tag/v0.3-rc.1)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890)
 - [GitHub](https://github.com/Sierra0003/RimFantasy---Gemstones)
 
@@ -28,7 +28,8 @@ Gems are intentionally sparse and not easy to obtain through natural means, but 
 
 SirLalaPyon for his amazing, high-quality vanilla styled art.
 
-### Recent Changes
+### Latest Changes
 
-- [Buff] Reduced Crafting skill requirement for gem cutting from 8 to 6. (v0.3.1b)
-- [Fix] Rough Ruby will now be cut into Ruby instead of Diamond. (v0.3.2b)
+- [Buff] Reduced Crafting skill requirement for gem cutting from 8 to 6. (v0.3-b.2)
+- [Fix] Rough Ruby will now be cut into Ruby instead of Diamond. (v0.3-b.3)
+- [Update] No longer using placeholder textures for worktables. (v0.3-rc.1)
