@@ -16,7 +16,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -25,6 +25,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -73,7 +76,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -82,6 +85,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -130,7 +136,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -139,6 +145,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -187,7 +196,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -196,6 +205,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -244,7 +256,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -253,6 +265,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -301,7 +316,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -310,6 +325,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -358,7 +376,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -367,6 +385,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -415,7 +436,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -424,6 +445,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -472,7 +496,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -481,6 +505,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -529,7 +556,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -538,6 +565,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>
@@ -586,7 +616,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
-      <MarketValue>5</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.5</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -595,6 +625,9 @@
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <tradeTags>
+      <li>RF_RoughGemstones</li>
+    </tradeTags>
     <thingCategories>
       <li>RF_RoughGemstones</li>
     </thingCategories>

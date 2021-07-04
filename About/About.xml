@@ -69,9 +69,13 @@ Gems are intentionally sparse and not easy to obtain through natural means, but 
 [*][Fix] Rough Ruby will now be cut into Ruby instead of Diamond.
 [/list]
 
-[b]v0.3-rc.1[/b]
+[b]v0.3-b.4[/b]
 [list]
-[*][Update] No longer using placeholder textures for worktables.
+[*][Fix] Gem trading for all traders are now enabled. (v0.3-b.4)
+[*][Change] Rough Gemstone value increased from 5 -> 10. (v0.3-b.4)
+[*][Change] Cut Gemstone value increased from 8 -> 25. (v0.3-b.4)
+[*][Buff] Cut Gemstone is now worth double the royal favor to Royal Tribute Collectors. (v0.3-b.4)
+[*][Nerf] Rough Gemstone mining yield decreased from 36 -> 12. (v0.3-b.4)
 [/list]
 	</description>
 </ModMetaData>

@@ -32,4 +32,8 @@ SirLalaPyon for his amazing, high-quality vanilla styled art.
 
 - [Buff] Reduced Crafting skill requirement for gem cutting from 8 to 6. (v0.3-b.2)
 - [Fix] Rough Ruby will now be cut into Ruby instead of Diamond. (v0.3-b.3)
-- [Update] No longer using placeholder textures for worktables. (v0.3-rc.1)
+- [Fix] Gem trading for all traders are now enabled. (v0.3-b.4)
+- [Change] Rough Gemstone value increased from 5 -> 10. (v0.3-b.4)
+- [Change] Cut Gemstone value increased from 8 -> 25. (v0.3-b.4)
+- [Buff] Cut Gemstone is now worth double the royal favor to Royal Tribute Collectors. (v0.3-b.4)
+- [Nerf] Rough Gemstone mining yield decreased from 36 -> 12. (v0.3-b.4)
