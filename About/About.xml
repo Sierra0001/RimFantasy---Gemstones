@@ -6,13 +6,15 @@
 	<url></url>
 	<supportedVersions>
 		<li>1.2</li>
+		<li>1.3</li>
 	</supportedVersions>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
 	</loadAfter>
 	<description>
-[h1]Mod Version: v0.3-rc.2[/h1]
+[h1]Mod Version: v0.4-b.1[/h1]
 
 
 This mod adds 11 new gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
@@ -30,7 +32,7 @@ Raw gemstones can be used to craft stuffable furniture and blunt weapons the sam
 
 [b]Recommended Mods:[/b]
 [list]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890]RimFantasy - Temperature Pylons[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890]RimFantasy - Temperature Regulation[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2244594116]RimTraits - Vanilla Trait Colours[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1916352291]RimTraits - Medieval Talent[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2206957172]RimTraits - General Traits[/url]
@@ -71,11 +73,16 @@ Gems are intentionally sparse and not easy to obtain through natural means, but 
 
 [b]v0.3-b.4[/b]
 [list]
-[*][Fix] Gem trading for all traders are now enabled. (v0.3-b.4)
-[*][Change] Rough Gemstone value increased from 5 -> 10. (v0.3-b.4)
-[*][Change] Cut Gemstone value increased from 8 -> 25. (v0.3-b.4)
-[*][Buff] Cut Gemstone is now worth double the royal favor to Royal Tribute Collectors. (v0.3-b.4)
-[*][Nerf] Rough Gemstone mining yield decreased from 36 -> 12. (v0.3-b.4)
+[*][Fix] Gem trading for all traders are now enabled.
+[*][Change] Rough Gemstone value increased from 5 -> 10.
+[*][Change] Cut Gemstone value increased from 8 -> 25.
+[*][Buff] Cut Gemstone is now worth double the royal favor to Royal Tribute Collectors.
+[*][Nerf] Rough Gemstone mining yield decreased from 36 -> 12.
+[/list]
+
+[b]v0.4-b.1[/b]
+[list]
+[*][RimWorld 1.3] RimWorld 1.3 Ready.
 [/list]
 	</description>
 </ModMetaData>

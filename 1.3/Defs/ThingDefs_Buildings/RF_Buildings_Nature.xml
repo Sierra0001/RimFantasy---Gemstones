@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughDiamond</defName>
+    <label>rough diamond</label>
+    <description>Rock containing bits of rough diamond.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(109,109,109)</color>
+      <colorTwo>(211,211,211)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughDiamond</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughRuby</defName>
+    <label>rough ruby</label>
+    <description>Rock containing bits of rough ruby.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(87,0,0)</color>
+      <colorTwo>(189,25,60)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughRuby</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughCarnelian</defName>
+    <label>rough carnelian</label>
+    <description>Rock containing bits of rough carnelian.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(153,25,0)</color>
+      <colorTwo>(255,127,80)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughCarnelian</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughTopaz</defName>
+    <label>rough topaz</label>
+    <description>Rock containing bits of rough topaz.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(99,91,0)</color>
+      <colorTwo>(201,193,34)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughTopaz</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughPeridot</defName>
+    <label>rough peridot</label>
+    <description>Rock containing bits of rough peridot.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(0,94,18)</color>
+      <colorTwo>(57,196,120)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughPeridot</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughEmerald</defName>
+    <label>rough emerald</label>
+    <description>Rock containing bits of rough emerald.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(0,51,0)</color>
+      <colorTwo>(37,102,32)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughEmerald</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughAquamarine</defName>
+    <label>rough aquamarine</label>
+    <description>Rock containing bits of rough aquamarine.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(0,153,153)</color>
+      <colorTwo>(0,255,255)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughAquamarine</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughSapphire</defName>
+    <label>rough sapphire</label>
+    <description>Rock containing bits of rough sapphire.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(0,0,79)</color>
+      <colorTwo>(53,80,181)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughSapphire</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughAmethyst</defName>
+    <label>rough amethyst</label>
+    <description>Rock containing bits of rough amethyst.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(51,0,102)</color>
+      <colorTwo>(153,102,204)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughAmethyst</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughKunzite</defName>
+    <label>rough kunzite</label>
+    <description>Rock containing bits of rough kunzite.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(133,78,135)</color>
+      <colorTwo>(235,180,237)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughKunzite</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>RF_MineableRoughOnyx</defName>
+    <label>rough onyx</label>
+    <description>Rock containing bits of rough onyx.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(13,10,11)</color>
+      <colorTwo>(64,61,62)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1750</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RF_RoughOnyx</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0.065</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+</Defs>

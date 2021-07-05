@@ -20,7 +20,7 @@ Gems are intentionally sparse and not easy to obtain through natural means, but 
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0003/RimFantasy---Gemstones/releases/tag/v0.3-b.4)
+- [Current Version](https://github.com/Sierra0003/RimFantasy---Gemstones/releases/tag/v0.4-b.1)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890)
 - [GitHub](https://github.com/Sierra0003/RimFantasy---Gemstones)
 
@@ -37,3 +37,4 @@ SirLalaPyon for his amazing, high-quality vanilla styled art.
 - [Change] Cut Gemstone value increased from 8 -> 25. (v0.3-b.4)
 - [Buff] Cut Gemstone is now worth double the royal favor to Royal Tribute Collectors. (v0.3-b.4)
 - [Nerf] Rough Gemstone mining yield decreased from 36 -> 12. (v0.3-b.4)
+- [RimWorld 1.3] RimWorld 1.3 Ready. (v0.4-b.1)
