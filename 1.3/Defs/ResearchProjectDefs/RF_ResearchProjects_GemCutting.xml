@@ -12,8 +12,8 @@
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>RF_TableAdvancedGemCutting</defName>
-    <label>advanced gem cutting</label>
+    <defName>RF_TableIndustrialGemCutting</defName>
+    <label>industrial gem cutting</label>
     <description>Harness the power of light and use it to cut rough gems into beautiful, beautiful gems.</description>
     <baseCost>1200</baseCost>
     <techLevel>Industrial</techLevel>

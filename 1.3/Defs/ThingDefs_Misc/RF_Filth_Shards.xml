@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleDiamondShards</defName>
+    <label>diamond shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleDiamondShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleRubyShards</defName>
+    <label>ruby shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleRubyShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleCarnelianShards</defName>
+    <label>carnelian shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleCarnelianShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleTopazShards</defName>
+    <label>topaz shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleTopazShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubblePeridotShards</defName>
+    <label>peridot shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubblePeridotShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleEmeraldShards</defName>
+    <label>emerald shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleEmeraldShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleAquamarineShards</defName>
+    <label>aquamarine shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleAquamarineShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleSapphireShards</defName>
+    <label>sapphire shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleSapphireShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleAmethystShards</defName>
+    <label>amethyst shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleAmethystShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleKunziteShards</defName>
+    <label>kunzite shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleKunziteShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>RF_RubbleOnyxShards</defName>
+    <label>onyx shards</label>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/RF_RubbleOnyxShards</texPath>
+      <!--<color>(0,0,0,0)</color>-->
+    </graphicData>
+    <filth>
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
+
+</Defs>

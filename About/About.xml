@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>RimFantasy - Gemstones</name>
+	<name>RimFantasy - Core</name>
 	<author>Sierra</author>
-	<packageId>Sierra.RFGS</packageId>
+	<packageId>Sierra.RF.Core</packageId>
 	<url></url>
 	<supportedVersions>
-		<li>1.2</li>
 		<li>1.3</li>
 	</supportedVersions>
 	<loadAfter>
@@ -17,7 +16,7 @@
 [h1]Mod Version: v0.4-b.1[/h1]
 
 
-This mod adds 11 new gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
+This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
 
 Raw gemstones can be used to craft stuffable furniture and blunt weapons the same way jade works in vanilla. The cut gemstones worth more than their uncut variants and are used in trading and creation of certain ceremonial objects.
 
