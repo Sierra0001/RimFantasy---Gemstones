@@ -1,6 +1,6 @@
-# RimFantasy - Gemstones
+# RimFantasy - Core
 
-This mod adds 11 new gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
+This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
 
 Raw gemstones can be used to craft stuffable furniture and blunt weapons the same way jade works in vanilla. The cut gemstones worth more than their uncut variants and are used in trading and creation of certain ceremonial objects.
 
