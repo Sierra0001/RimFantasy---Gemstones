@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="BenchBase">
-    <defName>RF_GemCuttingBench</defName>
+    <defName>RF_MedievalGemCuttingBench</defName>
     <label>gem cutting bench</label>
     <description>A traditional workbench equipped for cutting of raw gems. Works at 50% of the speed of an advanced gem cutting table.</description>
     <thingClass>Building_WorkTable</thingClass>
@@ -60,7 +60,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>RF_TableGemCutting</li>
+      <li>RF_MedievalGemCutting</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -70,7 +70,7 @@
     <description>A hi-tech workbench equipped for cutting of raw gems. Can work without electricity at 25% of normal speed.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/Advanced/RF_IndustrialGemCuttingBench</texPath>
+      <texPath>Things/Building/Production/Industrial/RF_IndustrialGemCuttingBench</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2.5,1.5)</drawSize>
       <shaderType>CutoutComplex</shaderType>
@@ -135,7 +135,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>RF_TableAdvancedGemCutting</li>
+      <li>RF_IndustrialGemCutting</li>
     </researchPrerequisites>
   </ThingDef>
 

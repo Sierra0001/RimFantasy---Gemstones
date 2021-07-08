@@ -14,8 +14,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -53,8 +53,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -92,8 +92,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -131,8 +131,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -170,8 +170,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -209,8 +209,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -248,8 +248,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -287,8 +287,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -326,8 +326,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -365,8 +365,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -404,8 +404,8 @@
   	<allowMixingIngredients>true</allowMixingIngredients>
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
-			<li>RF_TableGemCutting</li>
-			<li>RF_TableAdvancedGemCutting</li>
+			<li>RF_MedievalGemCuttingBench</li>
+			<li>RF_IndustrialGemCuttingBench</li>
 		</recipeUsers>
     <ingredients>
 			<li>

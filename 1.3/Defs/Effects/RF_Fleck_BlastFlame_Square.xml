@@ -4,7 +4,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastDiamond_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastDiamond_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastDiamond_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -15,7 +15,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastRuby_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastRuby_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastRuby_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -26,7 +26,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastCarnelian_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastCarnelian_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastCarnelian_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -37,7 +37,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastTopaz_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastTopaz_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastTopaz_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -48,7 +48,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastPeridot_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastPeridot_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastPeridot_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -59,7 +59,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastEmerald_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastEmerald_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastEmerald_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -70,7 +70,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastAquamarine_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastAquamarine_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastAquamarine_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -81,7 +81,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastSapphire_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastSapphire_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastSapphire_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -92,7 +92,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastAmethyst_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastAmethyst_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastAmethyst_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -103,7 +103,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastKunzite_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastKunzite_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastKunzite_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -114,7 +114,7 @@
   <FleckDef ParentName="FleckBase">
     <defName>RF_Fleck_BlastOnyx_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Mote_BlastOnyx_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastOnyx_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>

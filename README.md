@@ -20,9 +20,9 @@ Gems are intentionally sparse and not easy to obtain through natural means, but 
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0003/RimFantasy---Gemstones/releases/tag/v0.4-b.1)
+- [Current Version](https://github.com/Sierra0003/RimFantasy---Core/releases/tag/v0.4-b.1)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890)
-- [GitHub](https://github.com/Sierra0003/RimFantasy---Gemstones)
+- [GitHub](https://github.com/Sierra0003/RimFantasy---Core)
 
 ### Credits
 
