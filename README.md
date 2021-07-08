@@ -38,3 +38,4 @@ SirLalaPyon for his amazing, high-quality vanilla styled art.
 - [Buff] Cut Gemstone is now worth double the royal favor to Royal Tribute Collectors. (v0.3-b.4)
 - [Nerf] Rough Gemstone mining yield decreased from 36 -> 12. (v0.3-b.4)
 - [RimWorld 1.3] RimWorld 1.3 Ready. (v0.4-b.1)
+- [RimWorld 1.3] Conversion to Core module. (v0.4-b.1)
