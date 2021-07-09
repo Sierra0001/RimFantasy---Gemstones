@@ -14,6 +14,8 @@ Raw gemstones can be used to craft stuffable furniture and blunt weapons the sam
 
 Gems are intentionally sparse and not easy to obtain through natural means, but can be obtained through trades and from salvaging certain objects.
 
+Balance feedbacks are welcomed, please provide context when doing so.
+
 ### Compatibility
 
 - Save Game Compatible

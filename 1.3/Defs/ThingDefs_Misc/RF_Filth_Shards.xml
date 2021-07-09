@@ -56,14 +56,14 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleTopazShards</defName>
-    <label>topaz shards</label>
+    <defName>RF_RubbleCitrineShards</defName>
+    <label>citrine shards</label>
     <statBases>
       <Beauty>-3</Beauty>
       <Cleanliness>-5</Cleanliness>
     </statBases>
     <graphicData>
-      <texPath>Things/Filth/RF_RubbleTopazShards</texPath>
+      <texPath>Things/Filth/RF_RubbleCitrineShards</texPath>
       <!--<color>(0,0,0,0)</color>-->
     </graphicData>
     <filth>

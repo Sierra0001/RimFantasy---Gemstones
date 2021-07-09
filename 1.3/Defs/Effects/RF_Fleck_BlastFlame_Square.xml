@@ -35,9 +35,9 @@
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
-    <defName>RF_Fleck_BlastTopaz_Square</defName>
+    <defName>RF_Fleck_BlastCitrine_Square</defName>
     <graphicData>
-      <texPath>Things/Mote/RF_Fleck_BlastTopaz_Square</texPath>
+      <texPath>Things/Mote/RF_Fleck_BlastCitrine_Square</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>

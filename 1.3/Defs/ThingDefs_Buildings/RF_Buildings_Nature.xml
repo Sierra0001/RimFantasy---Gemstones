@@ -71,9 +71,9 @@
   </ThingDef>
 
   <ThingDef ParentName="RockBase">
-    <defName>RF_MineableRoughTopaz</defName>
-    <label>rough topaz</label>
-    <description>Rock containing bits of rough topaz.</description>
+    <defName>RF_MineableRoughCitrine</defName>
+    <label>rough citrine</label>
+    <description>Rock containing bits of rough citrine.</description>
     <graphicData>
       <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -86,7 +86,7 @@
     </statBases>
     <building>
       <isResourceRock>true</isResourceRock>
-      <mineableThing>RF_RoughTopaz</mineableThing>
+      <mineableThing>RF_RoughCitrine</mineableThing>
       <mineableYield>12</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>

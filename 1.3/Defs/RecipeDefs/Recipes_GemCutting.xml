@@ -119,10 +119,10 @@
   </RecipeDef>
 
   <RecipeDef>
-    <defName>RF_CutTopaz</defName>
-    <label>cut rough topaz</label>
-    <description>Cut and polish a rough topaz into a cut topaz.</description>
-    <jobString>Cutting topaz.</jobString>
+    <defName>RF_CutCitrine</defName>
+    <label>cut rough citrine</label>
+    <description>Cut and polish a rough citrine into a cut citrine.</description>
+    <jobString>Cutting citrine.</jobString>
     <workAmount>2700</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
@@ -138,7 +138,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>RF_RoughTopaz</li>
+						<li>RF_RoughCitrine</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -146,11 +146,11 @@
 		</ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>RF_RoughTopaz</li>
+        <li>RF_RoughCitrine</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Topaz>1</RF_Topaz>
+      <RF_Citrine>1</RF_Citrine>
     </products>
     <skillRequirements>
         <Crafting>6</Crafting>

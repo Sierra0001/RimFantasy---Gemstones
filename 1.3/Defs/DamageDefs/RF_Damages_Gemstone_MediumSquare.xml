@@ -71,7 +71,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_TopazFlame_MediumSquare</defName>
+    <defName>RF_CitrineFlame_MediumSquare</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -85,7 +85,7 @@
     <defaultDamage>20</defaultDamage>
     <defaultArmorPenetration>0</defaultArmorPenetration>
     <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
-    <explosionCellFleck>RF_Fleck_BlastTopaz_Square</explosionCellFleck>
+    <explosionCellFleck>RF_Fleck_BlastCitrine_Square</explosionCellFleck>
     <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
     <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
     <soundExplosion>Explosion_EMP</soundExplosion>
