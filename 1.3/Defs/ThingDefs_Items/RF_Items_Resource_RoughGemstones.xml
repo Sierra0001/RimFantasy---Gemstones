@@ -38,7 +38,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(211,211,211)</color>
@@ -47,7 +47,7 @@
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <statOffsets>
-        <Beauty>10</Beauty>
+        <Beauty>5</Beauty>
       </statOffsets>
       <statFactors>
         <MaxHitPoints>0.5</MaxHitPoints>
@@ -98,7 +98,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(189,25,60)</color>
@@ -158,7 +158,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(255,127,80)</color>
@@ -218,7 +218,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(201,193,34)</color>
@@ -278,7 +278,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(57,196,120)</color>
@@ -338,7 +338,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(37,102,32)</color>
@@ -398,7 +398,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(0,255,255)</color>
@@ -458,7 +458,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(53,80,181)</color>
@@ -518,7 +518,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(153,102,204)</color>
@@ -578,7 +578,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(235,180,237)</color>
@@ -638,7 +638,7 @@
     <smeltable>true</smeltable>
     <stuffProps>
       <categories>
-        <li>Stony</li>
+        <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
       <color>(64,62,1)</color>
