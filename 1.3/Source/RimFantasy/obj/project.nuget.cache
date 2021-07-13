@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yJY/Zb6abi25/ZAfOz4LcGB3m1g4zxoDfB+nkjjcv4kKFDZzvna0lDN4KTUYbRmpHPNqFfMfMcVff7de/Z7oRw==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RimFantasy---Core\\1.3\\Source\\RimFantasy\\RimFantasy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3058-beta\\krafs.rimworld.ref.1.3.3058-beta.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.1.0\\lib.harmony.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
