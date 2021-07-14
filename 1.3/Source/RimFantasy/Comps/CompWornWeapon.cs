@@ -29,7 +29,7 @@ namespace RimFantasy
         }
         public GraphicData sheathOnlyGraphicData = null;
         public GraphicData fullGraphicData = null;
-        public DrawPosition drawPosition=DrawPosition.None;
+        public DrawPosition drawPosition;
         public Offset northOffset;
         public Offset eastOffset;
         public Offset southOffset;
@@ -110,7 +110,6 @@ namespace RimFantasy
     }
     public enum DrawPosition
     {
-        None,
         Back,
         Side
     }

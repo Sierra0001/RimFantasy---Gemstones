@@ -8,11 +8,17 @@ using Verse;
 
 namespace RimFantasy
 {
+    public enum AuraActiveLocation
+    {
+        Both,
+        Indoors,
+        Outdoors
+    }
     public class CompProperties_Aura_Joy : CompProperties
     {
         public float auraRadius;
         public float auraStrength;
-        public bool indoorsOnly;
+        public AuraActiveLocation locationMode;
         public float minJoy;
         public float maxJoy;
         public CompProperties_Aura_Joy()
@@ -72,7 +78,7 @@ namespace RimFantasy
             {
                 return false;
             }
-            if (Props.indoorsOnly && pawn.Position.UsesOutdoorTemperature(pawn.Map))
+            if (!CanWorkIn(pawn.Position, pawn.MapHeld))
             {
                 return false;
             }
@@ -82,6 +88,20 @@ namespace RimFantasy
                 return pct >= Props.minJoy && pct <= Props.maxJoy;
             }
             return false;
+        }
+
+        public bool CanWorkIn(IntVec3 cell, Map map)
+        {
+            bool isOutdoor = cell.UsesOutdoorTemperature(map);
+            if (Props.locationMode == AuraActiveLocation.Indoors && isOutdoor)
+            {
+                return false;
+            }
+            else if (Props.locationMode == AuraActiveLocation.Outdoors && !isOutdoor)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace RimFantasy
 	{
 		public float auraRadius;
 		public float auraStrength;
-		public bool indoorsOnly;
+		public AuraActiveLocation locationMode;
 		public float? minTemperature;
 		public float? maxTemperature;
 		public bool dependsOnPower;
@@ -131,7 +131,15 @@ namespace RimFantasy
 		public bool CanWorkIn(IntVec3 cell)
         {
 			bool isOutdoor = cell.UsesOutdoorTemperature(MapHeld);
-			return Props.indoorsOnly && !isOutdoor || isOutdoor;
+			if (Props.locationMode == AuraActiveLocation.Indoors && isOutdoor)
+            {
+				return false;
+            }
+			else if (Props.locationMode == AuraActiveLocation.Outdoors && !isOutdoor)
+            {
+				return false;
+            }
+			return true;
 		}
 
 		public ThingWithComps ParentHeld

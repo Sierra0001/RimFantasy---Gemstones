@@ -146,9 +146,10 @@ namespace RimFantasy
         }
         private bool ShouldGlow()
         {
+            bool shouldGlow = false;
             if (Props.glowWhileStockpiled.HasValue && InStockpile)
             {
-                return Props.glowWhileStockpiled.Value;
+                shouldGlow = Props.glowWhileStockpiled.Value;
             }
             if (Wearer != null && Props.glowWhileDrawn.HasValue)
             {
@@ -156,43 +157,47 @@ namespace RimFantasy
                 {
                     if (Wearer.IsCarryingWeaponOpenly())
                     {
-                        return true;
+                        shouldGlow = true;
                     }
                     else if (Wearer.equipment.Primary.TryGetCachedComp<CompWornWeapon>(out var comp) && comp.ShouldShowWeapon(Wearer))
                     {
-                        return true;
+                        shouldGlow = true;
                     }
                 }
-                return false;
             }
-            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary != null)
+            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent && Props.glowWhileEquipped.Value)
             {
-                return Props.glowWhileEquipped.Value;
+                shouldGlow = true;
             }
-            return true;
+            return shouldGlow;
         }
         private float GetRadius()
         {
+            var radius = 0f;
             if (Props.glowRadiusStockpiled.HasValue && InStockpile)
             {
-                return Props.glowRadiusStockpiled.Value;
+                radius = Props.glowRadiusStockpiled.Value;
             }
             if (Wearer != null && Props.glowRadiusDrawn.HasValue)
             {
                 if (Wearer.IsCarryingWeaponOpenly())
                 {
-                    return Props.glowRadiusDrawn.Value;
+                    radius = Props.glowRadiusDrawn.Value;
                 }
                 else if (Wearer.equipment.Primary.TryGetCachedComp<CompWornWeapon>(out var comp) && comp.ShouldShowWeapon(Wearer))
                 {
-                    return Props.glowRadiusDrawn.Value;
+                    radius = Props.glowRadiusDrawn.Value;
                 }
             }
-            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary != null)
+            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent)
             {
-                return Props.glowRadiusEquipped.Value;
+                radius = Props.glowRadiusEquipped.Value;
             }
-            return Props.glowRadius;
+            if (radius == 0f)
+            {
+                return Props.glowRadius;
+            }
+            return radius;
         }
 
         private IntVec3 GetPosition()

@@ -62,35 +62,35 @@
       <li Class="RimFantasy.CompProperties_Aura_Temperature">
         <auraRadius>5</auraRadius>
         <auraStrength>15</auraStrength>
-        <indoorsOnly>false</indoorsOnly>
+        <locationMode>Outdoors</locationMode>
         <minTemperature>-20</minTemperature>
         <maxTemperature>20</maxTemperature>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Food">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <indoorsOnly>false</indoorsOnly>
+        <locationMode>Outdoors</locationMode>
         <minFood>0.1</minFood>
         <maxFood>0.9</maxFood>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Joy">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <indoorsOnly>false</indoorsOnly>
+        <locationMode>Outdoors</locationMode>
         <minJoy>0.1</minJoy>
         <maxJoy>0.9</maxJoy>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <indoorsOnly>false</indoorsOnly>
+        <locationMode>Outdoors</locationMode>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Mood">
         <auraRadius>5</auraRadius>
         <auraStrength>30</auraStrength>
-        <indoorsOnly>false</indoorsOnly>
+        <locationMode>Outdoors</locationMode>
         <minMood>0.1</minMood>
         <maxMood>0.9</maxMood>
       </li>
@@ -176,35 +176,35 @@
       <li Class="RimFantasy.CompProperties_Aura_Temperature">
         <auraRadius>5</auraRadius>
         <auraStrength>15</auraStrength>
-        <indoorsOnly>true</indoorsOnly>
+        <locationMode>Indoors</locationMode>
         <minTemperature>-20</minTemperature>
         <maxTemperature>20</maxTemperature>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Food">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <indoorsOnly>true</indoorsOnly>
+        <locationMode>Indoors</locationMode>
         <minFood>0.1</minFood>
         <maxFood>0.9</maxFood>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Joy">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <indoorsOnly>true</indoorsOnly>
+        <locationMode>Indoors</locationMode>
         <minJoy>0.1</minJoy>
         <maxJoy>0.9</maxJoy>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <indoorsOnly>true</indoorsOnly>
+        <locationMode>Indoors</locationMode>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Mood">
         <auraRadius>5</auraRadius>
         <auraStrength>30</auraStrength>
-        <indoorsOnly>true</indoorsOnly>
+        <locationMode>Indoors</locationMode>
         <minMood>0.1</minMood>
         <maxMood>0.9</maxMood>
       </li>
@@ -275,8 +275,7 @@
         <compClass>CompHeatPusherPowered</compClass>
         <heatPerSecond>3</heatPerSecond>
       </li>
-      <li Class="CompProperties_Explosive">
-        <compClass>RimFantasy.CompExplosiveTickRare</compClass>
+      <li Class="RimFantasy.CompProperties_ExplosiveTickRare">
         <wickTicks>60</wickTicks>
         <explosiveRadius>3</explosiveRadius>
         <explosiveDamageType>RF_DiamondFlame_MediumSquare</explosiveDamageType>
