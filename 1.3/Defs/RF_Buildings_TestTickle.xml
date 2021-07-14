@@ -62,35 +62,35 @@
       <li Class="RimFantasy.CompProperties_Aura_Temperature">
         <auraRadius>5</auraRadius>
         <auraStrength>15</auraStrength>
-        <locationMode>Outdoors</locationMode>
+        <locationMode>Both</locationMode>
         <minTemperature>-20</minTemperature>
         <maxTemperature>20</maxTemperature>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Food">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <locationMode>Outdoors</locationMode>
+        <locationMode>Both</locationMode>
         <minFood>0.1</minFood>
         <maxFood>0.9</maxFood>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Joy">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <locationMode>Outdoors</locationMode>
+        <locationMode>Both</locationMode>
         <minJoy>0.1</minJoy>
         <maxJoy>0.9</maxJoy>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
-        <locationMode>Outdoors</locationMode>
+        <locationMode>Both</locationMode>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Mood">
         <auraRadius>5</auraRadius>
         <auraStrength>30</auraStrength>
-        <locationMode>Outdoors</locationMode>
+        <locationMode>Both</locationMode>
         <minMood>0.1</minMood>
         <maxMood>0.9</maxMood>
       </li>
@@ -236,7 +236,7 @@
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <blockWind>true</blockWind>
-    <tickerType>Rare</tickerType>
+    <tickerType>Normal</tickerType>
     <statBases>
       <MaxHitPoints>175</MaxHitPoints>
       <Beauty>3</Beauty>
@@ -267,6 +267,7 @@
         <glowColor>(370,370,370,0)</glowColor>
       </li>
       <li Class="CompProperties_Schedule"> <!-- Close to plant growing times with an extra half an hour -->
+        <compClass>RimFantasy.CompScheduleTickNormal</compClass>
         <startTime>0.20</startTime> <!-- 0.25 for Sun Lamp -->
         <endTime>0.85</endTime> <!-- 0.8 for Sun Lamp -->
         <offMessage>Recovering energy for the next release period</offMessage>
