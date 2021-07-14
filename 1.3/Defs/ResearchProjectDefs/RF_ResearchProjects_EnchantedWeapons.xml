@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>RF_EnchantedWeapons</defName>
+    <label>enchanted weapons</label>
+    <tab>RF_RimFantasy</tab>
+    <description>Infuse rough gemstones with magic to create light.</description>
+    <baseCost>750</baseCost>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>RF_MedievalGemCutting</li>
+    </prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>
