@@ -59,12 +59,40 @@
       <li>PlaceWorker_CoolerSimple</li>
     </placeWorkers>
     <comps>
+      <li Class="RimFantasy.CompProperties_Aura_Temperature">
+        <auraRadius>5</auraRadius>
+        <auraStrength>15</auraStrength>
+        <indoorsOnly>false</indoorsOnly>
+        <minTemperature>-20</minTemperature>
+        <maxTemperature>20</maxTemperature>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Food">
+        <auraRadius>5</auraRadius>
+        <auraStrength>0.02</auraStrength>
+        <indoorsOnly>false</indoorsOnly>
+        <minFood>0.1</minFood>
+        <maxFood>0.9</maxFood>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Joy">
+        <auraRadius>5</auraRadius>
+        <auraStrength>0.02</auraStrength>
+        <indoorsOnly>false</indoorsOnly>
+        <minJoy>0.1</minJoy>
+        <maxJoy>0.9</maxJoy>
+      </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
         <indoorsOnly>false</indoorsOnly>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Mood">
+        <auraRadius>5</auraRadius>
+        <auraStrength>30</auraStrength>
+        <indoorsOnly>false</indoorsOnly>
+        <minMood>0.1</minMood>
+        <maxMood>0.9</maxMood>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>7</glowRadius>
@@ -145,12 +173,40 @@
       <li>PlaceWorker_CoolerSimple</li>
     </placeWorkers>
     <comps>
+      <li Class="RimFantasy.CompProperties_Aura_Temperature">
+        <auraRadius>5</auraRadius>
+        <auraStrength>15</auraStrength>
+        <indoorsOnly>true</indoorsOnly>
+        <minTemperature>-20</minTemperature>
+        <maxTemperature>20</maxTemperature>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Food">
+        <auraRadius>5</auraRadius>
+        <auraStrength>0.02</auraStrength>
+        <indoorsOnly>true</indoorsOnly>
+        <minFood>0.1</minFood>
+        <maxFood>0.9</maxFood>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Joy">
+        <auraRadius>5</auraRadius>
+        <auraStrength>0.02</auraStrength>
+        <indoorsOnly>true</indoorsOnly>
+        <minJoy>0.1</minJoy>
+        <maxJoy>0.9</maxJoy>
+      </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
         <auraStrength>0.02</auraStrength>
         <indoorsOnly>true</indoorsOnly>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Mood">
+        <auraRadius>5</auraRadius>
+        <auraStrength>30</auraStrength>
+        <indoorsOnly>true</indoorsOnly>
+        <minMood>0.1</minMood>
+        <maxMood>0.9</maxMood>
       </li>
       <!--<li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
