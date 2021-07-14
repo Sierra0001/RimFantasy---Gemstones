@@ -7,7 +7,8 @@
     <description>A jewelled longsword infused with magic that enables its users to fight more effectively.
 \nThis weapon is enchanted and can only be wielded by a single person. The charged nature of the weapon also means that it may unleash a wave of energy upon destruction.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/RF_MeleeWeapon_EnchantedLongSword/RF_MeleeWeapon_EnchantedLongSword</texPath>
+      <!--<texPath>Things/Item/Equipment/WeaponMelee/RF_MeleeWeapon_EnchantedLongSword/RF_MeleeWeapon_EnchantedLongSword</texPath>-->
+      <texPath>Things/TwoHanded</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_BladelinkMonoSword</soundInteract>
@@ -43,7 +44,7 @@
       </li>
       <li Class="RimFantasy.CompProperties_WornWeapon">
         <sheathOnlyGraphicData>
-          <texPath>Things/Item/Equipment/WeaponMelee/RF_MeleeWeapon_EnchantedLongSword/RF_MeleeWeapon_EnchantedLongSword_Sheath</texPath>
+          <texPath>Things/TwoHanded_Sheath</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
         </sheathOnlyGraphicData>
       </li>
