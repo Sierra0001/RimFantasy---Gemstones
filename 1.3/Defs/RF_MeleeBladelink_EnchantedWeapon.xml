@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseWeapon_EnchantedWeapon">
+    <defName>RF_MeleeWeapon_EnchantedLongSword</defName>
+    <label>enchanted longsword</label>
+    <description>A jewelled longsword infused with magic that enables its users to fight more effectively.
+\nThis weapon is enchanted and can only be wielded by a single person. The charged nature of the weapon also means that it may unleash a wave of energy upon destruction.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/RF_MeleeWeapon_EnchantedLongSword/RF_MeleeWeapon_EnchantedLongSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BladelinkMonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_BladelinkMonoSword</meleeHitSound>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
+      <li>LongSword</li>
+    </weaponTags>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <relicChance>2</relicChance>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>RF_Gemstones</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <Steel>250</Steel>
+    </costList>
+    <comps>
+      <li Class="RimFantasy.CompProperties_GlowerStuffable">
+        <glowRadius>3</glowRadius>
+        <stuffGlow>true</stuffGlow>
+        <glowWhileStockpiled>false</glowWhileStockpiled>
+        <glowWhileEquipped>true</glowWhileEquipped>
+        <glowRadiusEquipped>12</glowRadiusEquipped>
+        <glowWhileDrawn>true</glowWhileDrawn>
+        <glowRadiusDrawn>3</glowRadiusDrawn>
+      </li>
+      <li Class="RimFantasy.CompProperties_WornWeapon">
+        <sheathOnlyGraphicData>
+          <texPath>Things/Item/Equipment/WeaponMelee/RF_MeleeWeapon_EnchantedLongSword/RF_MeleeWeapon_EnchantedLongSword_Sheath</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+        </sheathOnlyGraphicData>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2.1</cooldownTime>
+        <armorPenetration>0.15</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2.1</cooldownTime>
+        <armorPenetration>0.15</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>RF_EnchantedWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

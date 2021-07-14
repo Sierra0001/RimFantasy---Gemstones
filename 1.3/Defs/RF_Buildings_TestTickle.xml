@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RF_TestTickle</defName>
+    <label>test tickle</label>
+    <description>Looks like a thing placed on another thing.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/TestTickle/RF_TestTickle/RF_TestTickle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1,1)</drawSize>
+      <drawOffset>(0,0,0.10)</drawOffset>
+      <allowFlip>true</allowFlip>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume> <!--This requires testing. -->
+        <offset>(0,0,-0.23)</offset> <!--This requires testing. -->
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect> <!--This requires testing. -->
+      </damageData>
+    </graphicData>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability> <!--Either Standable OR PassThroughOnly OR Impassable. -->
+    <pathCost>30</pathCost>
+    <!--<constructEffect>ConstructMetal</constructEffect> --> <!-- Not applicable to stuffable items.-->
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.4</fillPercent>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Beauty>10</Beauty>
+      <Mass>1</Mass>
+      <WorkToBuild>360</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>35</costStuffCount>
+    <costList>
+      <RF_RoughSapphire>45</RF_RoughSapphire>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.15</resourcesFractionWhenDeconstructed>
+    <!--Are placeWorkers needed?-->
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <comps>
+      <li Class="RimFantasy.CompProperties_Aura_Rest">
+        <auraRadius>5</auraRadius>
+        <auraStrength>0.02</auraStrength>
+        <indoorsOnly>false</indoorsOnly>
+        <minRest>0.1</minRest>
+        <maxRest>0.9</maxRest>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>7</glowRadius>
+        <glowColor>(255,255,149,0)</glowColor> <!--20% reduction of original-->
+      </li>
+      <!--<li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>-25</heatPerSecond>
+        <heatPushMinTemperature>-28</heatPushMinTemperature>
+      </li>-->
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <specialDisplayRadius>5</specialDisplayRadius>
+    <!--<researchPrerequisites>
+      <li>RF_MagicalTemperatureRegulation</li>
+    </researchPrerequisites> -->
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RF_TestTickleindoors</defName>
+    <label>indoors test tickle</label>
+    <description>Looks like a thing placed on another thing.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/TestTickle/RF_TestTickle/RF_TestTickle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1,1)</drawSize>
+      <drawOffset>(0,0,0.10)</drawOffset>
+      <allowFlip>true</allowFlip>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume> <!--This requires testing. -->
+        <offset>(0,0,-0.23)</offset> <!--This requires testing. -->
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect> <!--This requires testing. -->
+      </damageData>
+    </graphicData>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability> <!--Either Standable OR PassThroughOnly OR Impassable. -->
+    <pathCost>30</pathCost>
+    <!--<constructEffect>ConstructMetal</constructEffect> --> <!-- Not applicable to stuffable items.-->
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.4</fillPercent>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Beauty>10</Beauty>
+      <Mass>1</Mass>
+      <WorkToBuild>360</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>35</costStuffCount>
+    <costList>
+      <RF_RoughSapphire>45</RF_RoughSapphire>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.15</resourcesFractionWhenDeconstructed>
+    <!--Are placeWorkers needed?-->
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <comps>
+      <li Class="RimFantasy.CompProperties_Aura_Rest">
+        <auraRadius>5</auraRadius>
+        <auraStrength>0.02</auraStrength>
+        <indoorsOnly>true</indoorsOnly>
+        <minRest>0.1</minRest>
+        <maxRest>0.9</maxRest>
+      </li>
+      <!--<li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>-25</heatPerSecond>
+        <heatPushMinTemperature>-28</heatPushMinTemperature>
+      </li>-->
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <specialDisplayRadius>5</specialDisplayRadius>
+    <!--<researchPrerequisites>
+      <li>RF_MagicalTemperatureRegulation</li>
+    </researchPrerequisites> -->
+  </ThingDef>
+
+</Defs>
