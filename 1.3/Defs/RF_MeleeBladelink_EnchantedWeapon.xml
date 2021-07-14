@@ -77,7 +77,6 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>RF_EnchantedWeapons</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
