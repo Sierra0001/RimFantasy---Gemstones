@@ -360,7 +360,7 @@
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <blockWind>true</blockWind>
-    <tickerType>Normal</tickerType>
+    <tickerType>Rare</tickerType>
     <statBases>
       <MaxHitPoints>175</MaxHitPoints>
       <Beauty>3</Beauty>
