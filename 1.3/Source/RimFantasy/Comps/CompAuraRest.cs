@@ -71,7 +71,7 @@ namespace RimFantasy
             {
                 return false;
             }
-            if (CanWorkIn(pawn.Position, pawn.MapHeld))
+            if (!CanWorkIn(pawn.Position, pawn.MapHeld))
             {
                 return false;
             }
@@ -85,7 +85,7 @@ namespace RimFantasy
 
         public bool CanWorkIn(IntVec3 cell, Map map)
         {
-            bool isOutdoor = cell.UsesOutdoorTemperature(map);
+            bool isOutdoor = cell.PsychologicallyOutdoors(map);
             if (Props.locationMode == AuraActiveLocation.Indoors && isOutdoor)
             {
                 return false;

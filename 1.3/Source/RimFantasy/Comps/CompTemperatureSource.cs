@@ -130,7 +130,7 @@ namespace RimFantasy
 
 		public bool CanWorkIn(IntVec3 cell)
         {
-			bool isOutdoor = cell.UsesOutdoorTemperature(MapHeld);
+			bool isOutdoor = cell.PsychologicallyOutdoors(MapHeld);
 			if (Props.locationMode == AuraActiveLocation.Indoors && isOutdoor)
             {
 				return false;

@@ -61,10 +61,10 @@ namespace RimFantasy
 					{
 						if (comp.CanApplyOn(___pawn))
 						{
-							Log.Message("Applying rest to " + ___pawn + " - " + __instance.CurLevel);
+							Log.Message("Applying rest to " + ___pawn + " - " + __instance.CurLevel + " from " + comp);
 							__instance.CurLevel += comp.Props.auraStrength;
 							Traverse.Create(__instance).Field("lastRestTick").SetValue(Find.TickManager.TicksGame);
-							Log.Message("2 Applying rest to " + ___pawn + " - " + __instance.CurLevel);
+							Log.Message("2 Applying rest to " + ___pawn + " - " + __instance.CurLevel + " from " + comp);
 						}
 					}
 				}

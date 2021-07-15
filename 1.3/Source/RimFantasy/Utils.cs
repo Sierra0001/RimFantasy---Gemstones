@@ -60,5 +60,10 @@ namespace RimFantasy
             }
             return false;
         }
+
+        public static bool PsychologicallyOutdoors(this IntVec3 cell, Map map)
+        {
+            return cell.GetRoom(map).PsychologicallyOutdoors;
+        }
     }
 }

@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>RF_TestTickle</defName>
-    <label>test tickle</label>
+    <label>both test tickle</label>
     <description>Looks like a thing placed on another thing.</description>
     <category>Building</category>
     <graphicData>
