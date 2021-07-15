@@ -8,17 +8,8 @@ using Verse;
 
 namespace RimFantasy
 {
-    public enum AuraActiveLocation
+    public class CompProperties_Aura_Joy : CompProperties_Aura
     {
-        Both,
-        Indoors,
-        Outdoors
-    }
-    public class CompProperties_Aura_Joy : CompProperties
-    {
-        public float auraRadius;
-        public float auraStrength;
-        public AuraActiveLocation locationMode;
         public float minJoy;
         public float maxJoy;
         public CompProperties_Aura_Joy()
@@ -26,12 +17,12 @@ namespace RimFantasy
             this.compClass = typeof(CompAuraJoy);
         }
     }
-    public class CompAuraJoy : ThingComp, IAura
+    public class CompAuraJoy : CompAura
     {
         public static Dictionary<Map, HashSet<CompAuraJoy>> cachedComps = new Dictionary<Map, HashSet<CompAuraJoy>>();
-
-        public void SpawnSetup()
+        public override void SpawnSetup()
         {
+            base.SpawnSetup();
             if (this.parent.MapHeld != null)
             {
                 if (cachedComps.ContainsKey(this.parent.MapHeld))
@@ -44,17 +35,7 @@ namespace RimFantasy
                 }
             }
         }
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            SpawnSetup();
-            base.PostSpawnSetup(respawningAfterLoad);
-        }
 
-        public override void PostExposeData()
-        {
-            base.PostExposeData();
-            SpawnSetup();
-        }
         public override void PostDeSpawn(Map map)
         {
             if (cachedComps.ContainsKey(map))
@@ -71,14 +52,10 @@ namespace RimFantasy
             }
             base.PostDestroy(mode, previousMap);
         }
-        public CompProperties_Aura_Joy Props => base.props as CompProperties_Aura_Joy;
-        public bool CanApplyOn(Pawn pawn)
+        public new CompProperties_Aura_Joy Props => base.props as CompProperties_Aura_Joy;
+        public override bool CanApplyOn(Pawn pawn)
         {
-            if (pawn.Position.DistanceTo(this.parent.PositionHeld) > Props.auraRadius)
-            {
-                return false;
-            }
-            if (!CanWorkIn(pawn.Position, pawn.MapHeld))
+            if (!base.CanApplyOn(pawn))
             {
                 return false;
             }
@@ -88,20 +65,6 @@ namespace RimFantasy
                 return pct >= Props.minJoy && pct <= Props.maxJoy;
             }
             return false;
-        }
-
-        public bool CanWorkIn(IntVec3 cell, Map map)
-        {
-            bool isOutdoor = cell.PsychologicallyOutdoors(map);
-            if (Props.locationMode == AuraActiveLocation.Indoors && isOutdoor)
-            {
-                return false;
-            }
-            else if (Props.locationMode == AuraActiveLocation.Outdoors && !isOutdoor)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

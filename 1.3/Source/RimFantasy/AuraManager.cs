@@ -37,37 +37,24 @@ namespace RimFantasy
         }
     }
 
-    public class AreaTemperatureManager : MapComponent
+    public class AuraManager : MapComponent
 	{
         public bool dirty = false;
 
         public Dictionary<IntVec3, List<CompTemperatureSource>> temperatureSources = new Dictionary<IntVec3, List<CompTemperatureSource>>();
-        public List<CompTemperatureSource> compTemperatures = new List<CompTemperatureSource>();
-        public HashSet<CompTemperatureSource> compTemperaturesToTick = new HashSet<CompTemperatureSource>();
-        private List<CompTemperatureSource> dirtyComps = new List<CompTemperatureSource>();
-        public AreaTemperatureManager(Map map) : base(map)
+        public List<CompAura> compAuras = new List<CompAura>();
+        public HashSet<CompAura> compAurasToTick = new HashSet<CompAura>();
+        private List<CompAura> dirtyComps = new List<CompAura>();
+        public AuraManager(Map map) : base(map)
 		{
             HarmonyPatches.areaTemperatureManagers[map] = this;
 		}
-        public void MarkDirty(CompTemperatureSource comp)
+        public void MarkDirty(CompAura comp)
         {
             dirtyComps.Add(comp);
             dirty = true;
         }
-        public void RemoveComp(CompTemperatureSource comp)
-        {
-            if (compTemperatures.Contains(comp))
-            {
-                compTemperatures.Remove(comp);
-            }
-            foreach (var data in temperatureSources.Values)
-            {
-                if (data.Contains(comp))
-                {
-                    data.Remove(comp);
-                }
-            }
-        }
+
         public override void MapComponentTick()
         {
             base.MapComponentTick();
@@ -79,15 +66,16 @@ namespace RimFantasy
                     {
                         if (comp.parent.MapHeld != null)
                         {
+                            Log.Message("comp.parent.MapHeld: " + comp.parent.MapHeld);
                             comp.RecalculateAffectedCells();
                             if (!comp.AffectedCells.Any())
                             {
-                                RemoveComp(comp);
+                                comp.UnConnectFromManager();
                             }
                         }
                         else
                         {
-                            RemoveComp(comp);
+                            comp.UnConnectFromManager();
                         }
                     }
                 }
@@ -95,7 +83,7 @@ namespace RimFantasy
                 this.dirty = false;
             }
 
-            foreach (var comp in compTemperaturesToTick)
+            foreach (var comp in compAurasToTick)
             {
                 comp.Tick();
             }

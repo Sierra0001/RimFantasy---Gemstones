@@ -17,7 +17,7 @@ namespace RimFantasy
 	[StaticConstructorOnStartup]
 	internal static class HarmonyPatches
 	{
-		public static Dictionary<Map, AreaTemperatureManager> areaTemperatureManagers = new Dictionary<Map, AreaTemperatureManager>();
+		public static Dictionary<Map, AuraManager> areaTemperatureManagers = new Dictionary<Map, AuraManager>();
 		static HarmonyPatches()
 		{
 			Harmony harmony = new Harmony("Sierra.RimFantasy");
@@ -178,9 +178,9 @@ namespace RimFantasy
 		{
 			private static void Postfix(Building __instance)
 			{
-				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AreaTemperatureManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AuraManager proxyHeatManager))
 				{
-					foreach (var comp in proxyHeatManager.compTemperatures)
+					foreach (var comp in proxyHeatManager.compAuras)
 					{
 						if (comp.InRangeAndActive(__instance.Position))
 						{
@@ -196,9 +196,9 @@ namespace RimFantasy
 		{
 			private static void Prefix(Building __instance)
 			{
-				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AreaTemperatureManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AuraManager proxyHeatManager))
 				{
-					foreach (var comp in proxyHeatManager.compTemperatures)
+					foreach (var comp in proxyHeatManager.compAuras)
 					{
 						if (comp.InRangeAndActive(__instance.Position))
 						{
@@ -290,7 +290,7 @@ namespace RimFantasy
 
 			private static float GetOutDoorTemperature(float result, Map map, IntVec3 cell)
 			{
-				if (areaTemperatureManagers.TryGetValue(map, out AreaTemperatureManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
 				{
 					return proxyHeatManager.GetTemperatureOutcomeFor(cell, result);
 				}
@@ -304,7 +304,7 @@ namespace RimFantasy
 			private static void Postfix(Thing __instance, ref float __result)
 			{
 				var map = __instance.Map;
-				if (map != null && areaTemperatureManagers.TryGetValue(map, out AreaTemperatureManager proxyHeatManager))
+				if (map != null && areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
 				{
 					__result = proxyHeatManager.GetTemperatureOutcomeFor(__instance.Position, __result);
 				}
@@ -316,7 +316,7 @@ namespace RimFantasy
 		{
 			private static bool Prefix(ref bool __result, IntVec3 c, Map map, bool forSowing = false)
 			{
-				if (areaTemperatureManagers.TryGetValue(map, out AreaTemperatureManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
 				{
 					var tempResult = proxyHeatManager.GetTemperatureOutcomeFor(c, 0f);
 					if (tempResult != 0)
@@ -344,7 +344,7 @@ namespace RimFantasy
 			{
 				if (__result)
 				{
-					if (areaTemperatureManagers.TryGetValue(map, out AreaTemperatureManager proxyHeatManager))
+					if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
 					{
 						tempResult = proxyHeatManager.GetTemperatureOutcomeFor(c, tempResult);
 					}
