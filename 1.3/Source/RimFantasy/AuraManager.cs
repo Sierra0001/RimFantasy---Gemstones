@@ -13,46 +13,6 @@ using Verse.AI;
 
 namespace RimFantasy
 {
-    public class RimFantasyManager : GameComponent
-    {
-        public HashSet<ThingComp> compsToTickNormal = new HashSet<ThingComp>();
-        public HashSet<CompGlowerStuffable> compGlowerToTick = new HashSet<CompGlowerStuffable>();
-        public static RimFantasyManager Instance;
-        public RimFantasyManager(Game game)
-        {
-            Init();
-        }
-
-        void Init()
-        {
-            Instance = this;
-            if (compGlowerToTick is null)
-            {
-                compGlowerToTick = new HashSet<CompGlowerStuffable>();
-            }
-            if (compsToTickNormal is null)
-            {
-                compsToTickNormal = new HashSet<ThingComp>();
-            }
-        }
-        public override void GameComponentTick()
-        {
-            foreach (var comp in compGlowerToTick)
-            {
-                comp.Tick();
-            }
-            foreach (var comp in compsToTickNormal)
-            {
-                comp.CompTick();
-            }
-        }
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Instance = this;
-        }
-    }
-
     public class AuraManager : MapComponent
 	{
         public bool dirty = false;
