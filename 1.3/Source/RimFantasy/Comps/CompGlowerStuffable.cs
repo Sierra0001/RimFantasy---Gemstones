@@ -148,6 +148,10 @@ namespace RimFantasy
                 {
                     return inventoryTracker.pawn;
                 }
+                else if (this.parent.ParentHolder is Pawn_CarryTracker carryTracker)
+                {
+                    return carryTracker.pawn;
+                }
                 return null;
             }
         }
@@ -162,23 +166,13 @@ namespace RimFantasy
             {
                 shouldGlow = Props.glowWhileOnGround.Value;
             }
-            if (Wearer != null && Props.glowWhileDrawn.HasValue)
+            if (Wearer != null && Props.glowWhileDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment.Primary == this.parent)
             {
-                if (Props.glowWhileDrawn.Value)
-                {
-                    if (Wearer.IsCarryingWeaponOpenly())
-                    {
-                        shouldGlow = true;
-                    }
-                    else if (Wearer.equipment.Primary.TryGetCachedComp<CompWornWeapon>(out var comp) && comp.ShouldShowWeapon(Wearer))
-                    {
-                        shouldGlow = true;
-                    }
-                }
+                shouldGlow = Props.glowWhileDrawn.Value;
             }
-            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent && Props.glowWhileEquipped.Value)
+            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent)
             {
-                shouldGlow = true;
+                shouldGlow = Props.glowWhileEquipped.Value;
             }
             return shouldGlow;
         }
@@ -202,16 +196,9 @@ namespace RimFantasy
             {
                 radius = Props.glowRadiusEquipped.Value;
             }
-            if (Wearer != null && Props.glowRadiusDrawn.HasValue)
+            if (Wearer != null && Props.glowRadiusDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment.Primary == this.parent)
             {
-                if (Wearer.IsCarryingWeaponOpenly())
-                {
-                    radius = Props.glowRadiusDrawn.Value;
-                }
-                else if (Wearer.equipment.Primary.TryGetCachedComp<CompWornWeapon>(out var comp) && comp.ShouldShowWeapon(Wearer))
-                {
-                    radius = Props.glowRadiusDrawn.Value;
-                }
+                radius = Props.glowRadiusDrawn.Value;
             }
             if (radius == 0f)
             {
