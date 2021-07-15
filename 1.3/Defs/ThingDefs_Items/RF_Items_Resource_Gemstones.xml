@@ -32,7 +32,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(211,211,211)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -78,7 +78,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(189,25,60)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -124,7 +124,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(255,127,80)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -170,7 +170,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(201,193,34)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -216,7 +216,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(57,196,120)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -262,7 +262,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(37,102,32)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -308,7 +308,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(0,255,255)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -354,7 +354,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(53,80,181)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -400,7 +400,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(102,51,153)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -446,7 +446,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(235,180,237)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -492,7 +492,7 @@
       </categories>
       <commonality>0.05</commonality>
       <constructEffect>ConstructMetal</constructEffect>
-      <color>(160,178,181)</color>
+      <color>(64,62,1)</color>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
