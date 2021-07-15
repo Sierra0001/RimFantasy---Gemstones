@@ -66,7 +66,6 @@ namespace RimFantasy
                     {
                         if (comp.parent.MapHeld != null)
                         {
-                            Log.Message("comp.parent.MapHeld: " + comp.parent.MapHeld);
                             comp.RecalculateAffectedCells();
                             if (!comp.AffectedCells.Any())
                             {

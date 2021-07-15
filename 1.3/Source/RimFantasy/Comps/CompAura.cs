@@ -128,14 +128,13 @@ namespace RimFantasy
 							this.affectedCells.Add(x);
 						}
 					}
-				}, int.MaxValue, rememberParents: false, (IEnumerable<IntVec3>)null);
+				}, int.MaxValue, rememberParents: false, null);
 				affectedCells.AddRange(ParentHeld.OccupiedRect().Where(x => CanWorkIn(x)));
 				affectedCellsList.AddRange(affectedCells.ToList());
 				Manager.compAuras.Add(this);
 			}
+			Log.Message("RecalculateAffectedCells" + this + " - " + affectedCells.Count + " - workThroughWalls: " + this.Props.workThroughWalls);
 		}
-
-
 		public IEnumerable<IntVec3> GetCells()
 		{
 			if (this.Props.tileOffset != IntVec3.Invalid)
@@ -169,6 +168,7 @@ namespace RimFantasy
 
 		public virtual bool CanApplyOn(Pawn pawn)
         {
+			Log.Message("this.affectedCells: " + this.affectedCells.Count());
 			if (!this.affectedCells.Contains(pawn.Position))
 			{
 				return false;
@@ -187,6 +187,7 @@ namespace RimFantasy
 		public virtual void SpawnSetup()
         {
 			MarkDirty();
+			this.active = true;
 		}
 		public override void PostSpawnSetup(bool respawningAfterLoad)
 		{
