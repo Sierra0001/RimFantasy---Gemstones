@@ -55,7 +55,7 @@ namespace RimFantasy
         public new CompProperties_Aura_Rest Props => base.props as CompProperties_Aura_Rest;
         public override bool CanApplyOn(Pawn pawn)
         {
-            if (!CanApplyOn(pawn))
+            if (!base.CanApplyOn(pawn))
             {
                 return false;
             }

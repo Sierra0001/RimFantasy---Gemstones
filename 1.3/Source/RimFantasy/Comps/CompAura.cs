@@ -117,7 +117,7 @@ namespace RimFantasy
 				};
 
 				var offset = this.Props.tileOffset != IntVec3.Invalid ? ParentHeld.OccupiedRect().MovedBy(this.Props.tileOffset.RotatedBy(ParentHeld.Rotation)).CenterCell : PositionHeld;
-				MapHeld.floodFiller.FloodFill(offset, validator, delegate (IntVec3 x)
+                MapHeld.floodFiller.FloodFill(offset, validator, (Action<IntVec3>)delegate (IntVec3 x)
 				{
 					if (tempCells.Contains(x))
 					{
@@ -125,7 +125,7 @@ namespace RimFantasy
 						var result = Props.workThroughWalls || edifice == null || edifice.def.passability != Traversability.Impassable || edifice == ParentHeld;
 						if (result && (Props.workThroughWalls || (GenSight.LineOfSight(offset, x, MapHeld) || offset.DistanceTo(x) <= 1.5f)) && CanWorkIn(x))
 						{
-							affectedCells.Add(x);
+							this.affectedCells.Add(x);
 						}
 					}
 				}, int.MaxValue, rememberParents: false, (IEnumerable<IntVec3>)null);
@@ -169,7 +169,7 @@ namespace RimFantasy
 
 		public virtual bool CanApplyOn(Pawn pawn)
         {
-			if (this.AffectedCells.Contains(pawn.Position))
+			if (!this.affectedCells.Contains(pawn.Position))
 			{
 				return false;
 			}
@@ -186,7 +186,7 @@ namespace RimFantasy
 		}
 		public virtual void SpawnSetup()
         {
-
+			MarkDirty();
 		}
 		public override void PostSpawnSetup(bool respawningAfterLoad)
 		{
