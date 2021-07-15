@@ -15,7 +15,8 @@ namespace RimFantasy
 		public ColorInt glowColor = new ColorInt(255, 255, 255, 0) * 1.45f;
 		public bool stuffGlow;
 		public bool? glowWhileStockpiled;
-		public float? glowRadiusStockpiled;
+        public bool? glowWhileOnGround;
+        public float? glowRadiusStockpiled;
 		public bool? glowWhileEquipped;
 		public float? glowRadiusEquipped;
 		public bool? glowWhileDrawn;
@@ -43,12 +44,18 @@ namespace RimFantasy
         }
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
-            base.PostDeSpawn(map);
             if (RimFantasyManager.Instance.compGlowerToTick.Contains(this))
             {
                 RimFantasyManager.Instance.compGlowerToTick.Remove(this);
             }
+            this.RemoveGlower(previousMap);
             base.PostDestroy(mode, previousMap);
+        }
+
+        public override void PostDeSpawn(Map map)
+        {
+            this.RemoveGlower(map);
+            base.PostDeSpawn(map);
         }
 
         public override void PostPostMake()
@@ -90,28 +97,28 @@ namespace RimFantasy
                     }
                     else if (!compPower.PowerOn && this.compGlower != null)
                     {
-                        this.RemoveGlower();
+                        this.RemoveGlower(this.parent.MapHeld);
                     }
                 }
             }
 
         }
-        public void RemoveGlower()
+        public void RemoveGlower(Map map)
         {
             if (this.compGlower != null)
             {
-                base.parent.MapHeld.glowGrid.DeRegisterGlower(this.compGlower);
+                map.glowGrid.DeRegisterGlower(this.compGlower);
                 this.compGlower = null;
             }
         }
         public void UpdateGlower()
         {
-            RemoveGlower();
+            RemoveGlower(this.parent.MapHeld);
             if (ShouldGlow())
             {
                 this.compGlower = new CompGlower();
                 var parent = GetParent();
-                var glow = this.parent.Stuff != null ? new ColorInt(this.parent.DrawColor) : this.Props.glowColor;
+                var glow = GetGlowColor();
                 var radius = GetRadius();
                 var position = GetPosition();
                 this.compGlower.Initialize(new CompProperties_Glower()
@@ -151,6 +158,10 @@ namespace RimFantasy
             {
                 shouldGlow = Props.glowWhileStockpiled.Value;
             }
+            if (Props.glowWhileOnGround.HasValue && this.parent.Spawned && Wearer is null && this.parent.ParentHolder is Map && !InStockpile)
+            {
+                shouldGlow = Props.glowWhileOnGround.Value;
+            }
             if (Wearer != null && Props.glowWhileDrawn.HasValue)
             {
                 if (Props.glowWhileDrawn.Value)
@@ -171,12 +182,25 @@ namespace RimFantasy
             }
             return shouldGlow;
         }
+
+        private ColorInt GetGlowColor()
+        {
+            if (this.Props.stuffGlow)
+            {
+                return this.parent.Stuff != null ? new ColorInt(this.parent.DrawColor) : this.Props.glowColor;
+            }
+            return this.Props.glowColor;
+        }
         private float GetRadius()
         {
             var radius = 0f;
             if (Props.glowRadiusStockpiled.HasValue && InStockpile)
             {
                 radius = Props.glowRadiusStockpiled.Value;
+            }
+            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent)
+            {
+                radius = Props.glowRadiusEquipped.Value;
             }
             if (Wearer != null && Props.glowRadiusDrawn.HasValue)
             {
@@ -188,10 +212,6 @@ namespace RimFantasy
                 {
                     radius = Props.glowRadiusDrawn.Value;
                 }
-            }
-            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent)
-            {
-                radius = Props.glowRadiusEquipped.Value;
             }
             if (radius == 0f)
             {

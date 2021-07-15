@@ -37,8 +37,8 @@
 				<glowRadius>2</glowRadius>
 				<glowColor>(130,157,255,0)</glowColor>
 				<!--<stuffGlow>false</stuffGlow>-->
-				<glowWhileStockpiled>true</glowWhileStockpiled>
 				<glowWhileEquipped>true</glowWhileEquipped>
+				<glowWhileOnGround>true</glowWhileOnGround>
 				<glowRadiusEquipped>15</glowRadiusEquipped>
 				<glowWhileDrawn>true</glowWhileDrawn>
 				<glowRadiusDrawn>55</glowRadiusDrawn>

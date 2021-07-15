@@ -133,7 +133,6 @@ namespace RimFantasy
 				affectedCellsList.AddRange(affectedCells.ToList());
 				Manager.compAuras.Add(this);
 			}
-			Log.Message("RecalculateAffectedCells" + this + " - " + affectedCells.Count + " - workThroughWalls: " + this.Props.workThroughWalls);
 		}
 		public IEnumerable<IntVec3> GetCells()
 		{

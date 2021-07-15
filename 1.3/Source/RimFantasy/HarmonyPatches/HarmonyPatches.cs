@@ -40,10 +40,8 @@ namespace RimFantasy
                     {
 						if (comp.CanApplyOn(___pawn))
                         {
-							Log.Message("Applying food to " + ___pawn + " - " + __instance.CurLevel + " - " + comp);
 							__instance.CurLevel += comp.Props.auraStrength;
 							Traverse.Create(__instance).Field("lastNonStarvingTick").SetValue(Find.TickManager.TicksGame);
-							Log.Message("2 Applying food to " + ___pawn + " - " + __instance.CurLevel + " - " + comp);
 						}
 					}
                 }
@@ -61,10 +59,8 @@ namespace RimFantasy
 					{
 						if (comp.CanApplyOn(___pawn))
 						{
-							Log.Message("Applying rest to " + ___pawn + " - " + __instance.CurLevel + " from " + comp);
 							__instance.CurLevel += comp.Props.auraStrength;
 							Traverse.Create(__instance).Field("lastRestTick").SetValue(Find.TickManager.TicksGame);
-							Log.Message("2 Applying rest to " + ___pawn + " - " + __instance.CurLevel + " from " + comp);
 						}
 					}
 				}
@@ -82,10 +78,8 @@ namespace RimFantasy
 					{
 						if (comp.CanApplyOn(___pawn))
 						{
-							Log.Message("Applying joy to " + ___pawn + " - " + __instance.CurLevel);
 							__instance.CurLevel += comp.Props.auraStrength;
 							Traverse.Create(__instance).Field("lastGainTick").SetValue(Find.TickManager.TicksGame);
-							Log.Message("2 Applying joy to " + ___pawn + " - " + __instance.CurLevel);
 						}
 					}
 				}
@@ -103,9 +97,7 @@ namespace RimFantasy
 					{
 						if (comp.CanApplyOn(__instance.pawn))
 						{
-							Log.Message("Applying mood to " + __instance.pawn + " - " + __result);
 							__result += comp.Props.auraStrength;
-							Log.Message("2 Applying mood to " + __instance.pawn + " - " + __result);
 						}
 					}
 				}
