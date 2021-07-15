@@ -521,7 +521,7 @@
         <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
-      <color>(153,102,204)</color>
+      <color>(102,51,153)</color>
       <constructEffect>ConstructMetal</constructEffect>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>

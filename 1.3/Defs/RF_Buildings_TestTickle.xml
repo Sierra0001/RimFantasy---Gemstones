@@ -65,7 +65,7 @@
         <locationMode>Outdoors</locationMode>
         <minTemperature>-20</minTemperature>
         <maxTemperature>20</maxTemperature>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Food">
         <auraRadius>5</auraRadius>
@@ -73,7 +73,7 @@
         <locationMode>Outdoors</locationMode>
         <minFood>0.1</minFood>
         <maxFood>0.9</maxFood>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Joy">
         <auraRadius>5</auraRadius>
@@ -81,7 +81,7 @@
         <locationMode>Outdoors</locationMode>
         <minJoy>0.1</minJoy>
         <maxJoy>0.9</maxJoy>
-		<workThroughWalls>true</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
@@ -89,7 +89,7 @@
         <locationMode>Outdoors</locationMode>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Mood">
         <auraRadius>5</auraRadius>
@@ -97,7 +97,7 @@
         <locationMode>Outdoors</locationMode>
         <minMood>0.1</minMood>
         <maxMood>0.9</maxMood>
-		<workThroughWalls>true</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>7</glowRadius>
@@ -183,7 +183,7 @@
         <locationMode>Indoors</locationMode>
         <minTemperature>-20</minTemperature>
         <maxTemperature>20</maxTemperature>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Food">
         <auraRadius>5</auraRadius>
@@ -191,7 +191,7 @@
         <locationMode>Indoors</locationMode>
         <minFood>0.1</minFood>
         <maxFood>0.9</maxFood>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Joy">
         <auraRadius>5</auraRadius>
@@ -199,7 +199,7 @@
         <locationMode>Indoors</locationMode>
         <minJoy>0.1</minJoy>
         <maxJoy>0.9</maxJoy>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
@@ -207,7 +207,7 @@
         <locationMode>Indoors</locationMode>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Mood">
         <auraRadius>5</auraRadius>
@@ -215,7 +215,7 @@
         <locationMode>Indoors</locationMode>
         <minMood>0.1</minMood>
         <maxMood>0.9</maxMood>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <!--<li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
@@ -298,7 +298,7 @@
         <locationMode>Both</locationMode>
         <minTemperature>-20</minTemperature>
         <maxTemperature>20</maxTemperature>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Food">
         <auraRadius>5</auraRadius>
@@ -306,7 +306,7 @@
         <locationMode>Both</locationMode>
         <minFood>0.1</minFood>
         <maxFood>0.9</maxFood>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Joy">
         <auraRadius>5</auraRadius>
@@ -314,7 +314,7 @@
         <locationMode>Both</locationMode>
         <minJoy>0.1</minJoy>
         <maxJoy>0.9</maxJoy>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
@@ -322,7 +322,7 @@
         <locationMode>Both</locationMode>
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Mood">
         <auraRadius>5</auraRadius>
@@ -330,7 +330,7 @@
         <locationMode>Both</locationMode>
         <minMood>0.1</minMood>
         <maxMood>0.9</maxMood>
-		<workThroughWalls>false</workThroughWalls>
+        <workThroughWalls>true</workThroughWalls>
       </li>
       <!--<li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
