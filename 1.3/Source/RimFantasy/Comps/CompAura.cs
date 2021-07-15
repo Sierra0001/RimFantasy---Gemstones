@@ -168,7 +168,6 @@ namespace RimFantasy
 
 		public virtual bool CanApplyOn(Pawn pawn)
         {
-			Log.Message("this.affectedCells: " + this.affectedCells.Count());
 			if (!this.affectedCells.Contains(pawn.Position))
 			{
 				return false;

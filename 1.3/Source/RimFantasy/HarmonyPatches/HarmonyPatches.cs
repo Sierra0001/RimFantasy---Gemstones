@@ -352,8 +352,6 @@ namespace RimFantasy
 			}
 		}
 
-
-
 		[HarmonyPatch(typeof(PawnRenderer))]
 		[HarmonyPatch("DrawEquipment")]
 		public static class DrawEquipment_Patch
@@ -371,77 +369,95 @@ namespace RimFantasy
 					DrawWornWeapon(comp, ___pawn, rootLoc, comp.FullGraphic);
 				}
 			}
-
-			public static void DrawSheath(Pawn pawn, Thing eq, Vector3 drawLoc, float aimAngle, Graphic graphic)
+			private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilGen)
 			{
-				float num = aimAngle;
-				num %= 360f;
-				CompWornWeapon comp = eq.TryGetComp<CompWornWeapon>();
-				if (comp != null)
+				var pawnInfo = AccessTools.Field(typeof(PawnRenderer), "pawn");
+				var method = AccessTools.Method(typeof(DrawEquipment_Patch), "DrawSheathOnlyGraphic");
+				var carryWeaponOpenly = AccessTools.Method(typeof(PawnRenderer), "CarryWeaponOpenly");
+				var rotatedBy = AccessTools.Method(typeof(Vector3Utility), "RotatedBy", new Type[] {typeof(Vector3), typeof(float) });
+				var codes = instructions.ToList();
+				for (var i = 0; i < codes.Count; i++)
+                {
+					if (i > 5 && (codes[i - 4].opcode == OpCodes.Ldloc_3 && codes[i - 3].Calls(rotatedBy) || codes[i - 2].Calls(carryWeaponOpenly)))
+					{
+						yield return new CodeInstruction(OpCodes.Ldarg_0, null);
+						yield return new CodeInstruction(OpCodes.Ldfld, pawnInfo);
+						yield return new CodeInstruction(OpCodes.Ldarg_1);
+						yield return new CodeInstruction(OpCodes.Call, method);
+                    }
+					yield return codes[i];
+                }
+			}
+
+			public static void DrawSheathOnlyGraphic(Pawn pawn, Vector3 rootLoc)
+            {
+				var eq = pawn.equipment.Primary;
+				if (eq.TryGetCachedComp<CompWornWeapon>(out var comp))
 				{
-					Graphics.DrawMesh(graphic.MeshAt(pawn.Rotation), drawLoc, Quaternion.AngleAxis(num, Vector3.up), graphic.MatAt(pawn.Rotation), 0);
+					DrawWornWeapon(comp, pawn, rootLoc, comp.SheathOnlyGraphic);
 				}
 			}
-			public static void DrawWornWeapon(CompWornWeapon compSheath, Pawn pawn, Vector3 drawLoc, Graphic graphic)
+
+			public static void DrawWornWeapon(CompWornWeapon CompWornWeapon, Pawn pawn, Vector3 drawLoc, Graphic graphic)
 			{
-				switch (compSheath.Props.drawPosition)
+				switch (CompWornWeapon.Props.drawPosition)
 				{
 					case DrawPosition.Side:
 						if (pawn.Rotation == Rot4.South)
 						{
-							drawLoc += compSheath.Props.northOffset.position;
+							drawLoc += CompWornWeapon.Props.northOffset.position;
 							drawLoc.y += drawSYSYPosition;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.northOffset.angle, graphic);
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.northOffset.angle, graphic);
 							return;
 						}
 						if (pawn.Rotation == Rot4.North)
 						{
-							drawLoc += compSheath.Props.southOffset.position;
+							drawLoc += CompWornWeapon.Props.southOffset.position;
 							drawLoc.y += drawSYSYPosition;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.southOffset.angle, graphic);
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.southOffset.angle, graphic);
 							return;
 						}
 						if (pawn.Rotation == Rot4.East)
 						{
-							drawLoc += compSheath.Props.eastOffset.position;
+							drawLoc += CompWornWeapon.Props.eastOffset.position;
 							drawLoc.y += drawSYSYPosition;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.eastOffset.angle, graphic);
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.eastOffset.angle, graphic);
 							return;
 						}
 						if (pawn.Rotation == Rot4.West)
 						{
-							drawLoc += compSheath.Props.westOffset.position;
+							drawLoc += CompWornWeapon.Props.westOffset.position;
 							drawLoc.y += drawSYSYPosition;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.westOffset.angle, graphic);
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.westOffset.angle, graphic);
 							return;
 						}
 						break;
 					case DrawPosition.Back:
 						if (pawn.Rotation == Rot4.South)
 						{
-							drawLoc += compSheath.Props.southOffset.position;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.southOffset.angle, graphic);
+							drawLoc += CompWornWeapon.Props.southOffset.position;
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.southOffset.angle, graphic);
 							return;
 						}
 						if (pawn.Rotation == Rot4.North)
 						{
-							drawLoc += compSheath.Props.northOffset.position;
+							drawLoc += CompWornWeapon.Props.northOffset.position;
 							drawLoc.y += drawSYSYPosition;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.northOffset.angle, graphic);
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.northOffset.angle, graphic);
 							return;
 						}
 						if (pawn.Rotation == Rot4.East)
 						{
-							drawLoc += compSheath.Props.eastOffset.position;
+							drawLoc += CompWornWeapon.Props.eastOffset.position;
 							drawLoc.y += drawSYSYPosition;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.eastOffset.angle, graphic);
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.eastOffset.angle, graphic);
 							return;
 						}
 						if (pawn.Rotation == Rot4.West)
 						{
-							drawLoc += compSheath.Props.westOffset.position;
+							drawLoc += CompWornWeapon.Props.westOffset.position;
 							drawLoc.y += drawSYSYPosition;
-							DrawSheath(pawn, pawn.equipment.Primary, drawLoc, compSheath.Props.westOffset.angle, graphic);
+							DrawWornWeapon(pawn, CompWornWeapon, drawLoc, CompWornWeapon.Props.westOffset.angle, graphic);
 							return;
 						}
 						break;
@@ -449,7 +465,15 @@ namespace RimFantasy
 						return;
 				}
 			}
-
+			public static void DrawWornWeapon(Pawn pawn, CompWornWeapon comp, Vector3 drawLoc, float aimAngle, Graphic graphic)
+			{
+				float num = aimAngle;
+				num %= 360f;
+				if (comp != null)
+				{
+					Graphics.DrawMesh(graphic.MeshAt(pawn.Rotation), drawLoc, Quaternion.AngleAxis(num, Vector3.up), graphic.MatAt(pawn.Rotation), 0);
+				}
+			}
 		}
 	}
 }

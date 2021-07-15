@@ -125,7 +125,4 @@ namespace RimFantasy
         public Offset southOffset;
         public Offset westOffset;
     }
-
-
-
 }
