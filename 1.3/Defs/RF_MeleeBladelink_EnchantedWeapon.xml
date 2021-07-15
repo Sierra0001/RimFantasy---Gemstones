@@ -35,13 +35,14 @@
 		<comps>
 			<li Class="RimFantasy.CompProperties_GlowerStuffable">
 				<glowRadius>2</glowRadius>
-				<glowColor>(130,157,255,0)</glowColor>
-				<!--<stuffGlow>false</stuffGlow>-->
-				<glowWhileEquipped>true</glowWhileEquipped>
+				<!--<glowColor>(130,157,255,0)</glowColor>-->
+				<stuffGlow>true</stuffGlow>
 				<glowWhileOnGround>true</glowWhileOnGround>
-				<glowRadiusEquipped>15</glowRadiusEquipped>
+				<glowWhileStockpiled>true</glowWhileStockpiled>
+				<glowWhileEquipped>true</glowWhileEquipped>
+				<glowRadiusEquipped>12</glowRadiusEquipped>
 				<glowWhileDrawn>true</glowWhileDrawn>
-				<glowRadiusDrawn>55</glowRadiusDrawn>
+				<glowRadiusDrawn>45</glowRadiusDrawn>
 			</li>
 			<li Class="RimFantasy.CompProperties_WornWeapon">
 				<sheathOnlyGraphicData>
