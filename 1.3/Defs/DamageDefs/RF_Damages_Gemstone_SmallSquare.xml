@@ -2,7 +2,7 @@
 <Defs>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_DiamondFlame_SmallSquare</defName>
+    <defName>RF_Flame_SmallSquareRF_Diamond</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
