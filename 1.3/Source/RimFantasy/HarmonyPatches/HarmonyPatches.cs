@@ -11,6 +11,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
+using static Verse.DamageWorker;
 
 namespace RimFantasy
 {
@@ -473,8 +474,7 @@ namespace RimFantasy
 		{
 			private static void Postfix(ref IEnumerable<DamageInfo> __result, Verb __instance, LocalTargetInfo target)
 			{
-				var comp = __instance.EquipmentSource.TryGetComp<CompArkaneWeapon>();
-				if (comp != null)
+				if (__instance.EquipmentSource.TryGetCachedComp<CompArkaneWeapon>(out var comp))
 				{
 					foreach (var trait in comp.TraitsListForReading)
 					{
@@ -485,6 +485,76 @@ namespace RimFantasy
 					}
 				}
 			}
+		}
+
+		[HarmonyPatch(typeof(Verb_LaunchProjectile), "TryCastShot")]
+		public static class Patch_TryCastShot
+		{
+			public static Verb verbSource;
+			private static void Prefix(Verb __instance)
+			{
+				verbSource = __instance;
+			}
+			private static void Postfix(Verb __instance)
+			{
+				verbSource = null;
+			}
+		}
+
+		[HarmonyPatch(typeof(Projectile), "Launch", new Type[]
+		{
+			typeof(Thing), typeof(Vector3), typeof(LocalTargetInfo), typeof(LocalTargetInfo), typeof(ProjectileHitFlags), typeof(bool), typeof(Thing), typeof(ThingDef)
+		})]
+		public static class Patch_Projectile_Launch
+		{
+			public static void Postfix(Projectile __instance, Thing launcher, Vector3 origin, LocalTargetInfo usedTarget, LocalTargetInfo intendedTarget, ProjectileHitFlags hitFlags, Thing equipment = null, ThingDef targetCoverDef = null)
+			{
+				if (Patch_TryCastShot.verbSource != null && Patch_TryCastShot.verbSource.EquipmentSource.TryGetCachedComp<CompArkaneWeapon>(out var comp))
+                {
+					comp.releasedProjectiles.Add(__instance);
+				}
+			}
+		}
+
+		[HarmonyPatch(typeof(Bullet), "Impact")]
+		public static class Patch_Bullet_Impact
+		{
+			private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilGen)
+			{
+				bool found = false;
+				var associateWithLog = AccessTools.Method(typeof(DamageResult), "AssociateWithLog");
+				var applyEffects = AccessTools.Method(typeof(Patch_Bullet_Impact), "ApplyEffects");
+				var codes = instructions.ToList();
+				for (var i = 0; i < codes.Count; i++)
+				{
+					yield return codes[i];
+					if (!found && codes[i].Calls(associateWithLog))
+                    {
+						found = true;
+						yield return new CodeInstruction(OpCodes.Ldarg_0);
+						yield return new CodeInstruction(OpCodes.Ldarg_1);
+						yield return new CodeInstruction(OpCodes.Call, applyEffects);
+                    }
+				}
+			}
+
+			public static void ApplyEffects(Projectile projectile, Thing hitThing)
+            {
+				if (hitThing != null)
+                {
+					var comp = CompArkaneWeapon.GetLinkedCompFor(projectile);
+					if (comp != null)
+                    {
+						foreach (var trait in comp.TraitsListForReading)
+                        {
+							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
+                            {
+								arcaneTraitDef.Worker.OnDamageDealt(hitThing);
+							}
+                        }
+                    }
+                }
+            }
 		}
 	}
 }

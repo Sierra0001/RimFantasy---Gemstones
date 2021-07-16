@@ -23,6 +23,23 @@ namespace RimFantasy
 	{
 		public new CompProperties_ArkaneWeapon Props => base.props as CompProperties_ArkaneWeapon;
 		private static readonly IntRange TraitsRange = new IntRange(1, 2);
+		public HashSet<Projectile> releasedProjectiles = new HashSet<Projectile>();
+		private static HashSet<CompArkaneWeapon> compArkaneWeapons = new HashSet<CompArkaneWeapon>();
+		public static CompArkaneWeapon GetLinkedCompFor(Projectile projectle)
+        {
+			foreach (var comp in compArkaneWeapons)
+            {
+				if (comp.releasedProjectiles.Contains(projectle))
+                {
+					return comp;
+                }
+            }
+			return null;
+        }
+		public CompArkaneWeapon()
+        {
+			compArkaneWeapons.Add(this);
+		}
 		public override void PostPostMake()
 		{
 			InitializeTraitsCustom();
@@ -61,5 +78,12 @@ namespace RimFantasy
 			}
 			return true;
 		}
-	}
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+			releasedProjectiles.RemoveWhere(x => x is null || x.Destroyed);
+			Scribe_Collections.Look(ref releasedProjectiles, "releasedProjectiles", LookMode.Reference);
+        }
+    }
 }
