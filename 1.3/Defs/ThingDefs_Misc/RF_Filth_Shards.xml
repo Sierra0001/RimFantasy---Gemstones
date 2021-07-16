@@ -20,7 +20,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleRubyShards</defName>
+    <defName>RF_RubbleShardsRF_Ruby</defName>
     <label>ruby shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -38,7 +38,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleCarnelianShards</defName>
+    <defName>RF_RubbleShardsRF_Carnelian</defName>
     <label>carnelian shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -56,7 +56,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleCitrineShards</defName>
+    <defName>RF_RubbleShardsRF_Citrine</defName>
     <label>citrine shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -74,7 +74,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubblePeridotShards</defName>
+    <defName>RF_RubbleShardsRF_Peridot</defName>
     <label>peridot shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -92,7 +92,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleEmeraldShards</defName>
+    <defName>RF_RubbleShardsRF_Emerald</defName>
     <label>emerald shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -110,7 +110,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleAquamarineShards</defName>
+    <defName>RF_RubbleShardsRF_Aquamarine</defName>
     <label>aquamarine shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -128,7 +128,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleSapphireShards</defName>
+    <defName>RF_RubbleShardsRF_Sapphire</defName>
     <label>sapphire shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -146,7 +146,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleAmethystShards</defName>
+    <defName>RF_RubbleShardsRF_Amethyst</defName>
     <label>amethyst shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -164,7 +164,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleKunziteShards</defName>
+    <defName>RF_RubbleShardsRF_Kunzite</defName>
     <label>kunzite shards</label>
     <statBases>
       <Beauty>-3</Beauty>
@@ -182,7 +182,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>RF_RubbleOnyxShards</defName>
+    <defName>RF_RubbleShardsRF_Onyx</defName>
     <label>onyx shards</label>
     <statBases>
       <Beauty>-3</Beauty>

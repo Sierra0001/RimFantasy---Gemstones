@@ -2,7 +2,7 @@
 <Defs>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_DiamondFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Diamond</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -25,7 +25,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_RubyFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Ruby</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -48,7 +48,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_CarnelianFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Carnelian</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -71,7 +71,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_CitrineFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Citrine</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -94,7 +94,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_PeridotFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Peridot</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -117,7 +117,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_EmeraldFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Emerald</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -140,7 +140,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_AquamarineFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Aquamarine</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -163,7 +163,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_SapphireFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Sapphire</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -186,7 +186,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_AmethystFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Amethyst</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -209,7 +209,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_KunziteFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Kunzite</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -232,7 +232,7 @@
   </DamageDef>
 
   <DamageDef ParentName="Flame">
-    <defName>RF_OnyxFlame_SmallRound</defName>
+    <defName>RF_Flame_SmallRoundRF_Onyx</defName>
     <workerClass>DamageWorker_Flame</workerClass>
     <label>magical energy burn</label>
     <hasForcefulImpact>false</hasForcefulImpact>
