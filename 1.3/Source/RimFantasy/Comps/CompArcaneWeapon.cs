@@ -58,7 +58,6 @@ namespace RimFantasy
 				RimFantasyManager.Instance.compsToTickNormal.Add(this);
             }
 		}
-
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
@@ -67,28 +66,20 @@ namespace RimFantasy
 				RimFantasyManager.Instance.compsToTickNormal.Add(this);
 			}
 		}
-        public override void PostDestroy(DestroyMode mode, Map previousMap)
-        {
-            base.PostDestroy(mode, previousMap);
-			if (RimFantasyManager.Instance.compsToTickNormal.Contains(this))
-			{
-				RimFantasyManager.Instance.compsToTickNormal.Remove(this);
-			}
-		}
-        public override void PostDeSpawn(Map map)
-        {
-            base.PostDeSpawn(map);
-			if (RimFantasyManager.Instance.compsToTickNormal.Contains(this))
-			{
-				RimFantasyManager.Instance.compsToTickNormal.Remove(this);
-			}
-		}
-        public override void PostPostMake()
+		public override void PostPostMake()
 		{
 			InitializeTraitsCustom();
 			if (!RimFantasyManager.Instance.compsToTickNormal.Contains(this))
 			{
 				RimFantasyManager.Instance.compsToTickNormal.Add(this);
+			}
+		}
+		public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+            base.PostDestroy(mode, previousMap);
+			if (RimFantasyManager.Instance.compsToTickNormal.Contains(this))
+			{
+				RimFantasyManager.Instance.compsToTickNormal.Remove(this);
 			}
 		}
 		public void InitializeTraitsCustom()
@@ -248,6 +239,22 @@ namespace RimFantasy
 			}
 			else if (ShieldState == ShieldState.Active)
 			{
+				Pawn wearer = this.Wearer;
+				if (!wearer.Spawned || wearer.Dead || wearer.Downed)
+				{
+					return;
+				}
+				if (!shieldTraitDef.shieldCombatRecovery)
+                {
+					if (wearer.InAggroMentalState)
+					{
+						return;
+					}
+					if (wearer.Drafted)
+					{
+						return;
+					}
+				}
 				energy += EnergyGainPerTick;
 				if (energy > EnergyMax)
 				{
@@ -263,12 +270,14 @@ namespace RimFantasy
 				if (def is ArcaneWeaponTraitDef arcaneTraitDef)
                 {
 					if (dinfo.Def.isRanged && arcaneTraitDef.deflectRangeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectRangeChance.Value))
-                    {
+					{
+						Log.Message("Deflecting range " + dinfo);
 						return true;
                     }
 					if ((dinfo.Weapon == null || dinfo.Weapon == ThingDefOf.Human || dinfo.Weapon.IsMeleeWeapon) 
 						&& arcaneTraitDef.deflectMeleeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectMeleeChance.Value))
                     {
+						Log.Message("Deflecting melee " + dinfo);
 						return true;
                     }
                 }
@@ -285,6 +294,10 @@ namespace RimFantasy
 			}
 			if (dinfo.Def.isRanged || dinfo.Def.isExplosive)
 			{
+				if (!Rand.Chance(shieldTraitDef.shieldDeflectChance))
+                {
+					return false;
+                }
 				energy -= dinfo.Amount * EnergyLossPerDamage;
 				if (energy < 0f)
 				{

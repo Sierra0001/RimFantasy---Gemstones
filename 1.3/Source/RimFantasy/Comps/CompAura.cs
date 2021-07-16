@@ -25,9 +25,24 @@ namespace RimFantasy
 		public AuraActiveLocation locationMode;
 		public bool workThroughWalls;
 		public IntVec3 tileOffset = IntVec3.Invalid;
+
+		public bool dependsOnPower;
+		public bool dependsOnFuel;
+		public bool dependsOnGas;
+		public bool flickable;
+
 	}
 	public abstract class CompAura : ThingComp
 	{
+		private CompPowerTrader powerComp;
+		private ThingComp gasComp;
+		private CompRefuelable fuelComp;
+		private CompFlickable compFlickable;
+		private CompTempControl tempControlComp;
+		public static MethodInfo methodInfoGasOn;
+		public static Type gasCompType;
+		private IntVec3 prevPosition;
+
 		private AuraManager manager;
 		protected AuraManager Manager
         {
@@ -154,8 +169,87 @@ namespace RimFantasy
 
 		public virtual void Tick()
         {
+			if (compFlickable != null)
+			{
+				if (!compFlickable.SwitchIsOn)
+				{
+					if (this.active && MapHeld != null)
+					{
+						SetActive(false);
+						RecalculateAffectedCells();
+						if (Manager.compAuras.Contains(this))
+						{
+							this.UnConnectFromManager();
+						}
+					}
+					return;
+				}
+			}
 
-        }
+			if (Props.dependsOnFuel && Props.dependsOnPower)
+			{
+				if (powerComp != null && powerComp.PowerOn && fuelComp != null && fuelComp.HasFuel)
+				{
+					if (!this.active)
+					{
+						this.SetActive(true);
+					}
+				}
+				else if (this.active)
+				{
+					this.SetActive(false);
+				}
+			}
+
+			else if (powerComp != null)
+			{
+				if (!powerComp.PowerOn && this.active)
+				{
+					this.SetActive(false);
+				}
+				else if (powerComp.PowerOn && !this.active)
+				{
+					this.SetActive(true);
+				}
+			}
+
+			else if (fuelComp != null)
+			{
+				if (!fuelComp.HasFuel && this.active)
+				{
+					this.SetActive(false);
+				}
+				else if (fuelComp.HasFuel && !this.active)
+				{
+					this.SetActive(true);
+				}
+			}
+			else if (gasComp != null)
+			{
+				if (!(bool)methodInfoGasOn.Invoke(gasComp, null) && this.active)
+				{
+					this.SetActive(false);
+				}
+				else if ((bool)methodInfoGasOn.Invoke(gasComp, null) && !this.active)
+				{
+					this.SetActive(true);
+				}
+
+			}
+
+			if (active)
+			{
+				if (prevPosition != this.PositionHeld)
+				{
+					prevPosition = this.PositionHeld;
+					dirty = true;
+				}
+			}
+			if (dirty)
+			{
+				MarkDirty();
+			}
+		}
 		public bool InRangeAndActive(IntVec3 nearByCell)
 		{
 			if (this.active && this.PositionHeld.DistanceTo(nearByCell) <= Props.auraRadius)
@@ -185,7 +279,47 @@ namespace RimFantasy
 		public virtual void SpawnSetup()
         {
 			MarkDirty();
-			this.active = true;
+			if (this.MapHeld != null)
+			{
+				if (Props.dependsOnPower)
+				{
+					powerComp = this.parent.GetComp<CompPowerTrader>();
+				}
+				if (Props.dependsOnFuel)
+				{
+					fuelComp = this.parent.GetComp<CompRefuelable>();
+				}
+				if (Props.dependsOnGas)
+				{
+					gasComp = GetGasComp();
+				}
+				if (Props.flickable)
+				{
+					compFlickable = this.parent.GetComp<CompFlickable>();
+				}
+				if (!Props.dependsOnFuel && !Props.dependsOnPower)
+				{
+					active = true;
+				}
+
+				tempControlComp = this.parent.GetComp<CompTempControl>();
+				if (Props.dependsOnPower || Props.dependsOnFuel || Props.dependsOnGas || Props.flickable || active)
+				{
+					this.Manager.compAurasToTick.Add(this);
+				}
+			}
+		}
+
+		private ThingComp GetGasComp()
+		{
+			foreach (var comp in this.parent.AllComps)
+			{
+				if (comp.GetType() == gasCompType)
+				{
+					return comp;
+				}
+			}
+			return null;
 		}
 		public override void PostSpawnSetup(bool respawningAfterLoad)
 		{

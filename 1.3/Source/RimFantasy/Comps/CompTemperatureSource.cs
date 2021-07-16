@@ -16,11 +16,6 @@ namespace RimFantasy
 		public float? minTemperature;
 		public float? maxTemperature;
 
-		public bool dependsOnPower;
-		public bool dependsOnFuel;
-		public bool dependsOnGas;
-		public bool flickable;
-
 		public float smeltSnowRadius;
 		public float smeltSnowAtTemperature;
 		public float smeltSnowPower;
@@ -32,14 +27,7 @@ namespace RimFantasy
 	public class CompTemperatureSource : CompAura
 	{
 		public new CompProperties_Aura_Temperature Props => (CompProperties_Aura_Temperature)props;
-		private CompPowerTrader powerComp;
-		private ThingComp gasComp;
-		private CompRefuelable fuelComp;
-		private CompFlickable compFlickable;
-		private CompTempControl tempControlComp;
-		public static MethodInfo methodInfoGasOn;
-		public static Type gasCompType;
-		private IntVec3 prevPosition;
+
 		public float TemperatureOutcome
         {
 			get
@@ -63,39 +51,7 @@ namespace RimFantasy
 				}
 			}
 		}
-        public override void SpawnSetup()
-        {
-			base.SpawnSetup();
-			if (this.MapHeld != null)
-            {
-				if (Props.dependsOnPower)
-				{
-					powerComp = this.parent.GetComp<CompPowerTrader>();
-				}
-				if (Props.dependsOnFuel)
-				{
-					fuelComp = this.parent.GetComp<CompRefuelable>();
-				}
-				if (Props.dependsOnGas)
-				{
-					gasComp = GetGasComp();
-				}
-				if (Props.flickable)
-				{
-					compFlickable = this.parent.GetComp<CompFlickable>();
-				}
-				if (!Props.dependsOnFuel && !Props.dependsOnPower)
-				{
-					active = true;
-				}
 
-				tempControlComp = this.parent.GetComp<CompTempControl>();
-				if (Props.dependsOnPower || Props.dependsOnFuel || Props.dependsOnGas || Props.flickable || active)
-				{
-					this.Manager.compAurasToTick.Add(this);
-				}
-			}
-		}
 		public override void PostSpawnSetup(bool respawningAfterLoad)
         {
 			base.PostSpawnSetup(respawningAfterLoad);
@@ -107,18 +63,6 @@ namespace RimFantasy
             base.PostExposeData();
 			SpawnSetup();
 		}
-		private ThingComp GetGasComp()
-        {
-			foreach (var comp in this.parent.AllComps)
-			{
-				if (comp.GetType() == gasCompType)
-				{
-					return comp;
-				}
-			}
-			return null;
-		}
-
 		public override void PostDestroy(DestroyMode mode, Map previousMap)
 		{
 			base.PostDestroy(mode, previousMap);
@@ -143,86 +87,7 @@ namespace RimFantasy
 		
 		public override void Tick()
         {
-			if (compFlickable != null)
-            {
-				if (!compFlickable.SwitchIsOn)
-                {
-					if (this.active && MapHeld != null)
-					{
-						SetActive(false);
-						RecalculateAffectedCells();
-						if (Manager.compAuras.Contains(this))
-                        {
-							this.UnConnectFromManager();
-                        }
-					}
-					return;
-				}
-			}
-		
-			if (Props.dependsOnFuel && Props.dependsOnPower)
-            {
-				if (powerComp != null && powerComp.PowerOn && fuelComp != null && fuelComp.HasFuel)
-                {
-					if (!this.active)
-                    {
-						this.SetActive(true);
-					}
-				}
-				else if (this.active)
-                {
-					this.SetActive(false);
-                }
-            }
-		
-			else if (powerComp != null)
-            {
-				if (!powerComp.PowerOn && this.active)
-                {
-					this.SetActive(false);
-				}
-				else if (powerComp.PowerOn && !this.active)
-				{
-					this.SetActive(true);
-				}
-			}
-		
-			else if (fuelComp != null)
-            {
-				if (!fuelComp.HasFuel && this.active)
-                {
-					this.SetActive(false);
-				}
-				else if (fuelComp.HasFuel && !this.active)
-				{
-					this.SetActive(true);
-				}
-            }
-			else if (gasComp != null)
-            {
-				if (!(bool)methodInfoGasOn.Invoke(gasComp, null) && this.active)
-                {
-					this.SetActive(false);
-				}
-				else if ((bool)methodInfoGasOn.Invoke(gasComp, null) && !this.active)
-                {
-					this.SetActive(true);
-				}
-
-			}
-
-			if (active)
-            {
-				if (prevPosition != this.PositionHeld)
-                {
-					prevPosition = this.PositionHeld;
-					dirty = true;
-                }
-            }
-			if (dirty)
-			{
-				MarkDirty();
-			}
+			base.Tick();
 			if (active)
             {
 				if (MapHeld != null)

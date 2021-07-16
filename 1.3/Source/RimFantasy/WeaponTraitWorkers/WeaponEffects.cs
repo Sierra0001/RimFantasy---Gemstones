@@ -139,7 +139,6 @@ namespace RimFantasy
             base.DoEffect(damageInfo, comp, attacker, target);
         }
     }
-
     public class WeaponEffect_Slash : WeaponEffect
     {
         public DamageDef damageDef;
@@ -159,6 +158,21 @@ namespace RimFantasy
                 }
             }
             base.DoEffect(damageInfo, comp, attacker, target);
+        }
+    }
+
+    public class WeaponEffect_Multiple : WeaponEffect
+    {
+        public List<WeaponEffect> weaponEffects;
+        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        {
+            if (weaponEffects != null && Rand.Chance(effectChance))
+            {
+                foreach (var weaponEffect in weaponEffects)
+                {
+                    weaponEffect.DoEffect(damageInfo, comp, attacker, target);
+                }
+            }
         }
     }
 }

@@ -19,13 +19,11 @@ namespace RimFantasy
         public List<WeaponEffect> weaponEffects;
 
         public bool isShield;
-
         public float shieldEnergyMax;
-
         public float shieldRechargeRate;
-
         public string shieldTexPath;
-
+        public bool shieldCombatRecovery;
+        public float shieldDeflectChance = 1f;
         public float? deflectMeleeChance;
         public float? deflectRangeChance;
         public new ArcaneWeaponTraitWorker Worker => base.Worker as ArcaneWeaponTraitWorker;
@@ -39,7 +37,10 @@ namespace RimFantasy
             {
                 foreach (var weaponEffect in def.weaponEffects)
                 {
-                    weaponEffect.DoEffect(damageInfo, comp, attacker, target);
+                    if (Rand.Chance(weaponEffect.effectChance))
+                    {
+                        weaponEffect.DoEffect(damageInfo, comp, attacker, target);
+                    }
                 }
             }
         }
