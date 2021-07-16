@@ -22,11 +22,11 @@ namespace RimFantasy
     public class ArcaneWeaponTraitWorker : WeaponTraitWorker
     {
         public new ArcaneWeaponTraitDef def => base.def as ArcaneWeaponTraitDef;
-        public virtual void OnDamageDealt(Thing attacker, LocalTargetInfo target)
+        public virtual void OnDamageDealt(CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (Rand.Chance(def.workerSettings.effectChance))
             {
-                def.workerSettings.DoEffect(attacker, target);
+                def.workerSettings.DoEffect(comp, attacker, target);
             }
         }
     }

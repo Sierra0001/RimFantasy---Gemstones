@@ -474,13 +474,13 @@ namespace RimFantasy
 		{
 			private static void Postfix(ref IEnumerable<DamageInfo> __result, Verb __instance, LocalTargetInfo target)
 			{
-				if (__instance.EquipmentSource.TryGetCachedComp<CompArkaneWeapon>(out var comp))
+				if (__instance.EquipmentSource.TryGetCachedComp<CompArcaneWeapon>(out var comp))
 				{
 					foreach (var trait in comp.TraitsListForReading)
 					{
 						if (trait is ArcaneWeaponTraitDef arcaneDef)
 						{
-							arcaneDef.Worker.OnDamageDealt(__instance.Caster, target);
+							arcaneDef.Worker.OnDamageDealt(comp, __instance.Caster, target);
 						}
 					}
 				}
@@ -509,7 +509,7 @@ namespace RimFantasy
 		{
 			public static void Postfix(Projectile __instance, Thing launcher, Vector3 origin, LocalTargetInfo usedTarget, LocalTargetInfo intendedTarget, ProjectileHitFlags hitFlags, Thing equipment = null, ThingDef targetCoverDef = null)
 			{
-				if (Patch_TryCastShot.verbSource != null && Patch_TryCastShot.verbSource.EquipmentSource.TryGetCachedComp<CompArkaneWeapon>(out var comp))
+				if (Patch_TryCastShot.verbSource != null && Patch_TryCastShot.verbSource.EquipmentSource.TryGetCachedComp<CompArcaneWeapon>(out var comp))
                 {
 					comp.releasedProjectiles.Add(__instance);
 				}
@@ -542,14 +542,14 @@ namespace RimFantasy
             {
 				if (hitThing != null)
                 {
-					var comp = CompArkaneWeapon.GetLinkedCompFor(projectile);
+					var comp = CompArcaneWeapon.GetLinkedCompFor(projectile);
 					if (comp != null)
                     {
 						foreach (var trait in comp.TraitsListForReading)
                         {
 							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
                             {
-								arcaneTraitDef.Worker.OnDamageDealt(comp.Wearer, hitThing);
+								arcaneTraitDef.Worker.OnDamageDealt(comp, comp.Wearer, hitThing);
 							}
                         }
                     }

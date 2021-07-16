@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\CompExplosiveStuffed.cs" />
-    <Compile Include="Comps\CompArkaneWeapon.cs" />
+    <Compile Include="Comps\CompArcaneWeapon.cs" />
     <Compile Include="RimFantasyManager.cs" />
     <Compile Include="Comps\CompAura.cs" />
     <Compile Include="DefExtensions.cs" />

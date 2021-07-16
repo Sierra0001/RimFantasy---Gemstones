@@ -21,7 +21,7 @@ namespace RimFantasy
         public int? baseDamageValue;
         public FleckDef fleckDefOnTarget;
         public float fleckScale = 1;
-        public virtual void DoEffect(Thing attacker, LocalTargetInfo target)
+        public virtual void DoEffect(CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.HasThing && !target.ThingDestroyed)
             {
@@ -42,32 +42,61 @@ namespace RimFantasy
     {
         public bool setsTargetOnFire;
         public FloatRange fireSize;
-        public override void DoEffect(Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (setsTargetOnFire && target.HasThing && !target.ThingDestroyed)
             {
                 target.Thing.TryAttachFire(fireSize.RandomInRange);
             }
-            base.DoEffect(attacker, target);
+            base.DoEffect(comp, attacker, target);
         }
     }
-
-    public class WeaponEffect_Drain : WeaponEffect
+    public class WeaponEffect_ApplyHediff : WeaponEffect
     {
-        public FloatRange hpToDrain;
-        public override void DoEffect(Thing attacker, LocalTargetInfo target)
+        public HediffDef hediffDef;
+        public BodyPartDef partToApply;
+        public float initialSeverity = 1f;
+        public override void DoEffect(CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.HasThing && target.Thing is Pawn victim)
             {
-
+                var part = partToApply != null ? victim.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def == partToApply) : null;
+                var hediff = HediffMaker.MakeHediff(hediffDef, victim, part);
+                hediff.Severity = initialSeverity;
+                victim.health.AddHediff(hediff);
             }
-            base.DoEffect(attacker, target);
+            base.DoEffect(comp, attacker, target);
+        }
+    }
+    public class WeaponEffect_Drain : WeaponEffect
+    {
+        public FloatRange hpToDrain;
+        public DamageDef drainDamage;
+        public override void DoEffect(CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        {
+            if (target.HasThing && target.Thing is Pawn victim)
+            {
+                var num = hpToDrain.RandomInRange;
+                var partsToDrain = victim.health.hediffSet.GetNotMissingParts().Where(x => x.depth == BodyPartDepth.Outside).InRandomOrder();
+                foreach (var part in partsToDrain)
+                {
+                    if (num <= 0)
+                    {
+                        break;
+                    }
+                    var diff = Math.Abs(num - victim.health.hediffSet.GetPartHealth(part));
+                    var toDrain = num - diff;
+                    num -= toDrain;
+                    victim.TakeDamage(new DamageInfo(drainDamage, toDrain, hitPart: part, weapon: comp.parent.def));
+                } 
+            }
+            base.DoEffect(comp, attacker, target);
         }
     }
     public class WeaponEffect_Heal : WeaponEffect
     {
         public FloatRange hpToHeal;
-        public override void DoEffect(Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (attacker is Pawn pawn && pawn.health?.hediffSet != null)
             {
@@ -86,7 +115,7 @@ namespace RimFantasy
                     hediff.Heal(toHeal);
                 }
             }
-            base.DoEffect(attacker, target);
+            base.DoEffect(comp, attacker, target);
         }
     }
 

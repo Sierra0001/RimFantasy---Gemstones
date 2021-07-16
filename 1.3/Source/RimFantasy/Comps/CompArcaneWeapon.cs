@@ -11,24 +11,24 @@ using Verse.AI.Group;
 
 namespace RimFantasy
 {
-	public class CompProperties_ArkaneWeapon : CompProperties_Biocodable
+	public class CompProperties_ArcaneWeapon : CompProperties_Biocodable
 	{
 		public List<WeaponTraitDef> weaponTraitsPool;
 		public int minWeaponTraits;
 		public int maxWeaponTraits;
-		public CompProperties_ArkaneWeapon()
+		public CompProperties_ArcaneWeapon()
 		{
-			compClass = typeof(CompArkaneWeapon);
+			compClass = typeof(CompArcaneWeapon);
 		}
 	}
-	public class CompArkaneWeapon : CompBladelinkWeapon
+	public class CompArcaneWeapon : CompBladelinkWeapon
 	{
-		public new CompProperties_ArkaneWeapon Props => base.props as CompProperties_ArkaneWeapon;
+		public new CompProperties_ArcaneWeapon Props => base.props as CompProperties_ArcaneWeapon;
 		public HashSet<Projectile> releasedProjectiles = new HashSet<Projectile>();
-		private static HashSet<CompArkaneWeapon> compArkaneWeapons = new HashSet<CompArkaneWeapon>();
-		public static CompArkaneWeapon GetLinkedCompFor(Projectile projectle)
+		private static HashSet<CompArcaneWeapon> compArcaneWeapons = new HashSet<CompArcaneWeapon>();
+		public static CompArcaneWeapon GetLinkedCompFor(Projectile projectle)
         {
-			foreach (var comp in compArkaneWeapons)
+			foreach (var comp in compArcaneWeapons)
             {
 				if (comp.releasedProjectiles.Contains(projectle))
                 {
@@ -49,9 +49,9 @@ namespace RimFantasy
 				return null;
             }
         }
-		public CompArkaneWeapon()
+		public CompArcaneWeapon()
         {
-			compArkaneWeapons.Add(this);
+			compArcaneWeapons.Add(this);
 		}
 		public override void PostPostMake()
 		{
