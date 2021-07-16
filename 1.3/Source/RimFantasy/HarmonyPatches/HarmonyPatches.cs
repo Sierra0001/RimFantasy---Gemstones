@@ -468,16 +468,20 @@ namespace RimFantasy
 			}
 		}
 
-		[HarmonyPatch(typeof(GenTemperature), "TryGetTemperatureForCell")]
-		public static class Patch_TryGetTemperatureForCell
+		[HarmonyPatch(typeof(Verb_MeleeAttackDamage), "DamageInfosToApply")]
+		public static class Patch_DamageInfosToApply
 		{
-			private static void Postfix(bool __result, IntVec3 c, Map map, ref float tempResult)
+			private static void Postfix(ref IEnumerable<DamageInfo> __result, Verb __instance, LocalTargetInfo target)
 			{
-				if (__result)
+				var comp = __instance.EquipmentSource.TryGetComp<CompArkaneWeapon>();
+				if (comp != null)
 				{
-					if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
+					foreach (var trait in comp.TraitsListForReading)
 					{
-						tempResult = proxyHeatManager.GetTemperatureOutcomeFor(c, tempResult);
+						if (trait is ArcaneWeaponTraitDef arcaneDef)
+						{
+							arcaneDef.Worker.OnDamageDealt(target);
+						}
 					}
 				}
 			}

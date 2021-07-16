@@ -11,17 +11,17 @@ using Verse.AI.Group;
 
 namespace RimFantasy
 {
-	public class CompProperties_BladelinkWeaponCustom : CompProperties_Biocodable
+	public class CompProperties_ArkaneWeapon : CompProperties_Biocodable
 	{
 		public List<WeaponTraitDef> weaponTraitsPool;
-		public CompProperties_BladelinkWeaponCustom()
+		public CompProperties_ArkaneWeapon()
 		{
-			compClass = typeof(CompBladelinkWeaponCustom);
+			compClass = typeof(CompArkaneWeapon);
 		}
 	}
-	public class CompBladelinkWeaponCustom : CompBladelinkWeapon
+	public class CompArkaneWeapon : CompBladelinkWeapon
 	{
-		public new CompProperties_BladelinkWeaponCustom Props => base.props as CompProperties_BladelinkWeaponCustom;
+		public new CompProperties_ArkaneWeapon Props => base.props as CompProperties_ArkaneWeapon;
 		private static readonly IntRange TraitsRange = new IntRange(1, 2);
 		public override void PostPostMake()
 		{

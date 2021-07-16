@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\CompExplosiveStuffed.cs" />
-    <Compile Include="Comps\CompBladelinkWeaponCustom.cs" />
+    <Compile Include="Comps\CompArkaneWeapon.cs" />
     <Compile Include="RimFantasyManager.cs" />
     <Compile Include="Comps\CompAura.cs" />
     <Compile Include="Utils.cs" />
@@ -58,7 +58,7 @@
     <Compile Include="AuraManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Comps\CompWornWeapon.cs" />
-    <Compile Include="WeaponTraitWorkers\WeaponTraitWorkerCustom - Copy.cs" />
+    <Compile Include="WeaponTraitWorkers\ArcaneWeaponTraitWorker.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
