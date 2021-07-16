@@ -110,15 +110,6 @@
         <maxMood>0.9</maxMood>
         <workThroughWalls>true</workThroughWalls>
       </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>7</glowRadius>
-        <glowColor>(255,255,149,0)</glowColor> <!--20% reduction of original-->
-      </li>
-      <!--<li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>-25</heatPerSecond>
-        <heatPushMinTemperature>-28</heatPushMinTemperature>
-      </li>-->
     </comps>
     <designationCategory>Furniture</designationCategory>
     <minifiedDef>MinifiedThing</minifiedDef>
