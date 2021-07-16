@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>RF_CooldownIncrease</defName>
+    <label>cooldoown increase</label>
+    <description>Placeholder.</description>
+	<modExtensions>
+		<li Class="RimFantasy.HediffExtension">
+			<cooldownMultiplier>5</cooldownMultiplier>
+		</li>
+	</modExtensions>
+  </HediffDef>
+
+
+
+</Defs>

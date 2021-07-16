@@ -45,6 +45,7 @@
     <Compile Include="Comps\CompArkaneWeapon.cs" />
     <Compile Include="RimFantasyManager.cs" />
     <Compile Include="Comps\CompAura.cs" />
+    <Compile Include="DefExtensions.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Comps\CompAuraMood.cs" />
     <Compile Include="Comps\CompAuraJoy.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="AuraManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Comps\CompWornWeapon.cs" />
+    <Compile Include="WeaponTraitWorkers\WeaponEffects.cs" />
     <Compile Include="WeaponTraitWorkers\ArcaneWeaponTraitWorker.cs" />
   </ItemGroup>
   <ItemGroup>

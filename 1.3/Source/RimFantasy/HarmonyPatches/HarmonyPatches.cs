@@ -556,5 +556,28 @@ namespace RimFantasy
                 }
             }
 		}
+
+		[HarmonyPatch(typeof(VerbProperties), "AdjustedCooldown", new Type[]
+		{
+			typeof(Verb), typeof(Pawn)
+		})]
+		public static class Patch_AdjustedCooldown
+		{
+			public static void Postfix(ref float __result, Verb ownerVerb, Pawn attacker)
+			{
+				var pawn = ownerVerb.CasterPawn;
+				if (pawn != null && pawn.health?.hediffSet?.hediffs != null)
+                {
+					foreach (var hediff in pawn.health.hediffSet.hediffs)
+                    {
+						var hediffExtension = hediff.def.GetModExtension<HediffExtension>();
+						if (hediffExtension != null && hediffExtension.cooldownMultiplier.HasValue)
+                        {
+							__result *= hediffExtension.cooldownMultiplier.Value;
+						}
+                    }
+                }
+			}
+		}
 	}
 }
