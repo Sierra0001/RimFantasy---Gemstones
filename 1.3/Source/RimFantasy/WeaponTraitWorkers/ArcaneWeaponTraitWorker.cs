@@ -16,17 +16,17 @@ namespace RimFantasy
 {
     public class ArcaneWeaponTraitDef : WeaponTraitDef
     {
-        public WeaponEffect workerSettings;
+        public List<WeaponEffect> weaponEffects;
         public new ArcaneWeaponTraitWorker Worker => base.Worker as ArcaneWeaponTraitWorker;
     }
     public class ArcaneWeaponTraitWorker : WeaponTraitWorker
     {
         public new ArcaneWeaponTraitDef def => base.def as ArcaneWeaponTraitDef;
-        public virtual void OnDamageDealt(CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public virtual void OnDamageDealt(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
-            if (Rand.Chance(def.workerSettings.effectChance))
+            foreach (var weaponEffect in def.weaponEffects)
             {
-                def.workerSettings.DoEffect(comp, attacker, target);
+                weaponEffect.DoEffect(damageInfo, comp, attacker, target);
             }
         }
     }

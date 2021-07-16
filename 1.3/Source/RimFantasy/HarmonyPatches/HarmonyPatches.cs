@@ -480,7 +480,10 @@ namespace RimFantasy
 					{
 						if (trait is ArcaneWeaponTraitDef arcaneDef)
 						{
-							arcaneDef.Worker.OnDamageDealt(comp, __instance.Caster, target);
+							foreach (var damageInfo in __result)
+                            {
+								arcaneDef.Worker.OnDamageDealt(damageInfo, comp, __instance.Caster, target);
+                            }
 						}
 					}
 				}
@@ -533,12 +536,13 @@ namespace RimFantasy
 						found = true;
 						yield return new CodeInstruction(OpCodes.Ldarg_0);
 						yield return new CodeInstruction(OpCodes.Ldarg_1);
+						yield return new CodeInstruction(OpCodes.Ldloc_3);
 						yield return new CodeInstruction(OpCodes.Call, applyEffects);
                     }
 				}
 			}
 
-			public static void ApplyEffects(Projectile projectile, Thing hitThing)
+			public static void ApplyEffects(Projectile projectile, Thing hitThing, DamageInfo damageInfo)
             {
 				if (hitThing != null)
                 {
@@ -549,7 +553,7 @@ namespace RimFantasy
                         {
 							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
                             {
-								arcaneTraitDef.Worker.OnDamageDealt(comp, comp.Wearer, hitThing);
+								arcaneTraitDef.Worker.OnDamageDealt(damageInfo, comp, comp.Wearer, hitThing);
 							}
                         }
                     }
