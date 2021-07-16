@@ -14,6 +14,8 @@ namespace RimFantasy
 	public class CompProperties_ArkaneWeapon : CompProperties_Biocodable
 	{
 		public List<WeaponTraitDef> weaponTraitsPool;
+		public int minWeaponTraits;
+		public int maxWeaponTraits;
 		public CompProperties_ArkaneWeapon()
 		{
 			compClass = typeof(CompArkaneWeapon);
@@ -22,7 +24,6 @@ namespace RimFantasy
 	public class CompArkaneWeapon : CompBladelinkWeapon
 	{
 		public new CompProperties_ArkaneWeapon Props => base.props as CompProperties_ArkaneWeapon;
-		private static readonly IntRange TraitsRange = new IntRange(1, 2);
 		public HashSet<Projectile> releasedProjectiles = new HashSet<Projectile>();
 		private static HashSet<CompArkaneWeapon> compArkaneWeapons = new HashSet<CompArkaneWeapon>();
 		public static CompArkaneWeapon GetLinkedCompFor(Projectile projectle)
@@ -35,6 +36,18 @@ namespace RimFantasy
                 }
             }
 			return null;
+        }
+
+		public Pawn Wearer
+        {
+            get
+            {
+				if (this.parent.ParentHolder is Pawn_EquipmentTracker equipmentTracker)
+                {
+					return equipmentTracker.pawn;
+                }
+				return null;
+            }
         }
 		public CompArkaneWeapon()
         {
@@ -53,7 +66,7 @@ namespace RimFantasy
 				traits = new List<WeaponTraitDef>();
 			}
 			Rand.PushState(parent.HashOffset());
-			int randomInRange = TraitsRange.RandomInRange;
+			int randomInRange = new IntRange(Props.minWeaponTraits, Props.maxWeaponTraits).RandomInRange;
 			for (int i = 0; i < randomInRange; i++)
 			{
 				IEnumerable<WeaponTraitDef> source = allDefs.Where((WeaponTraitDef x) => CanAddTrait(x, traits));

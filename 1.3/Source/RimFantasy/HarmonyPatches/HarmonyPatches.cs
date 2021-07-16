@@ -480,7 +480,7 @@ namespace RimFantasy
 					{
 						if (trait is ArcaneWeaponTraitDef arcaneDef)
 						{
-							arcaneDef.Worker.OnDamageDealt(target);
+							arcaneDef.Worker.OnDamageDealt(__instance.Caster, target);
 						}
 					}
 				}
@@ -549,7 +549,7 @@ namespace RimFantasy
                         {
 							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
                             {
-								arcaneTraitDef.Worker.OnDamageDealt(hitThing);
+								arcaneTraitDef.Worker.OnDamageDealt(comp.Wearer, hitThing);
 							}
                         }
                     }
