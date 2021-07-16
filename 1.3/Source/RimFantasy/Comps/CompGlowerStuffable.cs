@@ -72,6 +72,10 @@ namespace RimFantasy
         {
             if (this.parent.MapHeld != null)
             {
+                if (map is null)
+                {
+                    map = this.parent.MapHeld;
+                }
                 if (prevPosition != this.parent.PositionHeld)
                 {
                     prevPosition = this.parent.PositionHeld;

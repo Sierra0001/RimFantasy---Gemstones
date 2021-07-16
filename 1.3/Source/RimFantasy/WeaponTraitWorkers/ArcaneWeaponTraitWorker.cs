@@ -17,6 +17,17 @@ namespace RimFantasy
     public class ArcaneWeaponTraitDef : WeaponTraitDef
     {
         public List<WeaponEffect> weaponEffects;
+
+        public bool isShield;
+
+        public float shieldEnergyMax;
+
+        public float shieldRechargeRate;
+
+        public string shieldTexPath;
+
+        public float? deflectMeleeChance;
+        public float? deflectRangeChance;
         public new ArcaneWeaponTraitWorker Worker => base.Worker as ArcaneWeaponTraitWorker;
     }
     public class ArcaneWeaponTraitWorker : WeaponTraitWorker
@@ -24,9 +35,12 @@ namespace RimFantasy
         public new ArcaneWeaponTraitDef def => base.def as ArcaneWeaponTraitDef;
         public virtual void OnDamageDealt(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
-            foreach (var weaponEffect in def.weaponEffects)
+            if (def.weaponEffects != null)
             {
-                weaponEffect.DoEffect(damageInfo, comp, attacker, target);
+                foreach (var weaponEffect in def.weaponEffects)
+                {
+                    weaponEffect.DoEffect(damageInfo, comp, attacker, target);
+                }
             }
         }
     }

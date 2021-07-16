@@ -361,6 +361,10 @@ namespace RimFantasy
 				{
 					DrawWornWeapon(comp, ___pawn, rootLoc, comp.FullGraphic);
 				}
+				if (pawn.equipment.Primary.TryGetCachedComp<CompArcaneWeapon>(out var compArcaneWeapon))
+                {
+					compArcaneWeapon.DrawWornExtras();
+				}
 			}
 			private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilGen)
 			{
@@ -581,6 +585,76 @@ namespace RimFantasy
 						}
                     }
                 }
+			}
+		}
+
+		[HarmonyPatch(typeof(Pawn), "GetGizmos")]
+		public class Pawn_GetGizmos_Patch
+		{
+			public static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> __result, Pawn __instance)
+			{
+				foreach (var g in __result)
+				{
+					yield return g;
+				}
+				if (__instance.Faction == Faction.OfPlayer && __instance.equipment.Primary != null && __instance.equipment.Primary.TryGetCachedComp<CompArcaneWeapon>(out var comp))
+				{
+					if (Find.Selector.SingleSelectedThing == comp.Wearer)
+					{
+						Gizmo_EnergyShieldStatus gizmo_EnergyShieldStatus = new Gizmo_EnergyShieldStatus();
+						gizmo_EnergyShieldStatus.shield = comp;
+						yield return gizmo_EnergyShieldStatus;
+					}
+				}
+			}
+		}
+
+		[HarmonyPatch(typeof(Pawn_HealthTracker), "PreApplyDamage")]
+		public class Pawn_PreApplyDamage_Patch
+		{
+			[HarmonyPriority(Priority.Last)]
+			public static bool Prefix(Pawn ___pawn, DamageInfo dinfo, out bool absorbed)
+			{
+				absorbed = false;
+				if (___pawn.equipment?.Primary != null && ___pawn.equipment.Primary.TryGetCachedComp<CompArcaneWeapon>(out var comp))
+                {
+					if (comp.CheckPreAbsorbDamage(dinfo))
+                    {
+						Faction homeFaction = ___pawn.HomeFaction;
+						if (dinfo.Instigator != null && homeFaction != null && homeFaction.IsPlayer && !___pawn.InAggroMentalState)
+						{
+							Pawn pawn = dinfo.Instigator as Pawn;
+							if (dinfo.InstigatorGuilty && pawn != null && pawn.guilt != null && pawn.mindState != null)
+							{
+								pawn.guilt.Notify_Guilty();
+							}
+						}
+						if (___pawn.Spawned)
+						{
+							if (!___pawn.Position.Fogged(___pawn.Map))
+							{
+								___pawn.mindState.Active = true;
+							}
+							___pawn.GetLord()?.Notify_PawnDamaged(___pawn, dinfo);
+							if (dinfo.Def.ExternalViolenceFor(___pawn))
+							{
+								GenClamor.DoClamor(___pawn, 18f, ClamorDefOf.Harm);
+							}
+							___pawn.jobs.Notify_DamageTaken(dinfo);
+						}
+						if (homeFaction != null)
+						{
+							homeFaction.Notify_MemberTookDamage(___pawn, dinfo);
+							if (Current.ProgramState == ProgramState.Playing && homeFaction == Faction.OfPlayer && dinfo.Def.ExternalViolenceFor(___pawn) && ___pawn.SpawnedOrAnyParentSpawned)
+							{
+								___pawn.MapHeld.dangerWatcher.Notify_ColonistHarmedExternally();
+							}
+						}
+						absorbed = true;
+						return false;
+					}
+                }
+				return true;
 			}
 		}
 	}

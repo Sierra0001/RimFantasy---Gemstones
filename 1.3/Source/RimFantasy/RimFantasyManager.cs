@@ -36,10 +36,6 @@ namespace RimFantasy
         void Init()
         {
             Instance = this;
-            if (compGlowerToTick is null)
-            {
-                compGlowerToTick = new List<CompGlowerStuffable>();
-            }
             if (compsToTickNormal is null)
             {
                 compsToTickNormal = new List<ThingComp>();

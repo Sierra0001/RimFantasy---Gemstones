@@ -23,6 +23,7 @@ namespace RimFantasy
         public float fleckScale = 1;
         public virtual void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
+            Log.Message(this + " doing weapon effect on " + target + ", attacker: " + attacker + ", comp: " + comp + " damageInfo: " + damageInfo);
             if (target.HasThing && !target.ThingDestroyed)
             {
                 if (fleckDefOnTarget != null)
@@ -151,13 +152,12 @@ namespace RimFantasy
             {
                 var num = amountOfEnemies.RandomInRange;
                 foreach (var thing in GenRadial.RadialDistinctThingsAround(attacker.Position, attacker.Map, maxDistance, true)
-                    .Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
+                    .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
                     var damDef = damageDef != null ? damageDef : damageInfo.Def;
                     thing.TakeDamage(new DamageInfo(damDef, damageInfo.Amount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
                 }
             }
-
             base.DoEffect(damageInfo, comp, attacker, target);
         }
     }
