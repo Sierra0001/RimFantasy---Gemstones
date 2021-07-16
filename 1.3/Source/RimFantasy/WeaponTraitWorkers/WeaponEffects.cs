@@ -63,6 +63,10 @@ namespace RimFantasy
                 if (victim.health.hediffSet.GetFirstHediffOfDef(hediffDef) is null)
                 {
                     var part = partToApply != null ? victim.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def == partToApply) : null;
+                    if (hediffDef.hediffClass.IsAssignableFrom(typeof(Hediff_Injury)))
+                    {
+                        part = victim.health.hediffSet.GetNotMissingParts().Where(x => x.depth == BodyPartDepth.Outside && x.coverage >= 0.1f).RandomElement();
+                    }
                     var hediff = HediffMaker.MakeHediff(hediffDef, victim, part);
                     victim.health.AddHediff(hediff);
                 }
