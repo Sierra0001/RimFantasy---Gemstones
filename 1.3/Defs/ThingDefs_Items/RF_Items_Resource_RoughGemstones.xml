@@ -8,6 +8,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Diamond/Rough/RF_RoughDiamond</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -68,6 +69,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Ruby/Rough/RF_RoughRuby</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -128,6 +130,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Carnelian/Rough/RF_RoughCarnelian</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -188,6 +191,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Citrine/Rough/RF_RoughCitrine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -248,6 +252,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Peridot/Rough/RF_RoughPeridot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -281,7 +286,7 @@
         <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
-      <color>(57,196,120)</color>
+      <color>(150,225,90)</color>
       <constructEffect>ConstructMetal</constructEffect>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
@@ -308,6 +313,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Emerald/Rough/RF_RoughEmerald</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -341,7 +347,7 @@
         <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
-      <color>(37,102,32)</color>
+      <color>(50,150,50)</color>
       <constructEffect>ConstructMetal</constructEffect>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
@@ -368,6 +374,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Aquamarine/Rough/RF_RoughAquamarine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -401,7 +408,7 @@
         <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
-      <color>(0,255,255)</color>
+      <color>(51,255,255)</color>
       <constructEffect>ConstructMetal</constructEffect>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
@@ -428,6 +435,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Sapphire/Rough/RF_RoughSapphire</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -461,7 +469,7 @@
         <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
-      <color>(53,80,181)</color>
+      <color>(0,125,225)</color>
       <constructEffect>ConstructMetal</constructEffect>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
@@ -488,6 +496,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Amethyst/Rough/RF_RoughAmethyst</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -521,7 +530,7 @@
         <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
-      <color>(102,51,153)</color>
+      <color>(115,64,166)</color>
       <constructEffect>ConstructMetal</constructEffect>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
@@ -548,6 +557,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Kunzite/Rough/RF_RoughKunzite</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -608,6 +618,7 @@
     <graphicData>
       <texPath>Things/Item/Resource/Onyx/Rough/RF_RoughOnyx</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
     </graphicData>
     <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
