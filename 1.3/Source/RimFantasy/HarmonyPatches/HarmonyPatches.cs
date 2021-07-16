@@ -467,5 +467,20 @@ namespace RimFantasy
 				}
 			}
 		}
+
+		[HarmonyPatch(typeof(GenTemperature), "TryGetTemperatureForCell")]
+		public static class Patch_TryGetTemperatureForCell
+		{
+			private static void Postfix(bool __result, IntVec3 c, Map map, ref float tempResult)
+			{
+				if (__result)
+				{
+					if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
+					{
+						tempResult = proxyHeatManager.GetTemperatureOutcomeFor(c, tempResult);
+					}
+				}
+			}
+		}
 	}
 }

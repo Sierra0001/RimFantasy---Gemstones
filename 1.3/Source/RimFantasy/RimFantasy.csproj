@@ -58,6 +58,7 @@
     <Compile Include="AuraManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Comps\CompWornWeapon.cs" />
+    <Compile Include="WeaponTraitWorkers\WeaponTraitWorkerCustom - Copy.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
