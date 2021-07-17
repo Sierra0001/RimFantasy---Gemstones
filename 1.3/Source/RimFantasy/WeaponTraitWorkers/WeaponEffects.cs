@@ -144,23 +144,60 @@ namespace RimFantasy
         public DamageDef damageDef;
         public IntRange amountOfEnemies;
         public float maxDistance;
-        public float baseDamageFactor;
+        public float baseDamageFactor = 1f;
         public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.Thing != null)
             {
                 var num = amountOfEnemies.RandomInRange;
+                var damAmount = baseDamageValue.HasValue ? baseDamageValue.Value : damageInfo.Amount;
+                var damDef = damageDef != null ? damageDef : damageInfo.Def;
+                target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
+
                 foreach (var thing in GenRadial.RadialDistinctThingsAround(attacker.Position, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
-                    var damDef = damageDef != null ? damageDef : damageInfo.Def;
-                    thing.TakeDamage(new DamageInfo(damDef, damageInfo.Amount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
+                    thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
                 }
             }
             base.DoEffect(damageInfo, comp, attacker, target);
         }
     }
+    public class WeaponEffect_Slam : WeaponEffect
+    {
+        public DamageDef damageDef;
+        public IntRange amountOfEnemies;
+        public float maxDistance;
+        public float knockbackDistance;
+        public float baseDamageFactor = 1f;
+        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        {
+            if (target.Thing != null)
+            {
+                var num = amountOfEnemies.RandomInRange;
+                var damDef = damageDef != null ? damageDef : damageInfo.Def;
+                var damAmount = baseDamageValue.HasValue ? baseDamageValue.Value : damageInfo.Amount;
 
+                target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
+                var cells = GenRadial.RadialCellsAround(target.Thing.Position, knockbackDistance, true).Where(x => x.DistanceTo(target.Thing.Position) >= knockbackDistance
+                    && x.DistanceTo(target.Thing.Position) < x.DistanceTo(attacker.Position));
+                var cell = cells.RandomElement();
+                target.Thing.Position = cell;
+
+                foreach (var thing in GenRadial.RadialDistinctThingsAround(attacker.Position, attacker.Map, maxDistance, true)
+                    .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
+                {
+
+                    thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
+                    cells = GenRadial.RadialCellsAround(thing.Position, knockbackDistance, true).Where(x => x.DistanceTo(thing.Position) >= knockbackDistance 
+                        && x.DistanceTo(thing.Position) < x.DistanceTo(attacker.Position));
+                    cell = cells.RandomElement();
+                    thing.Position = cell;
+                }
+            }
+            base.DoEffect(damageInfo, comp, attacker, target);
+        }
+    }
     public class WeaponEffect_Multiple : WeaponEffect
     {
         public List<WeaponEffect> weaponEffects;
