@@ -63,9 +63,9 @@
         <fuelConsumptionRate>10.0</fuelConsumptionRate>
         <fuelCapacity>20.0</fuelCapacity>
         <fuelFilter>
-          <thingDefs>
-            <li>WoodLog</li>
-          </thingDefs>
+          <categories>
+            <li>RF_RoughGemstones</li>
+          </categories>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
@@ -77,6 +77,7 @@
         <minTemperature>-20</minTemperature>
         <maxTemperature>20</maxTemperature>
         <workThroughWalls>true</workThroughWalls>
+        <dependsOnFuel>true</dependsOnFuel>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Food">
         <auraRadius>5</auraRadius>
@@ -85,6 +86,7 @@
         <minFood>0.1</minFood>
         <maxFood>0.9</maxFood>
         <workThroughWalls>true</workThroughWalls>
+        <dependsOnFuel>true</dependsOnFuel>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Joy">
         <auraRadius>5</auraRadius>
@@ -93,6 +95,7 @@
         <minJoy>0.1</minJoy>
         <maxJoy>0.9</maxJoy>
         <workThroughWalls>true</workThroughWalls>
+        <dependsOnFuel>true</dependsOnFuel>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Rest">
         <auraRadius>5</auraRadius>
@@ -101,6 +104,7 @@
         <minRest>0.1</minRest>
         <maxRest>0.9</maxRest>
         <workThroughWalls>true</workThroughWalls>
+        <dependsOnFuel>true</dependsOnFuel>
       </li>
       <li Class="RimFantasy.CompProperties_Aura_Mood">
         <auraRadius>5</auraRadius>
@@ -109,6 +113,7 @@
         <minMood>0.1</minMood>
         <maxMood>0.9</maxMood>
         <workThroughWalls>true</workThroughWalls>
+        <dependsOnFuel>true</dependsOnFuel>
       </li>
     </comps>
     <designationCategory>Furniture</designationCategory>
