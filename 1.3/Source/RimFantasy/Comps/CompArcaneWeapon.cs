@@ -267,14 +267,14 @@ namespace RimFantasy
 		{
 			foreach (var def in this.TraitsListForReading)
             {
-				if (def is ArcaneWeaponTraitDef arcaneTraitDef)
+				if (def is ArcaneWeaponTraitDef arcaneTraitDef && !arcaneTraitDef.isShield)
                 {
-					if (dinfo.Def.isRanged && arcaneTraitDef.deflectRangeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectRangeChance.Value))
+					if ((dinfo.Def.isRanged || dinfo.Def.isExplosive) && arcaneTraitDef.deflectRangeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectRangeChance.Value))
 					{
 						Log.Message("Deflecting range " + dinfo);
 						return true;
                     }
-					if ((dinfo.Weapon == null || dinfo.Weapon == ThingDefOf.Human || dinfo.Weapon.IsMeleeWeapon) 
+					if ((dinfo.Weapon == null || dinfo.Weapon.race != null || dinfo.Weapon.IsMeleeWeapon) 
 						&& arcaneTraitDef.deflectMeleeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectMeleeChance.Value))
                     {
 						Log.Message("Deflecting melee " + dinfo);
@@ -292,12 +292,9 @@ namespace RimFantasy
 				Break();
 				return false;
 			}
-			if (dinfo.Def.isRanged || dinfo.Def.isExplosive)
+			if (((dinfo.Def.isRanged || dinfo.Def.isExplosive) && shieldTraitDef.deflectRangeChance.HasValue && Rand.Chance(shieldTraitDef.deflectRangeChance.Value)) ||
+				(dinfo.Weapon == null || dinfo.Weapon.race != null || dinfo.Weapon.IsMeleeWeapon) && shieldTraitDef.deflectMeleeChance.HasValue && Rand.Chance(shieldTraitDef.deflectMeleeChance.Value))
 			{
-				if (!Rand.Chance(shieldTraitDef.shieldDeflectChance))
-                {
-					return false;
-                }
 				energy -= dinfo.Amount * EnergyLossPerDamage;
 				if (energy < 0f)
 				{

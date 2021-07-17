@@ -597,7 +597,8 @@ namespace RimFantasy
 				{
 					yield return g;
 				}
-				if (__instance.Faction == Faction.OfPlayer && __instance.equipment.Primary != null && __instance.equipment.Primary.TryGetCachedComp<CompArcaneWeapon>(out var comp))
+				if (__instance.Faction == Faction.OfPlayer && __instance.equipment.Primary != null 
+					&& __instance.equipment.Primary.TryGetCachedComp<CompArcaneWeapon>(out var comp) && comp.shieldTraitDef != null)
 				{
 					if (Find.Selector.SingleSelectedThing == comp.Wearer)
 					{

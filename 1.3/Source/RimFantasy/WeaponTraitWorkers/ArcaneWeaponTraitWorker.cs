@@ -23,7 +23,6 @@ namespace RimFantasy
         public float shieldRechargeRate;
         public string shieldTexPath;
         public bool shieldCombatRecovery;
-        public float shieldDeflectChance = 1f;
         public float? deflectMeleeChance;
         public float? deflectRangeChance;
         public new ArcaneWeaponTraitWorker Worker => base.Worker as ArcaneWeaponTraitWorker;
