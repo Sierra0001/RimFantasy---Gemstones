@@ -32,7 +32,7 @@ namespace RimFantasy
     public class ArcaneWeaponTraitWorker : WeaponTraitWorker
     {
         public new ArcaneWeaponTraitDef def => base.def as ArcaneWeaponTraitDef;
-        public virtual void OnDamageDealt(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public virtual void OnDamageDealt(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (def.weaponEffects != null)
             {
@@ -40,7 +40,7 @@ namespace RimFantasy
                 {
                     if (Rand.Chance(weaponEffect.effectChance))
                     {
-                        weaponEffect.DoEffect(damageInfo, comp, attacker, target);
+                        weaponEffect.DoEffect(attackSource, damageInfo, comp, attacker, target);
                     }
                 }
             }

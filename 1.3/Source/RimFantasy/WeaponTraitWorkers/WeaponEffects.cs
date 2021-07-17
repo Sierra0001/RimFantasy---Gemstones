@@ -21,7 +21,7 @@ namespace RimFantasy
         public int? baseDamageValue;
         public FleckDef fleckDefOnTarget;
         public float fleckScale = 1;
-        public virtual void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public virtual void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             Log.Message(this + " doing weapon effect on " + target + ", attacker: " + attacker + ", comp: " + comp + " damageInfo: " + damageInfo);
             if (target.HasThing && !target.ThingDestroyed)
@@ -43,13 +43,13 @@ namespace RimFantasy
     {
         public bool setsTargetOnFire;
         public FloatRange fireSize;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (setsTargetOnFire && target.HasThing && !target.ThingDestroyed)
             {
                 target.Thing.TryAttachFire(fireSize.RandomInRange);
             }
-            base.DoEffect(damageInfo, comp, attacker, target);
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
     public class WeaponEffect_ApplyHediff : WeaponEffect
@@ -57,7 +57,7 @@ namespace RimFantasy
         public HediffDef hediffDef;
         public BodyPartDef partToApply;
         public float severityOffset = 1f;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.HasThing && target.Thing is Pawn victim)
             {
@@ -73,14 +73,14 @@ namespace RimFantasy
                 }
                 HealthUtility.AdjustSeverity(victim, hediffDef, severityOffset);
             }
-            base.DoEffect(damageInfo, comp, attacker, target);
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
     public class WeaponEffect_Drain : WeaponEffect
     {
         public FloatRange hpToDrain;
         public DamageDef drainDamage;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.HasThing && target.Thing is Pawn victim)
             {
@@ -98,13 +98,13 @@ namespace RimFantasy
                     victim.TakeDamage(new DamageInfo(drainDamage, toDrain, hitPart: part, instigator: attacker, weapon: comp.parent.def));
                 } 
             }
-            base.DoEffect(damageInfo, comp, attacker, target);
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
     public class WeaponEffect_Heal : WeaponEffect
     {
         public FloatRange hpToHeal;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (attacker is Pawn pawn && pawn.health?.hediffSet != null)
             {
@@ -123,20 +123,20 @@ namespace RimFantasy
                     hediff.Heal(toHeal);
                 }
             }
-            base.DoEffect(damageInfo, comp, attacker, target);
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
 
     public class WeaponEffect_Stun : WeaponEffect
     {
         public IntRange stunDuration;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.HasThing && target.Thing is Pawn victim && victim.stances?.stunner != null)
             {
                 victim.stances.stunner.StunFor(stunDuration.RandomInRange, attacker);
             }
-            base.DoEffect(damageInfo, comp, attacker, target);
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
     public class WeaponEffect_Slash : WeaponEffect
@@ -145,7 +145,7 @@ namespace RimFantasy
         public IntRange amountOfEnemies;
         public float maxDistance;
         public float baseDamageFactor = 1f;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.Thing != null)
             {
@@ -153,14 +153,15 @@ namespace RimFantasy
                 var damAmount = baseDamageValue.HasValue ? baseDamageValue.Value : damageInfo.Amount;
                 var damDef = damageDef != null ? damageDef : damageInfo.Def;
                 target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
+                Log.Message("attackSource.PositionHeld: " + attackSource.PositionHeld + " - target.Cell: " + target.Cell + " - attacker.Position: " + attacker.Position);
 
-                foreach (var thing in GenRadial.RadialDistinctThingsAround(attacker.Position, attacker.Map, maxDistance, true)
+                foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
                 }
             }
-            base.DoEffect(damageInfo, comp, attacker, target);
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
     public class WeaponEffect_Slam : WeaponEffect
@@ -171,7 +172,7 @@ namespace RimFantasy
         public float knockbackDistance;
         public float knockbackDistanceSecondaryTargets;
         public float baseDamageFactor = 1f;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.Thing != null)
             {
@@ -185,7 +186,8 @@ namespace RimFantasy
                 var cell = cells.RandomElement();
                 target.Thing.Position = cell;
 
-                foreach (var thing in GenRadial.RadialDistinctThingsAround(attacker.Position, attacker.Map, maxDistance, true)
+                Log.Message("attackSource.PositionHeld: " + attackSource.PositionHeld + " - target.Cell: " + target.Cell + " - attacker.Position: " + attacker.Position);
+                foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
@@ -195,19 +197,19 @@ namespace RimFantasy
                     thing.Position = cell;
                 }
             }
-            base.DoEffect(damageInfo, comp, attacker, target);
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
     public class WeaponEffect_Multiple : WeaponEffect
     {
         public List<WeaponEffect> weaponEffects;
-        public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (weaponEffects != null && Rand.Chance(effectChance))
             {
                 foreach (var weaponEffect in weaponEffects)
                 {
-                    weaponEffect.DoEffect(damageInfo, comp, attacker, target);
+                    weaponEffect.DoEffect(attackSource, damageInfo, comp, attacker, target);
                 }
             }
         }

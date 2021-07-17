@@ -486,7 +486,7 @@ namespace RimFantasy
 						{
 							foreach (var damageInfo in __result)
                             {
-								arcaneDef.Worker.OnDamageDealt(damageInfo, comp, __instance.Caster, target);
+								arcaneDef.Worker.OnDamageDealt(__instance.EquipmentSource, damageInfo, comp, __instance.Caster, target);
                             }
 						}
 					}
@@ -557,7 +557,7 @@ namespace RimFantasy
                         {
 							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
                             {
-								arcaneTraitDef.Worker.OnDamageDealt(damageInfo, comp, comp.Wearer, hitThing);
+								arcaneTraitDef.Worker.OnDamageDealt(projectile, damageInfo, comp, comp.Wearer, hitThing);
 							}
                         }
                     }
