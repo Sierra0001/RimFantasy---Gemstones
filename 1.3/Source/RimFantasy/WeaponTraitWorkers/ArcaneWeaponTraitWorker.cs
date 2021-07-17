@@ -25,6 +25,8 @@ namespace RimFantasy
         public bool shieldCombatRecovery;
         public float? deflectMeleeChance;
         public float? deflectRangeChance;
+        public FleckDef fleckDefOnDeflect;
+        public float fleckDefOnDeflectScale = 1f;
         public new ArcaneWeaponTraitWorker Worker => base.Worker as ArcaneWeaponTraitWorker;
     }
     public class ArcaneWeaponTraitWorker : WeaponTraitWorker

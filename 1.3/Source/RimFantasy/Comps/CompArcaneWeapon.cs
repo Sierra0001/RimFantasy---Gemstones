@@ -271,11 +271,19 @@ namespace RimFantasy
 				{
 					if ((dinfo.Def.isRanged || dinfo.Def.isExplosive) && arcaneTraitDef.deflectRangeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectRangeChance.Value))
 					{
+						if (arcaneTraitDef.fleckDefOnDeflect != null)
+						{
+							FleckMaker.Static(Wearer.Position, Wearer.Map, arcaneTraitDef.fleckDefOnDeflect, arcaneTraitDef.fleckDefOnDeflectScale);
+						}
 						return true;
 					}
 					if ((dinfo.Weapon == null || dinfo.Weapon.race != null || dinfo.Weapon.IsMeleeWeapon)
 							&& arcaneTraitDef.deflectMeleeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectMeleeChance.Value))
 					{
+						if (arcaneTraitDef.fleckDefOnDeflect != null)
+						{
+							FleckMaker.Static(Wearer.Position, Wearer.Map, arcaneTraitDef.fleckDefOnDeflect, arcaneTraitDef.fleckDefOnDeflectScale);
+						}
 						return true;
 					}
 				}
@@ -304,6 +312,10 @@ namespace RimFantasy
 					{
 						AbsorbedDamage(dinfo);
 					}
+					if (shieldTraitDef.fleckDefOnDeflect != null)
+                    {
+						FleckMaker.Static(Wearer.Position, Wearer.Map, shieldTraitDef.fleckDefOnDeflect, shieldTraitDef.fleckDefOnDeflectScale);
+                    }
 					return true;
 				}
 			}
