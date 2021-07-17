@@ -107,11 +107,11 @@ namespace RimFantasy
             }
 
         }
-        public void RemoveGlower(Map map)
+        public void RemoveGlower(Map prevMap)
         {
-            if (this.compGlower != null)
+            if (prevMap != null && this.compGlower != null)
             {
-                map.glowGrid.DeRegisterGlower(this.compGlower);
+                prevMap.glowGrid.DeRegisterGlower(this.compGlower);
                 this.compGlower = null;
             }
         }

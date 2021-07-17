@@ -266,48 +266,50 @@ namespace RimFantasy
 		public bool CheckPreAbsorbDamage(DamageInfo dinfo)
 		{
 			foreach (var def in this.TraitsListForReading)
-            {
+			{
 				if (def is ArcaneWeaponTraitDef arcaneTraitDef && !arcaneTraitDef.isShield)
-                {
+				{
 					if ((dinfo.Def.isRanged || dinfo.Def.isExplosive) && arcaneTraitDef.deflectRangeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectRangeChance.Value))
 					{
-						Log.Message("Deflecting range " + dinfo);
 						return true;
-                    }
-					if ((dinfo.Weapon == null || dinfo.Weapon.race != null || dinfo.Weapon.IsMeleeWeapon) 
-						&& arcaneTraitDef.deflectMeleeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectMeleeChance.Value))
-                    {
-						Log.Message("Deflecting melee " + dinfo);
+					}
+					if ((dinfo.Weapon == null || dinfo.Weapon.race != null || dinfo.Weapon.IsMeleeWeapon)
+							&& arcaneTraitDef.deflectMeleeChance.HasValue && Rand.Chance(arcaneTraitDef.deflectMeleeChance.Value))
+					{
 						return true;
-                    }
-                }
-            }
-			if (ShieldState != 0)
-			{
-				return false;
+					}
+				}
 			}
-			if (dinfo.Def == DamageDefOf.EMP)
+			if (this.shieldTraitDef != null)
 			{
-				energy = 0f;
-				Break();
-				return false;
-			}
-			if (((dinfo.Def.isRanged || dinfo.Def.isExplosive) && shieldTraitDef.deflectRangeChance.HasValue && Rand.Chance(shieldTraitDef.deflectRangeChance.Value)) ||
-				(dinfo.Weapon == null || dinfo.Weapon.race != null || dinfo.Weapon.IsMeleeWeapon) && shieldTraitDef.deflectMeleeChance.HasValue && Rand.Chance(shieldTraitDef.deflectMeleeChance.Value))
-			{
-				energy -= dinfo.Amount * EnergyLossPerDamage;
-				if (energy < 0f)
+				if (ShieldState != 0)
 				{
+					return false;
+				}
+				if (dinfo.Def == DamageDefOf.EMP)
+				{
+					energy = 0f;
 					Break();
+					return false;
 				}
-				else
+				if (((dinfo.Def.isRanged || dinfo.Def.isExplosive) && shieldTraitDef.deflectRangeChance.HasValue && Rand.Chance(shieldTraitDef.deflectRangeChance.Value)) ||
+						(dinfo.Weapon == null || dinfo.Weapon.race != null || dinfo.Weapon.IsMeleeWeapon) && shieldTraitDef.deflectMeleeChance.HasValue && Rand.Chance(shieldTraitDef.deflectMeleeChance.Value))
 				{
-					AbsorbedDamage(dinfo);
+					energy -= dinfo.Amount * EnergyLossPerDamage;
+					if (energy < 0f)
+					{
+						Break();
+					}
+					else
+					{
+						AbsorbedDamage(dinfo);
+					}
+					return true;
 				}
-				return true;
 			}
 			return false;
 		}
+
 
 		public void KeepDisplaying()
 		{
