@@ -169,6 +169,7 @@ namespace RimFantasy
         public IntRange amountOfEnemies;
         public float maxDistance;
         public float knockbackDistance;
+        public float knockbackDistanceSecondaryTargets;
         public float baseDamageFactor = 1f;
         public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
@@ -189,7 +190,7 @@ namespace RimFantasy
                 {
 
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
-                    cells = GenRadial.RadialCellsAround(thing.Position, knockbackDistance, true).Where(x => x.DistanceTo(thing.Position) >= knockbackDistance 
+                    cells = GenRadial.RadialCellsAround(thing.Position, knockbackDistanceSecondaryTargets, true).Where(x => x.DistanceTo(thing.Position) >= knockbackDistanceSecondaryTargets
                         && x.DistanceTo(thing.Position) < x.DistanceTo(attacker.Position));
                     cell = cells.RandomElement();
                     thing.Position = cell;
