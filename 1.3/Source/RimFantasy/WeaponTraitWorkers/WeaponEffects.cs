@@ -132,7 +132,7 @@ namespace RimFantasy
         public IntRange stunDuration;
         public override void DoEffect(DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
-            if (target.HasThing && target.Thing is Pawn victim)
+            if (target.HasThing && target.Thing is Pawn victim && victim.stances?.stunner != null)
             {
                 victim.stances.stunner.StunFor(stunDuration.RandomInRange, attacker);
             }
@@ -188,7 +188,6 @@ namespace RimFantasy
                 foreach (var thing in GenRadial.RadialDistinctThingsAround(attacker.Position, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
-
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
                     cells = GenRadial.RadialCellsAround(thing.Position, knockbackDistanceSecondaryTargets, true).Where(x => x.DistanceTo(thing.Position) >= knockbackDistanceSecondaryTargets
                         && x.DistanceTo(thing.Position) < x.DistanceTo(attacker.Position));
