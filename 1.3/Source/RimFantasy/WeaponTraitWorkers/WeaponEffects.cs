@@ -153,8 +153,6 @@ namespace RimFantasy
                 var damAmount = baseDamageValue.HasValue ? baseDamageValue.Value : damageInfo.Amount;
                 var damDef = damageDef != null ? damageDef : damageInfo.Def;
                 target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
-                Log.Message("attackSource.PositionHeld: " + attackSource.PositionHeld + " - target.Cell: " + target.Cell + " - attacker.Position: " + attacker.Position);
-
                 foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
@@ -181,23 +179,32 @@ namespace RimFantasy
                 var damAmount = baseDamageValue.HasValue ? baseDamageValue.Value : damageInfo.Amount;
 
                 target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
-                var cells = GenRadial.RadialCellsAround(target.Thing.Position, knockbackDistance, true).Where(x => x.DistanceTo(target.Thing.Position) >= knockbackDistance
-                    && x.DistanceTo(target.Thing.Position) < x.DistanceTo(attacker.Position));
-                var cell = cells.RandomElement();
-                target.Thing.Position = cell;
+                if (target.Thing is Pawn victim)
+                {
+                    TryToKnockBack(attackSource, victim);
+                }
 
-                Log.Message("attackSource.PositionHeld: " + attackSource.PositionHeld + " - target.Cell: " + target.Cell + " - attacker.Position: " + attacker.Position);
                 foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
-                    cells = GenRadial.RadialCellsAround(thing.Position, knockbackDistanceSecondaryTargets, true).Where(x => x.DistanceTo(thing.Position) >= knockbackDistanceSecondaryTargets
-                        && x.DistanceTo(thing.Position) < x.DistanceTo(attacker.Position));
-                    cell = cells.RandomElement();
-                    thing.Position = cell;
+                    TryToKnockBack(attackSource, thing);
                 }
             }
             base.DoEffect(attackSource, damageInfo, comp, attacker, target);
+        }
+
+        private void TryToKnockBack(Thing attacker, Pawn victim)
+        {
+            var cells = GenRadial.RadialCellsAround(victim.Position, knockbackDistanceSecondaryTargets, true)
+                .Where(x => x.DistanceTo(victim.Position) >= knockbackDistanceSecondaryTargets
+                && x.DistanceTo(victim.Position) < x.DistanceTo(attacker.PositionHeld) && x.Walkable(victim.Map) 
+                && GenSight.LineOfSight(victim.Position, x, victim.Map));
+            if (cells.Any())
+            {
+                var cell = cells.RandomElement();
+                victim.Position = cell;
+            }
         }
     }
     public class WeaponEffect_Multiple : WeaponEffect
