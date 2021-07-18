@@ -181,29 +181,55 @@ namespace RimFantasy
                 target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
                 if (target.Thing is Pawn victim)
                 {
-                    TryToKnockBack(attackSource, victim);
+                    TryToKnockBack(attackSource, attacker, victim, knockbackDistance);
                 }
 
                 foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
-                    TryToKnockBack(attackSource, thing);
+                    TryToKnockBack(attackSource, attacker, thing, knockbackDistanceSecondaryTargets);
                 }
             }
             base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
 
-        private void TryToKnockBack(Thing attacker, Pawn victim)
+        private void TryToKnockBack(Thing attackSource, Thing attacker, Pawn victim, float knockBackDistance)
         {
-            var cells = GenRadial.RadialCellsAround(victim.Position, knockbackDistanceSecondaryTargets, true)
-                .Where(x => x.DistanceTo(victim.Position) >= knockbackDistanceSecondaryTargets
-                && x.DistanceTo(victim.Position) < x.DistanceTo(attacker.PositionHeld) && x.Walkable(victim.Map) 
-                && GenSight.LineOfSight(victim.Position, x, victim.Map));
+            Predicate<IntVec3> validator = delegate (IntVec3 x)
+            {
+                if (x.DistanceTo(victim.Position) < knockBackDistance)
+                {
+                    return false;
+                }
+                if (!x.Walkable(victim.Map) || !GenSight.LineOfSight(victim.Position, x, victim.Map))
+                {
+                    return false;
+                }
+                if (attackSource.PositionHeld == victim.Position)
+                {
+                    if (x.DistanceTo(attacker.Position) > x.DistanceTo(victim.Position))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        victim.Map.debugDrawer.FlashCell(x, 0.1f);
+                    }
+                }
+                else if (x.DistanceTo(victim.Position) > x.DistanceTo(attackSource.PositionHeld))
+                {
+                    return true;
+                }
+                return false;
+            };
+            var cells = GenRadial.RadialCellsAround(victim.Position, knockBackDistance + 1, true).Where(x => validator(x));
             if (cells.Any())
             {
                 var cell = cells.RandomElement();
                 victim.Position = cell;
+                victim.pather.StopDead();
+                victim.jobs.StopAll();
             }
         }
     }

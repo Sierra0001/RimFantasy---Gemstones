@@ -81,7 +81,12 @@ namespace RimFantasy
                     prevPosition = this.parent.PositionHeld;
                     dirty = true;
                 }
-                if (compGlower is null && ShouldGlow())
+                var shouldGlow = ShouldGlow();
+                if (compGlower is null && shouldGlow || !shouldGlow)
+                {
+                    dirty = true;
+                }
+                else if (compGlower != null && curRadius != GetRadius())
                 {
                     dirty = true;
                 }
@@ -115,6 +120,8 @@ namespace RimFantasy
                 this.compGlower = null;
             }
         }
+
+        private float curRadius;
         public void UpdateGlower()
         {
             RemoveGlower(this.parent.MapHeld);
@@ -123,12 +130,12 @@ namespace RimFantasy
                 this.compGlower = new CompGlower();
                 var parent = GetParent();
                 var glow = GetGlowColor();
-                var radius = GetRadius();
+                curRadius = GetRadius();
                 var position = GetPosition();
                 this.compGlower.Initialize(new CompProperties_Glower()
                 {
                     glowColor = glow,
-                    glowRadius = radius,
+                    glowRadius = curRadius,
                     overlightRadius = Props.overlightRadius
                 });
                 this.compGlower.parent = parent;
