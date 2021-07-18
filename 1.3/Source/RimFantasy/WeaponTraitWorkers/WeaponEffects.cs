@@ -23,7 +23,6 @@ namespace RimFantasy
         public float fleckScale = 1;
         public virtual void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
-            Log.Message(this + " doing weapon effect on " + target + ", attacker: " + attacker + ", comp: " + comp + " damageInfo: " + damageInfo);
             if (target.HasThing && !target.ThingDestroyed)
             {
                 if (fleckDefOnTarget != null)
@@ -64,7 +63,7 @@ namespace RimFantasy
                 if (victim.health.hediffSet.GetFirstHediffOfDef(hediffDef) is null)
                 {
                     var part = partToApply != null ? victim.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def == partToApply) : null;
-                    if (hediffDef.hediffClass.IsAssignableFrom(typeof(Hediff_Injury)))
+                    if (typeof(Hediff_Injury).IsAssignableFrom(hediffDef.hediffClass))
                     {
                         part = victim.health.hediffSet.GetNotMissingParts().Where(x => x.depth == BodyPartDepth.Outside && x.coverage >= 0.1f).RandomElement();
                     }
@@ -85,7 +84,7 @@ namespace RimFantasy
             if (target.HasThing && target.Thing is Pawn victim)
             {
                 var num = hpToDrain.RandomInRange;
-                var partsToDrain = victim.health.hediffSet.GetNotMissingParts().Where(x => x.depth == BodyPartDepth.Outside).InRandomOrder();
+                var partsToDrain = victim.health.hediffSet.GetNotMissingParts().Where(x => x.depth == BodyPartDepth.Outside && x.coverageAbs > 0).InRandomOrder();
                 foreach (var part in partsToDrain)
                 {
                     if (num <= 0)
