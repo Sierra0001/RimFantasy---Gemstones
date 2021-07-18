@@ -177,60 +177,78 @@ namespace RimFantasy
                 var num = amountOfEnemies.RandomInRange;
                 var damDef = damageDef != null ? damageDef : damageInfo.Def;
                 var damAmount = baseDamageValue.HasValue ? baseDamageValue.Value : damageInfo.Amount;
-
-                target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
                 if (target.Thing is Pawn victim)
                 {
-                    TryToKnockBack(attackSource, attacker, victim, knockbackDistance);
+                    if (victim.Corpse != null)
+                    {
+                        TryToKnockBack(attacker, victim.Corpse, knockbackDistance);
+                    }
+                    else
+                    {
+                        TryToKnockBack(attacker, victim, knockbackDistance);
+                    }
+                }
+                else
+                {
+                    target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
                 }
 
                 foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
+                    TryToKnockBack(attacker, thing, knockbackDistanceSecondaryTargets);
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
-                    TryToKnockBack(attackSource, attacker, thing, knockbackDistanceSecondaryTargets);
                 }
             }
             base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
 
-        private void TryToKnockBack(Thing attackSource, Thing attacker, Pawn victim, float knockBackDistance)
+        private void TryToKnockBack(Thing attacker, Thing thing, float knockBackDistance)
         {
-            Predicate<IntVec3> validator = delegate (IntVec3 x)
+            float distanceDiff = attacker.Position.DistanceTo(thing.Position) < knockBackDistance ? attacker.Position.DistanceTo(thing.Position) : knockBackDistance;
+            Predicate <IntVec3> validator = delegate (IntVec3 x)
             {
-                if (x.DistanceTo(victim.Position) < knockBackDistance)
+                if (x.DistanceTo(thing.Position) < knockBackDistance)
                 {
                     return false;
                 }
-                if (!x.Walkable(victim.Map) || !GenSight.LineOfSight(victim.Position, x, victim.Map))
+                if (!x.Walkable(thing.Map) || !GenSight.LineOfSight(thing.Position, x, thing.Map))
                 {
                     return false;
                 }
-                if (attackSource.PositionHeld == victim.Position)
+                var attackerToVictimDistance = attacker.Position.DistanceTo(thing.Position);
+                var attackerToCellDistance = attacker.Position.DistanceTo(x);
+                var victimToCellDistance = thing.Position.DistanceTo(x);
+
+                if (attackerToVictimDistance > attackerToCellDistance)
                 {
-                    if (x.DistanceTo(attacker.Position) > x.DistanceTo(victim.Position))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        victim.Map.debugDrawer.FlashCell(x, 0.1f);
-                    }
+                    return false;
                 }
-                else if (x.DistanceTo(victim.Position) > x.DistanceTo(attackSource.PositionHeld))
+                if (attackerToCellDistance > victimToCellDistance + (distanceDiff - 1))
+                {
+                    return true;
+                }
+                else if (attacker.Position == thing.Position)
                 {
                     return true;
                 }
                 return false;
             };
-            var cells = GenRadial.RadialCellsAround(victim.Position, knockBackDistance + 1, true).Where(x => validator(x));
+            var cells = GenRadial.RadialCellsAround(thing.Position, knockBackDistance + 1, true).Where(x => validator(x));
             if (cells.Any())
             {
                 var cell = cells.RandomElement();
-                victim.Position = cell;
-                victim.pather.StopDead();
-                victim.jobs.StopAll();
+                thing.Position = cell;
+                if (thing is Pawn victim)
+                {
+                    victim.pather.StopDead();
+                    victim.jobs.StopAll();
+                }
             }
+            else
+            {
+                Log.Error("FAIL");
+            } 
         }
     }
     public class WeaponEffect_Multiple : WeaponEffect
