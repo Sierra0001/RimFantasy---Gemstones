@@ -40,7 +40,6 @@ namespace RimFantasy
                 {
                     if (Rand.Chance(weaponEffect.effectChance))
                     {
-                        Log.Message(weaponEffect + " doing weapon effect on " + target + ", attacker: " + attacker + ", comp: " + comp + " damageInfo: " + damageInfo);
                         weaponEffect.DoEffect(attackSource, damageInfo, comp, attacker, target);
                     }
                 }
