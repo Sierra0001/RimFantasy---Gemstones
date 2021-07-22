@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef Abstract="True" ParentName="FloorBase" Name="RF_FineTileStoneBase_Gemstone">
+    <renderPrecedence>220</renderPrecedence>
+    <description>Exquisite gemstone tiles, made with no compromises, for expressing economic status. Slow to construct.</description>
+    <texturePath>Terrain/Surfaces/TileStoneFine</texturePath>
+    <statBases>
+      <WorkToBuild>6000</WorkToBuild>
+      <Beauty>3</Beauty>
+    </statBases>
+    <designatorDropdown>Floor_Tile_Fine</designatorDropdown>
+    <researchPrerequisites>
+      <li>RF_MedievalGemCutting</li>
+    </researchPrerequisites>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileDiamond</defName>
+    <label>fine diamond tile</label>
+    <color>(211,211,211)</color>
+    <costList>
+      <RF_Diamond>4</RF_Diamond>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileRuby</defName>
+    <label>fine ruby tile</label>
+    <color>(189,25,60)</color>
+    <costList>
+      <RF_Ruby>4</RF_Ruby>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileCarnelian</defName>
+    <label>fine carnelian tile</label>
+    <color>(255,127,80)</color>
+    <costList>
+      <RF_Carnelian>4</RF_Carnelian>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileCitrine</defName>
+    <label>fine citrine tile</label>
+    <color>(201,193,34)</color>
+    <costList>
+      <RF_Citrine>4</RF_Citrine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTilePeridot</defName>
+    <label>fine peridot tile</label>
+    <color>(150,225,90)</color>
+    <costList>
+      <RF_Peridot>4</RF_Peridot>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileEmerald</defName>
+    <label>fine emerald tile</label>
+    <color>(50,150,50)</color>
+    <costList>
+      <RF_Emerald>4</RF_Emerald>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileAquamarine</defName>
+    <label>fine aquamarine tile</label>
+    <color>(51,255,255)</color>
+    <costList>
+      <RF_Aquamarine>4</RF_Aquamarine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileSapphire</defName>
+    <label>fine sapphire tile</label>
+    <color>(0,125,225)</color>
+    <costList>
+      <RF_Sapphire>4</RF_Sapphire>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileAmethyst</defName>
+    <label>fine amethyst tile</label>
+    <color>(115,64,166)</color>
+    <costList>
+      <RF_Amethyst>4</RF_Amethyst>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileKunzite</defName>
+    <label>fine kunzite tile</label>
+    <color>(235,180,237)</color>
+    <costList>
+      <RF_Kunzite>4</RF_Kunzite>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FineTileStoneBase_Gemstone">
+    <defName>RF_FineTileOnyx</defName>
+    <label>fine onyx tile</label>
+    <color>(64,62,1)</color>
+    <costList>
+      <RF_Onyx>4</RF_Onyx>
+    </costList>
+  </TerrainDef>
+
+</Defs>

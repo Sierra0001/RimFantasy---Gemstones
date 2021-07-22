@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>RF_CooldownIncrease</defName>
     <label>cooldoown increase</label>
-    <description>Placeholder.</description>
+    <description>A magical force seems to be slowing this pawn down.</description>
 	<modExtensions>
 		<li Class="RimFantasy.HediffExtension">
 			<cooldownMultiplier>5</cooldownMultiplier>
@@ -24,7 +24,7 @@
     <impactSoundType />
     <armorCategory />
   </DamageDef>
-  
+
   <HediffDef ParentName="InjuryBase">
     <defName>RF_DrainDamage</defName>
     <label>drain</label>

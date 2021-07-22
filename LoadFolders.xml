@@ -3,5 +3,8 @@
   <v1.3>
     <li>/</li>
     <li>1.3</li>
+    <li IfModActive="Ludeon.RimWorld.Royalty">Royalty</li>
+    <li IfModActive="Sierra.RF.ArcaneBatons">RimFantasyConditional/1.3/EquipmentModules</li>
+    <li IfModActive="Sierra.RF.ArcaneWeapons">RimFantasyConditional/1.3/EquipmentModules</li>
   </v1.3>
 </loadFolders>
