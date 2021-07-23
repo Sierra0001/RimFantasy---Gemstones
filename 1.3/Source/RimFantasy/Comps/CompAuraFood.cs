@@ -9,10 +9,6 @@ using Verse;
 
 namespace RimFantasy
 {
-    public interface IAura
-    {
-        void SpawnSetup();
-    }
     public class CompProperties_Aura_Food : CompProperties_Aura
     {
         public float minFood;

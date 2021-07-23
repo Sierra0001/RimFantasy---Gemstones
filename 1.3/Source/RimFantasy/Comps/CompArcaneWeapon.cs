@@ -39,7 +39,8 @@ namespace RimFantasy
 			return null;
         }
 
-		public Pawn Wearer
+        public override bool Biocodable => Props.biocodeOnEquip;
+        public Pawn Wearer
         {
             get
             {

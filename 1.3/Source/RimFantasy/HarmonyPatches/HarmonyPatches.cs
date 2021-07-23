@@ -110,13 +110,9 @@ namespace RimFantasy
 		{
 			private static void Postfix(Pawn __instance)
 			{
-				if (__instance.equipment?.Primary != null && __instance.equipment.Primary.TryGetCachedComp<CompTemperatureSource>(out var compTemp))
-                {
-					compTemp.SpawnSetup();
-                }
 				foreach (var comp in __instance.AllComps)
                 {
-					if (comp is IAura aura)
+					if (comp is CompAura aura)
                     {
 						aura.SpawnSetup();
                     }
@@ -127,7 +123,7 @@ namespace RimFantasy
 					{
 						foreach (var comp in thing.AllComps)
                         {
-							if (comp is IAura aura)
+							if (comp is CompAura aura)
 							{
 								aura.SpawnSetup();
 							}
@@ -140,7 +136,7 @@ namespace RimFantasy
 					{
 						foreach (var comp in thing.AllComps)
 						{
-							if (comp is IAura aura)
+							if (comp is CompAura aura)
 							{
 								aura.SpawnSetup();
 							}
@@ -155,7 +151,7 @@ namespace RimFantasy
                         {
 							foreach (var comp in withComps.AllComps)
 							{
-								if (comp is IAura aura)
+								if (comp is CompAura aura)
 								{
 									aura.SpawnSetup();
 								}
@@ -597,7 +593,7 @@ namespace RimFantasy
 				{
 					yield return g;
 				}
-				if (__instance.Faction == Faction.OfPlayer && __instance.equipment.Primary != null 
+				if (__instance.Faction == Faction.OfPlayer && __instance.equipment?.Primary != null 
 					&& __instance.equipment.Primary.TryGetCachedComp<CompArcaneWeapon>(out var comp) && comp.shieldTraitDef != null)
 				{
 					if (Find.Selector.SingleSelectedThing == comp.Wearer)
