@@ -23,9 +23,9 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0003/RimFantasy---Gemstones/releases/tag/v1.0)
+- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890)
-- [GitHub](https://github.com/Sierra0003/RimFantasy---Gemstones)
+- [GitHub](https://github.com/Sierra0001/RimFantasy---Gemstones)
 
 ### Credits
 
