@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>RimFantasy - Core</name>
+	<name>RimFantasy - Gemstones</name>
 	<author>Sierra</author>
-	<packageId>Sierra.RF.Core</packageId>
+	<packageId>Sierra.RF.Gemstones</packageId>
 	<url></url>
 	<supportedVersions>
 		<li>1.3</li>
@@ -13,7 +13,7 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 	</loadAfter>
 	<description>
-[h1]Mod Version: v0.4-b.1[/h1]
+[h1]Mod Version: v1.0[/h1]
 
 
 This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
@@ -24,8 +24,8 @@ Raw gemstones can be used to craft stuffable furniture and blunt weapons the sam
 [b]Features:[/b]
 [list]
 [*]11 Gemstones (x11 Rough/x11 Cut)
-[*]2 Worktables (Unpowered/Powered)
-[*]2 Researches (Unlocks Worktables)
+[*]2 Workbenches (Medieval/Industrial)
+[*]2 Researches (Unlocks Workbenches)
 [/list]
 
 
@@ -33,22 +33,24 @@ Raw gemstones can be used to craft stuffable furniture and blunt weapons the sam
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890]RimFantasy - Temperature Regulation[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890]RimFantasy - Crystallic Lighting[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890]RimFantasy - Arcane Batons[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890]RimFantasy - Arcane Weapons[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2244594116]RimTraits - Vanilla Trait Colors[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1916352291]RimTraits - Medieval Talent[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2206957172]RimTraits - General Traits[/url]
 [/list]
 
 
-[b]Mod Compatibility:[/b]
+[b]Compatibility:[/b]
 [list]
-[*]No Specific Issues Known.
-[*]Probably won't play well with other gem mods without a patch.
+[*]Save Game Compatible
+[*]Will not play nice with other gemstone mods without a patch.
 [/list]
 
 
 
 [b]Balance:[/b]
-Gems are intentionally sparse and not easy to obtain through natural means, but can be obtained through trades and from salvaging certain objects.
+Gems are intentionally sparse and not easy to obtain through natural means, but they can also be purchased from traders or obtained from salvaging certain objects.
 
 Balance feedbacks are welcomed, please provide context when doing so.
 
@@ -59,32 +61,15 @@ Balance feedbacks are welcomed, please provide context when doing so.
 [h1]Credits:[/h1]
 [list]
 [*]SirLalaPyon for his amazing, high quality vanilla styled art.
+[*]Taranchuk for his C# code magic that allows for various fancy features.
 [/list]
 
 
 [h1]Latest Changes:[/h1]
-[b]v0.3-b.2b[/b]
-[list]
-[*][Buff] Reduced Crafting skill requirement for gem cutting from 8 to 6.
-[/list]
-
-[b]v0.3-b.3[/b]
-[list]
-[*][Fix] Rough Ruby will now be cut into Ruby instead of Diamond.
-[/list]
-
-[b]v0.3-b.4[/b]
-[list]
-[*][Fix] Gem trading for all traders are now enabled.
-[*][Change] Rough Gemstone value increased from 5 -> 10.
-[*][Change] Cut Gemstone value increased from 8 -> 25.
-[*][Buff] Cut Gemstone is now worth double the royal favor to Royal Tribute Collectors.
-[*][Nerf] Rough Gemstone mining yield decreased from 36 -> 12.
-[/list]
-
-[b]v0.4-b.1[/b]
+[b]v1.0[/b]
 [list]
 [*][RimWorld 1.3] RimWorld 1.3 Ready.
+[*][Release] Initial release.
 [/list]
 	</description>
 </ModMetaData>
