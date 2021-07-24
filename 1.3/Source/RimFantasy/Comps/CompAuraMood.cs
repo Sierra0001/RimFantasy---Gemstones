@@ -45,7 +45,7 @@ namespace RimFantasy
         }
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
-            if (cachedComps.ContainsKey(previousMap))
+            if (previousMap != null && cachedComps.ContainsKey(previousMap))
             {
                 cachedComps[previousMap].Remove(this);
             }
