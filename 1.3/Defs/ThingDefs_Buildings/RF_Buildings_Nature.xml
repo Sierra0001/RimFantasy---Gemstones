@@ -18,7 +18,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughDiamond</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -41,7 +41,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughRuby</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -64,7 +64,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughCarnelian</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -87,7 +87,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughCitrine</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -110,7 +110,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughPeridot</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -133,7 +133,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughEmerald</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -156,7 +156,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughAquamarine</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -179,7 +179,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughSapphire</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -202,7 +202,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughAmethyst</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -225,7 +225,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughKunzite</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
@@ -248,7 +248,7 @@
     <building>
       <isResourceRock>true</isResourceRock>
       <mineableThing>RF_RoughOnyx</mineableThing>
-      <mineableYield>12</mineableYield>
+      <mineableYield>22</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>1~5</mineableScatterLumpSizeRange>
     </building>
