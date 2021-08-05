@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="RF_IdeoStoneTileBase_Gemstone" Name="RF_TotemicStoneTile_Gemstone" Abstract="True">
+    <description>Fine gemstone tiles in a totemic style.</description>
+    <texturePath>Terrain/Surfaces/TotemicTiles</texturePath>
+    <designatorDropdown>Floor_Totemic_Tile</designatorDropdown>
+    <dominantStyleCategory>Totemic</dominantStyleCategory>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicDiamond</defName>
+    <label>totemic diamond tile</label>
+    <color>(211,211,211)</color>
+    <costList>
+      <RF_Diamond>4</RF_Diamond>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicRuby</defName>
+    <label>totemic ruby tile</label>
+    <color>(189,25,60)</color>
+    <costList>
+      <RF_Ruby>4</RF_Ruby>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicCarnelian</defName>
+    <label>totemic carnelian tile</label>
+    <color>(255,127,80)</color>
+    <costList>
+      <RF_Carnelian>4</RF_Carnelian>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicCitrine</defName>
+    <label>totemic citrine tile</label>
+    <color>(201,193,34)</color>
+    <costList>
+      <RF_Citrine>4</RF_Citrine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicPeridot</defName>
+    <label>totemic peridot tile</label>
+    <color>(150,225,90)</color>
+    <costList>
+      <RF_Peridot>4</RF_Peridot>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicEmerald</defName>
+    <label>totemic emerald tile</label>
+    <color>(50,150,50)</color>
+    <costList>
+      <RF_Emerald>4</RF_Emerald>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicAquamarine</defName>
+    <label>totemic aquamarine tile</label>
+    <color>(51,255,255)</color>
+    <costList>
+      <RF_Aquamarine>4</RF_Aquamarine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicSapphire</defName>
+    <label>totemic sapphire tile</label>
+    <color>(0,125,225)</color>
+    <costList>
+      <RF_Sapphire>4</RF_Sapphire>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicAmethyst</defName>
+    <label>totemic amethyst tile</label>
+    <color>(115,64,166)</color>
+    <costList>
+      <RF_Amethyst>4</RF_Amethyst>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicKunzite</defName>
+    <label>totemic kunzite tile</label>
+    <color>(235,180,237)</color>
+    <costList>
+      <RF_Kunzite>4</RF_Kunzite>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TotemicStoneTile_Gemstone">
+    <defName>RF_Tile_TotemicOnyx</defName>
+    <label>totemic onyx tile</label>
+    <color>(64,62,1)</color>
+    <costList>
+      <RF_Onyx>4</RF_Onyx>
+    </costList>
+  </TerrainDef>
+
+</Defs>

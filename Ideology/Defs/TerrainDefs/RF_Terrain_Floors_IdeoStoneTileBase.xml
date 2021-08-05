@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="RF_FloorBase" Name="RF_IdeoStoneTileBase_Gemstone" Abstract="True">
+    <statBases>
+      <WorkToBuild>6000</WorkToBuild>
+      <Beauty>3</Beauty>
+      <StyleDominance>1</StyleDominance>
+    </statBases>
+    <renderPrecedence>220</renderPrecedence>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RF_MedievalGemCutting</li>
+    </researchPrerequisites>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+  </TerrainDef>
+
+</Defs>

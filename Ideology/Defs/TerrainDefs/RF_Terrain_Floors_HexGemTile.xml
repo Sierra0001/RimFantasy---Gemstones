@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="RF_IdeoStoneTileBase_Gemstone" Name="RF_TranshumanistStoneTile_Gemstone" Abstract="True">
+    <!--<description>Fine gemstone plates with a hexagonal pattern for that ultra-technological look.</description>-->
+    <description>Fine gemstone plates with a hexagonal pattern for an organised look.</description> 
+    <texturePath>Terrain/Surfaces/HexTile</texturePath>
+    <!--<designatorDropdown>Floor_Transhumanist_Stone</designatorDropdown>
+    <dominantStyleCategory>Transhumanist</dominantStyleCategory>-->
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistDiamond</defName>
+    <label>diamond hex tile</label>
+    <color>(211,211,211)</color>
+    <costList>
+      <RF_Diamond>4</RF_Diamond>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistRuby</defName>
+    <label>ruby hex tile</label>
+    <color>(189,25,60)</color>
+    <costList>
+      <RF_Ruby>4</RF_Ruby>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistCarnelian</defName>
+    <label>carnelian hex tile</label>
+    <color>(255,127,80)</color>
+    <costList>
+      <RF_Carnelian>4</RF_Carnelian>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistCitrine</defName>
+    <label>citrine hex tile</label>
+    <color>(201,193,34)</color>
+    <costList>
+      <RF_Citrine>4</RF_Citrine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistPeridot</defName>
+    <label>peridot hex tile</label>
+    <color>(150,225,90)</color>
+    <costList>
+      <RF_Peridot>4</RF_Peridot>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistEmerald</defName>
+    <label>emerald hex tile</label>
+    <color>(50,150,50)</color>
+    <costList>
+      <RF_Emerald>4</RF_Emerald>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistAquamarine</defName>
+    <label>aquamarine hex tile</label>
+    <color>(51,255,255)</color>
+    <costList>
+      <RF_Aquamarine>4</RF_Aquamarine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistSapphire</defName>
+    <label>sapphire hex tile</label>
+    <color>(0,125,225)</color>
+    <costList>
+      <RF_Sapphire>4</RF_Sapphire>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistAmethyst</defName>
+    <label>amethyst hex tile</label>
+    <color>(115,64,166)</color>
+    <costList>
+      <RF_Amethyst>4</RF_Amethyst>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistKunzite</defName>
+    <label>kunzite hex tile</label>
+    <color>(235,180,237)</color>
+    <costList>
+      <RF_Kunzite>4</RF_Kunzite>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TranshumanistStoneTile_Gemstone">
+    <defName>RF_Tile_TranshumanistOnyx</defName>
+    <label>onyx hex tile</label>
+    <color>(64,62,1)</color>
+    <costList>
+      <RF_Onyx>4</RF_Onyx>
+    </costList>
+  </TerrainDef>
+
+</Defs>

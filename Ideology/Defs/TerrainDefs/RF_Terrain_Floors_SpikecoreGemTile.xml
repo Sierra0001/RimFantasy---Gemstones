@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="RF_IdeoStoneTileBase_Gemstone" Name="RF_SpikecoreStoneTile_Gemstone" Abstract="True">
+    <description>Fine gemstone tiles in a spikecore style.</description>
+    <texturePath>Terrain/Surfaces/SpikecoreTile</texturePath>
+    <designatorDropdown>Floor_Spikecore_Tile</designatorDropdown>
+    <dominantStyleCategory>Spikecore</dominantStyleCategory>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreDiamond</defName>
+    <label>diamond spikecore tile</label>
+    <color>(211,211,211)</color>
+    <costList>
+      <RF_Diamond>4</RF_Diamond>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreRuby</defName>
+    <label>ruby spikecore tile</label>
+    <color>(189,25,60)</color>
+    <costList>
+      <RF_Ruby>4</RF_Ruby>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreCarnelian</defName>
+    <label>carnelian spikecore tile</label>
+    <color>(255,127,80)</color>
+    <costList>
+      <RF_Carnelian>4</RF_Carnelian>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreCitrine</defName>
+    <label>citrine spikecore tile</label>
+    <color>(201,193,34)</color>
+    <costList>
+      <RF_Citrine>4</RF_Citrine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecorePeridot</defName>
+    <label>peridot spikecore tile</label>
+    <color>(150,225,90)</color>
+    <costList>
+      <RF_Peridot>4</RF_Peridot>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreEmerald</defName>
+    <label>emerald spikecore tile</label>
+    <color>(50,150,50)</color>
+    <costList>
+      <RF_Emerald>4</RF_Emerald>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreAquamarine</defName>
+    <label>aquamarine spikecore tile</label>
+    <color>(51,255,255)</color>
+    <costList>
+      <RF_Aquamarine>4</RF_Aquamarine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreSapphire</defName>
+    <label>sapphire spikecore tile</label>
+    <color>(0,125,225)</color>
+    <costList>
+      <RF_Sapphire>4</RF_Sapphire>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreAmethyst</defName>
+    <label>amethyst spikecore tile</label>
+    <color>(115,64,166)</color>
+    <costList>
+      <RF_Amethyst>4</RF_Amethyst>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreKunzite</defName>
+    <label>kunzite spikecore tile</label>
+    <color>(235,180,237)</color>
+    <costList>
+      <RF_Kunzite>4</RF_Kunzite>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_SpikecoreStoneTile_Gemstone">
+    <defName>RF_Tile_SpikecoreOnyx</defName>
+    <label>onyx spikecore tile</label>
+    <color>(64,62,1)</color>
+    <costList>
+      <RF_Onyx>4</RF_Onyx>
+    </costList>
+  </TerrainDef>
+
+</Defs>
