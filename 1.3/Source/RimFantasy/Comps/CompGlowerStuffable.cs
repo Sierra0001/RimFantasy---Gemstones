@@ -177,11 +177,11 @@ namespace RimFantasy
             {
                 shouldGlow = Props.glowWhileOnGround.Value;
             }
-            if (Wearer != null && Props.glowWhileDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment.Primary == this.parent)
+            if (Wearer != null && Props.glowWhileDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment?.Primary == this.parent)
             {
                 shouldGlow = Props.glowWhileDrawn.Value;
             }
-            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent)
+            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment?.Primary == this.parent)
             {
                 shouldGlow = Props.glowWhileEquipped.Value;
             }

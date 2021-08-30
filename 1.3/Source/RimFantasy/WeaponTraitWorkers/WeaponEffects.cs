@@ -68,6 +68,11 @@ namespace RimFantasy
                         IEnumerable<BodyPartRecord> source = from x in victim.health.hediffSet.GetNotMissingParts() where x.depth == BodyPartDepth.Outside
                                                              && !victim.health.hediffSet.PartOrAnyAncestorHasDirectlyAddedParts(x) select x;
                         part = source.RandomElementByWeight((BodyPartRecord x) => x.coverageAbs);
+
+                        if (part is null)
+                        {
+                            part = victim.health.hediffSet.GetNotMissingParts().RandomElement();
+                        }
                     }
                     var hediff = HediffMaker.MakeHediff(hediffDef, victim, part);
                     victim.health.AddHediff(hediff);

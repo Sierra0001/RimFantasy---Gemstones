@@ -19,7 +19,7 @@ namespace RimFantasy
 			this.compClass = typeof(CompExplosiveStuffed);
 		}
 	}
-	public class CompExplosiveStuffed : ThingComp
+	public class CompExplosiveStuffed : CompExplosive
 	{
 		public bool wickStarted;
 
@@ -70,7 +70,6 @@ namespace RimFantasy
 
 		public override void PostExposeData()
 		{
-			base.PostExposeData();
 			Scribe_References.Look(ref instigator, "instigator");
 			Scribe_Collections.Look(ref thingsIgnoredByExplosion, "thingsIgnoredByExplosion", LookMode.Reference);
 			Scribe_Values.Look(ref wickStarted, "wickStarted", defaultValue: false);

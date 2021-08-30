@@ -58,16 +58,10 @@ namespace RimFantasy
 				{
 					foreach (var comp in comps)
 					{
-						Log.Message("Comp: " + comp);
 						if (comp.CanApplyOn(___pawn))
 						{
 							__instance.CurLevel += comp.Props.auraStrength;
 							Traverse.Create(__instance).Field("lastRestTick").SetValue(Find.TickManager.TicksGame);
-							Log.Message("apply on " + ___pawn);
-						}
-						else if (___pawn.IsColonistPlayerControlled)
-                        {
-							Log.Message("can't apply on " + ___pawn);
 						}
 					}
 				}
@@ -559,6 +553,7 @@ namespace RimFantasy
                         {
 							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
                             {
+								Log.Message("ApplyEffects Data: " + comp.Wearer + " - " + comp.Wearer?.ParentHolder + " - " + comp.parent + " - " + comp.parent.ParentHolder);
 								arcaneTraitDef.Worker.OnDamageDealt(projectile, damageInfo, comp, comp.Wearer, hitThing);
 							}
                         }
