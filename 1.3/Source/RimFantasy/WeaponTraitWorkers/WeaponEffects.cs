@@ -77,7 +77,16 @@ namespace RimFantasy
                     var hediff = HediffMaker.MakeHediff(hediffDef, victim, part);
                     victim.health.AddHediff(hediff);
                 }
-                HealthUtility.AdjustSeverity(victim, hediffDef, severityOffset);
+
+                if (severityOffset != 0f)
+                {
+                    Hediff firstHediffOfDef = victim.health.hediffSet.GetFirstHediffOfDef(hediffDef);
+                    if (firstHediffOfDef != null)
+                    {
+                        firstHediffOfDef.Severity += severityOffset;
+                    }
+                }
+
             }
             base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
@@ -159,7 +168,7 @@ namespace RimFantasy
                 var damAmount = baseDamageValue.HasValue ? baseDamageValue.Value : damageInfo.Amount;
                 var damDef = damageDef != null ? damageDef : damageInfo.Def;
                 target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
-                foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
+                foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, comp.parent.MapHeld, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
                     thing.TakeDamage(new DamageInfo(damDef, damAmount * baseDamageFactor, instigator: attacker, weapon: comp.parent.def));
@@ -178,7 +187,7 @@ namespace RimFantasy
         public float baseDamageFactor = 1f;
         public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
-            if (target.Thing != null)
+            if (target.Thing != null && attacker != null)
             {
                 var num = amountOfEnemies.RandomInRange;
                 var damDef = damageDef != null ? damageDef : damageInfo.Def;
@@ -199,7 +208,7 @@ namespace RimFantasy
                     target.Thing.TakeDamage(new DamageInfo(damDef, damAmount, instigator: attacker, weapon: comp.parent.def));
                 }
 
-                foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, attacker.Map, maxDistance, true)
+                foreach (var thing in GenRadial.RadialDistinctThingsAround(attackSource.PositionHeld, comp.parent.MapHeld, maxDistance, true)
                     .OfType<Pawn>().Where(x => x.Faction == target.Thing.Faction && x != target.Thing).Take(num))
                 {
                     TryToKnockBack(attacker, thing, knockbackDistanceSecondaryTargets);
@@ -251,10 +260,6 @@ namespace RimFantasy
                     victim.jobs.StopAll();
                 }
             }
-            else
-            {
-                Log.Error("FAIL");
-            } 
         }
     }
     public class WeaponEffect_Multiple : WeaponEffect

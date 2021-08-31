@@ -553,7 +553,6 @@ namespace RimFantasy
                         {
 							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
                             {
-								Log.Message("ApplyEffects Data: " + comp.Wearer + " - " + comp.Wearer?.ParentHolder + " - " + comp.parent + " - " + comp.parent.ParentHolder);
 								arcaneTraitDef.Worker.OnDamageDealt(projectile, damageInfo, comp, comp.Wearer, hitThing);
 							}
                         }
