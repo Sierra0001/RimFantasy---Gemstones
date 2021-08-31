@@ -99,6 +99,8 @@ namespace RimFantasy
 					countdownTicksLeft = -1;
 				}
 			}
+			Log.Message("CompTick: " + this + " - " + wickStarted);
+
 			if (!wickStarted)
 			{
 				return;
@@ -121,6 +123,8 @@ namespace RimFantasy
 					}
 				}
 			}
+			Log.Message("CompTick: " + this + " - " + wickTicksLeft);
+
 			wickTicksLeft--;
 			if (wickTicksLeft <= 0)
 			{

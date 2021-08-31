@@ -654,5 +654,19 @@ namespace RimFantasy
 				return true;
 			}
 		}
+
+		[HarmonyPatch(typeof(CompExplosive), "StartWick")]
+		public static class Patch_StartWick
+		{
+			private static bool Prefix(CompExplosive __instance, Thing instigator = null)
+			{
+				if (__instance is CompExplosiveStuffed compExplosiveStuffed)
+                {
+					compExplosiveStuffed.StartWick(instigator);
+					return false;
+                }
+				return true;
+			}
+		}
 	}
 }
