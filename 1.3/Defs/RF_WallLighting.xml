@@ -57,6 +57,8 @@
     </placeWorkers>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <comps>
+
+      <li Class="VanillaFurnitureExpanded.CompProperties_MountableOnWall"/>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>1.0</fuelConsumptionRate>
         <fuelCapacity>30</fuelCapacity>
