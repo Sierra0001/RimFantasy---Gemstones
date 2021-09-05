@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PeKUzwwinat62W3w/P72U61Z1Mrp5zLnJeE3E8S64FH5HMuP/I+xPzrXnmv01mKTXlKOF/g2Y+UmZjLrga00PQ==",
+  "dgSpecHash": "bUt7JKK1v1widofgZZ1NUzw/ULCgTf18Zr57cj/6FTCtnj93h0MV8hJsearKstb+2mHQLTjl4mEVB1gPA5rWLQ==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RimFantasy---Core\\1.3\\Source\\RimFantasy\\RimFantasy.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3104-beta\\krafs.rimworld.ref.1.3.3104-beta.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3111-beta\\krafs.rimworld.ref.1.3.3111-beta.nupkg.sha512",
     "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
   ],
   "logs": []
