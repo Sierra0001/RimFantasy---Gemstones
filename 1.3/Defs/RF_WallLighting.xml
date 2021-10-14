@@ -20,9 +20,9 @@
       </damageData>
     </graphicData>
     <rotatable>true</rotatable>
-    <altitudeLayer>Item</altitudeLayer>
-    <passability>Standable</passability>
-    <!--<pathCost>10</pathCost>-->
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>10</pathCost>
     <!--<constructEffect>ConstructWood</constructEffect>-->
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
@@ -57,7 +57,6 @@
     </placeWorkers>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <comps>
-
       <li Class="VanillaFurnitureExpanded.CompProperties_MountableOnWall"/>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>1.0</fuelConsumptionRate>
