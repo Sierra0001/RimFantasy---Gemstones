@@ -37,6 +37,7 @@ Taranchuk for his C# code magic that allows for various fancy features.
 - [RimWorld 1.3] RimWorld 1.3 Ready. (v1.0)
 - [Release] Initial release. (v1.0)
 - [Fix] Color correction for Onyx from 64,62,1 to 50,60,60. (v1.0.1)
+- [Fix] Disabled Industrial tier research and workbench. (Will cause a one-time harmless red error in existing games.) (v1.0.2)
 - [Buff] Gem cutting workAmount reduced from 2700 to 2600. (v1.0.2)
 - [Buff] Rough Gemstone mass reduced from 0.50 to 0.10. (v1.0.2)
 - [Buff] Cut Gemstone mass reduced from 0.40 to 0.075. (v1.0.2)

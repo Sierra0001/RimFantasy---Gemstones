@@ -9,7 +9,7 @@
     <priorityInType>115</priorityInType>
     <fixedBillGiverDefs>
       <li>RF_MedievalGemCuttingBench</li>
-      <li>RF_IndustrialGemCuttingBench</li>
+      <!--<li>RF_IndustrialGemCuttingBench</li>-->
     </fixedBillGiverDefs>
     <verb>cut gemstones</verb>
     <gerund>cutting gemstones at</gerund>

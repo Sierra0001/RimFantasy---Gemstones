@@ -77,6 +77,7 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 [b]v1.0.2[/b]
 [list]
+[*][Fix] Disabled Industrial tier research and workbench. (Will cause a one-time harmless red error in existing games.)
 [*][Buff] Gem cutting workAmount reduced from 2700 to 2600.
 [*][Buff] Rough Gemstone mass reduced from 0.50 to 0.10.
 [*][Buff] Cut Gemstone mass reduced from 0.40 to 0.075.
