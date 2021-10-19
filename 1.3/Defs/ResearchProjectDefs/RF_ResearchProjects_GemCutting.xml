@@ -12,7 +12,7 @@
     <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>RF_IndustrialGemCutting</defName>
     <label>industrial gem cutting</label>
     <tab>RF_RimFantasy</tab>
@@ -25,6 +25,6 @@
     </prerequisites>
     <researchViewX>3.00</researchViewX>
     <researchViewY>0.00</researchViewY>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
 </Defs>

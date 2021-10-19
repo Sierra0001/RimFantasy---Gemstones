@@ -6,7 +6,7 @@
     <label>cut rough diamond</label>
     <description>Cut and polish a rough diamond into a cut diamond.</description>
     <jobString>Cutting diamond.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -15,7 +15,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -45,7 +45,7 @@
     <label>cut rough ruby</label>
     <description>Cut and polish a rough ruby into a cut ruby.</description>
     <jobString>Cutting ruby.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -54,7 +54,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -84,7 +84,7 @@
     <label>cut rough carnelian</label>
     <description>Cut and polish a rough carnelian into a cut carnelian.</description>
     <jobString>Cutting carnelian.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -93,7 +93,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -123,7 +123,7 @@
     <label>cut rough citrine</label>
     <description>Cut and polish a rough citrine into a cut citrine.</description>
     <jobString>Cutting citrine.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -132,7 +132,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -162,7 +162,7 @@
     <label>cut rough peridot</label>
     <description>Cut and polish a rough peridot into a cut peridot.</description>
     <jobString>Cutting peridot.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -171,7 +171,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -201,7 +201,7 @@
     <label>cut rough emerald</label>
     <description>Cut and polish a rough emerald into a cut emerald.</description>
     <jobString>Cutting emerald.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -210,7 +210,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -240,7 +240,7 @@
     <label>cut rough aquamarine</label>
     <description>Cut and polish a rough aquamarine into a cut aquamarine.</description>
     <jobString>Cutting aquamarine.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -249,7 +249,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -279,7 +279,7 @@
     <label>cut rough sapphire</label>
     <description>Cut and polish a rough sapphire into a cut sapphire.</description>
     <jobString>Cutting sapphire.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -288,7 +288,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -318,7 +318,7 @@
     <label>cut rough amethyst</label>
     <description>Cut and polish a rough amethyst into a cut amethyst.</description>
     <jobString>Cutting amethyst.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -327,7 +327,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -357,7 +357,7 @@
     <label>cut rough kunzite</label>
     <description>Cut and polish a rough kunzite into a cut kunzite.</description>
     <jobString>Cutting kunzite.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -366,7 +366,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>
@@ -396,7 +396,7 @@
     <label>cut rough onyx</label>
     <description>Cut and polish a rough onyx into a cut onyx.</description>
     <jobString>Cutting onyx.</jobString>
-    <workAmount>2700</workAmount>
+    <workAmount>2600</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -405,7 +405,7 @@
 		<targetCountAdjustment>1</targetCountAdjustment>
     <recipeUsers>
 			<li>RF_MedievalGemCuttingBench</li>
-			<li>RF_IndustrialGemCuttingBench</li>
+			<!--<li>RF_IndustrialGemCuttingBench</li>-->
 		</recipeUsers>
     <ingredients>
 			<li>

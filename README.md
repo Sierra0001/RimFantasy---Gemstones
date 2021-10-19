@@ -2,13 +2,13 @@
 
 This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
 
-Raw gemstones can be used to craft stuffable furniture and blunt weapons the same way jade works in vanilla. The cut gemstones worth more than their uncut variants and are used in trading and creation of certain ceremonial objects.
+Gemstones can be used to craft structures, furniture and even weapons. Cut gemstones are worth more than their uncut variants and can even be used to earn royal favor.
 
 ### Features
 
 - 11 Gemstones (x11 Rough/x11 Cut)
-- 2 Workbenches (Medieval/Industrial)
-- 2 Researches (Unlocks Workbenches)
+- 1 Workbench (Medieval)
+- 1 Research (Unlocks Workbench)
 
 ### Balance
 
@@ -23,8 +23,8 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0)
-- [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1234567890)
+- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.2)
+- [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2630669656)
 - [GitHub](https://github.com/Sierra0001/RimFantasy---Gemstones)
 
 ### Credits
@@ -36,3 +36,7 @@ Taranchuk for his C# code magic that allows for various fancy features.
 
 - [RimWorld 1.3] RimWorld 1.3 Ready. (v1.0)
 - [Release] Initial release. (v1.0)
+- [Fix] Color correction for Onyx from 64,62,1 to 50,60,60. (v1.0.1)
+- [Buff] Gem cutting workAmount reduced from 2700 to 2600. (v1.0.2)
+- [Buff] Rough Gemstone mass reduced from 0.50 to 0.10. (v1.0.2)
+- [Buff] Cut Gemstone mass reduced from 0.40 to 0.075. (v1.0.2)

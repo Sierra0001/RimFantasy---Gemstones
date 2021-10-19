@@ -18,7 +18,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -80,7 +80,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -142,7 +142,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -204,7 +204,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -266,7 +266,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -328,7 +328,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -390,7 +390,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -452,7 +452,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -514,7 +514,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -576,7 +576,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -638,7 +638,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>1</Beauty>
       <MarketValue>15</MarketValue>
-      <Mass>0.5</Mass>
+      <Mass>0.10</Mass>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
@@ -663,7 +663,7 @@
         <li>RF_RoughGemstones</li>
       </categories>
       <commonality>0.05</commonality>
-      <color>(64,62,1)</color>
+      <color>(50,60,60)</color>
       <constructEffect>ConstructMetal</constructEffect>
       <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>

@@ -64,7 +64,7 @@
     </researchPrerequisites>
   </ThingDef>
 
-  <ThingDef ParentName="BenchBase">
+  <!--ThingDef ParentName="BenchBase">
     <defName>RF_IndustrialGemCuttingBench</defName>
     <label>industrial gem cutting bench</label>
     <description>A hi-tech workbench equipped for cutting of raw gems. Can work without electricity at 25% of normal speed.</description>
@@ -82,8 +82,6 @@
       </damageData>
     </graphicData>
     <minifiedDef>MinifiedThing</minifiedDef>
-    <!--<castEdgeShadows>true</castEdgeShadows>-->
-    <!--<staticSunShadowHeight>0.20</staticSunShadowHeight>-->
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
       <li>Metallic</li>
@@ -137,6 +135,6 @@
     <researchPrerequisites>
       <li>RF_IndustrialGemCutting</li>
     </researchPrerequisites>
-  </ThingDef>
+  </ThingDef-->
 
 </Defs>
