@@ -8,8 +8,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -19,8 +19,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -30,8 +30,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -41,8 +41,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -52,8 +52,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -63,8 +63,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -74,8 +74,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -85,8 +85,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -96,8 +96,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -107,8 +107,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
@@ -118,8 +118,8 @@
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <solidTime>0</solidTime>
-    <fadeOutTime>0.6</fadeOutTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>0.8</fadeOutTime>
   </FleckDef>
 
 </Defs>
