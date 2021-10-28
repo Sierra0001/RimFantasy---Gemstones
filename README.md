@@ -23,7 +23,7 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.2)
+- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.3)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2630669656)
 - [GitHub](https://github.com/Sierra0001/RimFantasy---Gemstones)
 
@@ -41,3 +41,5 @@ Taranchuk for his C# code magic that allows for various fancy features.
 - [Buff] Gem cutting workAmount reduced from 2700 to 2600. (v1.0.2)
 - [Buff] Rough Gemstone mass reduced from 0.50 to 0.10. (v1.0.2)
 - [Buff] Cut Gemstone mass reduced from 0.40 to 0.075. (v1.0.2)
+- [DEV] Arcane Crafting Bench textures added. (v1.0.3)
+- [DEV] Removed redundent files. (v1.0.3)

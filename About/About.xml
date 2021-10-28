@@ -13,7 +13,7 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 	</loadAfter>
 	<description>
-[h1]Mod Version: v1.0.2[/h1]
+[h1]Mod Version: v1.0.3[/h1]
 
 
 This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
@@ -82,6 +82,12 @@ Balance feedbacks are welcomed, please provide context when doing so.
 [*][Buff] Gem cutting workAmount reduced from 2700 to 2600.
 [*][Buff] Rough Gemstone mass reduced from 0.50 to 0.10.
 [*][Buff] Cut Gemstone mass reduced from 0.40 to 0.075.
+[/list]
+
+[b]v1.0.3[/b]
+[list]
+[*][DEV] Arcane Crafting Bench textures added.
+[*][DEV] Removed redundent files.
 [/list]
 	</description>
 </ModMetaData>
