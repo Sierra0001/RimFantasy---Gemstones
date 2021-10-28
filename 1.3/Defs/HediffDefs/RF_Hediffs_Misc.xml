@@ -38,7 +38,7 @@
     <defName>RF_DrainDamage</defName>
     <label>drain</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
-    <deathMessage>{0} has drained.</deathMessage>
+    <deathMessage>{0} has been drained to death.</deathMessage>
     <hediff>RF_DrainDamage</hediff>
     <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
     <hasForcefulImpact>false</hasForcefulImpact>
@@ -51,7 +51,7 @@
     <defName>RF_DrainDamage</defName>
     <label>drain</label>
     <labelNoun>a drain</labelNoun>
-    <description>A drain.</description>
+    <description>Health drained by shadow magic.</description>
     <injuryProps>
       <canMerge>false</canMerge>
     </injuryProps>
