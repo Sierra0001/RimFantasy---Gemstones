@@ -20,6 +20,8 @@ namespace RimFantasy
         public DamageDef effectDamage;
         public int? baseDamageValue;
         public FleckDef fleckDefOnTarget;
+        public FleckDef fleckDefOnSelf;
+        public float fleckDefOnSelfScale = 1;
         public float fleckScale = 1;
         public virtual void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
@@ -28,6 +30,10 @@ namespace RimFantasy
                 if (fleckDefOnTarget != null)
                 {
                     FleckMaker.Static(target.Cell, target.Thing.Map, fleckDefOnTarget, fleckScale);
+                }
+                if (fleckDefOnSelf != null)
+                {
+                    FleckMaker.Static(attacker.Position, attacker.Map, fleckDefOnSelf, fleckDefOnSelfScale);
                 }
                 if (effectDamage != null)
                 {
@@ -95,23 +101,31 @@ namespace RimFantasy
     {
         public FloatRange hpToDrain;
         public DamageDef drainDamage;
+        public IntRange numBodyPartsToDrain = new IntRange(999, 999);
         public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
             if (target.HasThing && target.Thing is Pawn victim)
             {
                 var num = hpToDrain.RandomInRange;
                 var partsToDrain = victim.health.hediffSet.GetNotMissingParts().Where(x => x.depth == BodyPartDepth.Outside && x.coverageAbs > 0).InRandomOrder();
+                var count = 0;
+                var maxToDamage = numBodyPartsToDrain.RandomInRange;
                 foreach (var part in partsToDrain)
                 {
                     if (num <= 0)
                     {
                         break;
                     }
-                    var diff = Math.Abs(num - victim.health.hediffSet.GetPartHealth(part));
-                    var toDrain = num - diff;
+                    var partHealth = victim.health.hediffSet.GetPartHealth(part);
+                    var toDrain = partHealth > num ? partHealth - num : partHealth;
                     num -= toDrain;
                     victim.TakeDamage(new DamageInfo(drainDamage, toDrain, hitPart: part, instigator: attacker, weapon: comp.parent.def));
-                } 
+                    count++;
+                    if (count > maxToDamage)
+                    {
+                        break;
+                    }
+                }
             }
             base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
@@ -119,24 +133,42 @@ namespace RimFantasy
     public class WeaponEffect_Heal : WeaponEffect
     {
         public FloatRange hpToHeal;
+
+        public static void Heal(FloatRange hpToHeal, Pawn pawn)
+        {
+            var num = hpToHeal.RandomInRange;
+            var hediffSet = pawn.health.hediffSet;
+            var hediffs = hediffSet.GetHediffs<Hediff_Injury>().Where(x => x.CanHealNaturally() || x.CanHealFromTending()).InRandomOrder();
+            foreach (var hediff in hediffs)
+            {
+                if (num <= 0)
+                {
+                    break;
+                }
+
+                var toHeal = hediff.Severity > num ? hediff.Severity - num : hediff.Severity;
+                num -= toHeal;
+                hediff.Heal(toHeal);
+            }
+        }
         public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
         {
-            if (attacker is Pawn pawn && pawn.health?.hediffSet != null)
+            if (target.HasThing && target.Thing is Pawn && attacker is Pawn pawn && pawn.health?.hediffSet != null)
             {
-                var num = hpToHeal.RandomInRange;
-                var hediffSet = pawn.health.hediffSet;
-                var hediffs = hediffSet.GetHediffs<Hediff_Injury>().Where(x => x.CanHealNaturally() || x.CanHealFromTending()).InRandomOrder();
-                foreach (var hediff in hediffs)
-                {
-                    if (num <= 0)
-                    {
-                        break;
-                    }
-                    var diff = Math.Abs(num - hediff.Severity);
-                    var toHeal = num - diff;
-                    num -= toHeal;
-                    hediff.Heal(toHeal);
-                }
+                Heal(hpToHeal, pawn);
+            }
+            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
+        }
+    }
+
+    public class WeaponEffect_HealTarget : WeaponEffect
+    {
+        public FloatRange hpToHeal;
+        public override void DoEffect(Thing attackSource, DamageInfo damageInfo, CompArcaneWeapon comp, Thing attacker, LocalTargetInfo target)
+        {
+            if (target.HasThing && target.Thing is Pawn pawn && pawn.health?.hediffSet != null)
+            {
+                WeaponEffect_Heal.Heal(hpToHeal, pawn);
             }
             base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
