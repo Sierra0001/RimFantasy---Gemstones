@@ -22,7 +22,9 @@ namespace RimFantasy
         public float shieldEnergyMax;
         public float shieldRechargeRate;
         public string shieldTexPath;
+        public bool shieldTexStuffPostfix;
         public bool shieldCombatRecovery;
+        public bool ignoreRechargeDelay;
         public float? deflectMeleeChance;
         public float? deflectRangeChance;
         public FleckDef fleckDefOnDeflect;

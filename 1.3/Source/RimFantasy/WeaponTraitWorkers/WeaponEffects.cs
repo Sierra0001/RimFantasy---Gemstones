@@ -117,7 +117,7 @@ namespace RimFantasy
                         break;
                     }
                     var partHealth = victim.health.hediffSet.GetPartHealth(part);
-                    var toDrain = partHealth > num ? partHealth - num : partHealth;
+                    var toDrain = partHealth > num ? Mathf.Min(partHealth - num, num) : partHealth;
                     num -= toDrain;
                     victim.TakeDamage(new DamageInfo(drainDamage, toDrain, hitPart: part, instigator: attacker, weapon: comp.parent.def));
                     count++;
@@ -146,7 +146,7 @@ namespace RimFantasy
                     break;
                 }
 
-                var toHeal = hediff.Severity > num ? hediff.Severity - num : hediff.Severity;
+                var toHeal = hediff.Severity > num ? Mathf.Min(hediff.Severity - num, num) : hediff.Severity;
                 num -= toHeal;
                 hediff.Heal(toHeal);
             }
@@ -156,8 +156,8 @@ namespace RimFantasy
             if (target.HasThing && target.Thing is Pawn && attacker is Pawn pawn && pawn.health?.hediffSet != null)
             {
                 Heal(hpToHeal, pawn);
+                base.DoEffect(attackSource, damageInfo, comp, attacker, target);
             }
-            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
 
@@ -169,8 +169,8 @@ namespace RimFantasy
             if (target.HasThing && target.Thing is Pawn pawn && pawn.health?.hediffSet != null)
             {
                 WeaponEffect_Heal.Heal(hpToHeal, pawn);
+                base.DoEffect(attackSource, damageInfo, comp, attacker, target);
             }
-            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
 
@@ -182,8 +182,8 @@ namespace RimFantasy
             if (target.HasThing && target.Thing is Pawn victim && victim.stances?.stunner != null)
             {
                 victim.stances.stunner.StunFor(stunDuration.RandomInRange, attacker);
+                base.DoEffect(attackSource, damageInfo, comp, attacker, target);
             }
-            base.DoEffect(attackSource, damageInfo, comp, attacker, target);
         }
     }
     public class WeaponEffect_Slash : WeaponEffect

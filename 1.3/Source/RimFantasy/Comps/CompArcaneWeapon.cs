@@ -12,6 +12,10 @@ using Verse.Sound;
 
 namespace RimFantasy
 {
+	public class RimFantasyExtension : DefModExtension
+    {
+		public string stuffKey;
+    }
 	public class CompProperties_ArcaneWeapon : CompProperties_Biocodable
 	{
 		public List<WeaponTraitDef> weaponTraitsPool;
@@ -103,7 +107,6 @@ namespace RimFantasy
 					if (trait is ArcaneWeaponTraitDef arcaneWeaponTraitDef && arcaneWeaponTraitDef.isShield)
                     {
 						this.shieldTraitDef = arcaneWeaponTraitDef;
-
 					}
 				}
 			}
@@ -148,8 +151,7 @@ namespace RimFantasy
 		private Vector3 impactAngleVect;
 
 		private int lastAbsorbDamageTick = -9999;
-
-		private int StartingTicksToReset = 3200;
+		private int StartingTicksToReset => shieldTraitDef.ignoreRechargeDelay ? 0 : 3200;
 
 		private float EnergyOnReset = 0.2f;
 
@@ -167,7 +169,22 @@ namespace RimFantasy
             {
 				if (shieldMat is null)
                 {
-					shieldMat = MaterialPool.MatFrom(shieldTraitDef.shieldTexPath, ShaderDatabase.Transparent);
+					var texPath = shieldTraitDef.shieldTexPath;
+					if (shieldTraitDef.shieldTexStuffPostfix)
+                    {
+						string stuffKey = "";
+						if (this.parent.Stuff != null)
+                        {
+							stuffKey = this.parent.Stuff.defName;
+						}
+                        else
+                        {
+							var extension = this.parent.def.GetModExtension<RimFantasyExtension>();
+							stuffKey = extension.stuffKey;
+						}
+						texPath += "_" + stuffKey;
+					}
+					shieldMat = MaterialPool.MatFrom(texPath, ShaderDatabase.Transparent);
 				}
 				return shieldMat;
 			}
