@@ -80,6 +80,38 @@
         <maxTemperature>28</maxTemperature>
         <workThroughWalls>false</workThroughWalls>
       </li>
+      <li Class="RimFantasy.CompProperties_Aura_Rest">
+        <auraRadius>2</auraRadius>
+        <auraStrength>0.011</auraStrength> <!-- Was 0.001 -->
+        <locationMode>Both</locationMode>
+        <minRest>0</minRest>
+        <maxRest>0.8</maxRest>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Food">
+        <auraRadius>2</auraRadius>
+        <auraStrength>0.011</auraStrength> <!-- Was 0.001 -->
+        <locationMode>Both</locationMode>
+        <minFood>0</minFood>
+        <maxFood>0.8</maxFood>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Joy">
+        <auraRadius>2</auraRadius>
+        <auraStrength>0.011</auraStrength> <!-- Was 0.001 -->
+        <locationMode>Both</locationMode>
+        <minJoy>0</minJoy>
+        <maxJoy>0.8</maxJoy>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Mood">
+        <auraRadius>2</auraRadius>
+        <auraStrength>8</auraStrength> <!-- Was 8 -->
+        <locationMode>Both</locationMode>
+        <minMood>0</minMood>
+        <maxMood>0.8</maxMood>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
       <li Class="CompProperties_Explosive">
         <wickTicks>60</wickTicks>
         <explosiveRadius>1</explosiveRadius>
