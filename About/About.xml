@@ -13,7 +13,7 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 	</loadAfter>
 	<description>
-[h1]Mod Version: v1.0.3[/h1]
+[h1]Mod Version: v1.0.4[/h1]
 
 
 This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
@@ -71,11 +71,6 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 
 [h1]Latest Changes:[/h1]
-[b]v1.0.1[/b]
-[list]
-[*][Fix] Color correction for Onyx from 64,62,1 to 50,60,60.
-[/list]
-
 [b]v1.0.2[/b]
 [list]
 [*][Fix] Disabled Industrial tier research and workbench. (Will cause a one-time harmless red error in existing games.)
@@ -88,6 +83,11 @@ Balance feedbacks are welcomed, please provide context when doing so.
 [list]
 [*][DEV] Arcane Crafting Bench textures added.
 [*][DEV] Removed redundent files.
+[/list]
+
+[b]v1.0.4[/b]
+[list]
+[*][DEV] Added support for RimFantasy - Arcane Weapons.
 [/list]
 	</description>
 </ModMetaData>

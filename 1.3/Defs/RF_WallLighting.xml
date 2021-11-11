@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RF_SunstoneWallLamp</defName>
+    <label>SunstoneWallLamp</label>
+    <description>A small shard of diamond mounted on a wall. It lights up an area, providing light in its surroundings.</description>
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RF_SunstoneWallLamp/RF_SunstoneWallLamp</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <drawOffsetNorth>(0,0,0.385)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.20)</drawOffsetSouth>
+      <drawOffsetEast>(0.4,0,0.28)</drawOffsetEast>
+      <drawOffsetWest>(-0.4,0,0.28)</drawOffsetWest>
+      <drawRotated>false</drawRotated>
+      <allowFlip>true</allowFlip>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+    </graphicData>
+    <rotatable>true</rotatable>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>10</pathCost>
+    <!--<constructEffect>ConstructWood</constructEffect>-->
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>2</Beauty>
+      <Mass>1</Mass>
+      <WorkToBuild>450</WorkToBuild>
+    </statBases>
+    <selectable>true</selectable>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <RF_RoughDiamond>6</RF_RoughDiamond>
+    </costList>
+    <building>
+			<isEdifice>false</isEdifice>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.15</resourcesFractionWhenDeconstructed>
+    <clearBuildingArea>false</clearBuildingArea>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>1.0</fuelConsumptionRate>
+        <fuelCapacity>30</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>RF_RoughDiamond</li>
+          </thingDefs>
+        </fuelFilter>
+  			<destroyOnNoFuel>false</destroyOnNoFuel>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius> <!--Sun lamp is 14-->
+        <glowColor>(211,211,211,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>1</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>60</wickTicks>
+        <explosiveRadius>1</explosiveRadius>
+        <explosiveDamageType>RF_Flame_SmallSquareRF_Diamond</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0</chanceNeverExplodeFromDamage>
+        <postExplosionSpawnChance>0.25</postExplosionSpawnChance>
+        <postExplosionSpawnThingDef>RF_RubbleShardsRF_Diamond</postExplosionSpawnThingDef>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <!--<researchPrerequisites>
+      <li>RF_MagicalLighting</li>
+    </researchPrerequisites>-->
+  </ThingDef>
+
+</Defs>
