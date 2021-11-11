@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--  ===== Based on RE_PreFabWallLight ===== -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RFVE_GlowstoneWallLamp</defName>
+    <label>VE Code glowstone wall lamp</label>
+    <description>A wall light designed to be quickly and easily assembled in the process of setting up a new colony. Does not take up any space inside a room.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RF_SunstoneWallLamp/RF_SunstoneWallLamp</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.1,1.1</drawSize>
+      <drawOffsetNorth>(0,0,0.385)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.20)</drawOffsetSouth>
+      <drawOffsetEast>(0.4,0,0.28)</drawOffsetEast>
+      <drawOffsetWest>(-0.4,0,0.28)</drawOffsetWest>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.20</fillPercent>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Mass>2</Mass>
+    </statBases>
+    <size>(1, 1)</size>
+    <placeWorkers>
+      <li>VanillaFurnitureExpanded.PlaceWorker_OnWall</li>
+    </placeWorkers>
+    <costList>
+      <RF_RoughCitrine>1</RF_RoughCitrine>
+    </costList>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <building>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <!--<allowWireConnection>false</allowWireConnection>
+      <spawnedConceptLearnOpportunity>RE_PrefabWallLamps</spawnedConceptLearnOpportunity>
+      <boughtConceptLearnOpportunity>RE_PrefabWallLamps</boughtConceptLearnOpportunity>-->
+    </building>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <destroyable>true</destroyable>
+    <clearBuildingArea>false</clearBuildingArea>
+    <canOverlapZones>true</canOverlapZones>
+    <!--<uiIconPath>Things/Building/Furniture/PreFabWallLight/UIPreFabWallLight</uiIconPath>-->
+    <comps>
+      <li Class="VanillaFurnitureExpanded.CompProperties_MountableOnWall"/>
+      <li Class="VanillaFurnitureExpanded.CompProperties_GlowerExtended">
+        <spawnGlowerInFacedCell>true</spawnGlowerInFacedCell>
+        <colorOptions>
+          <li>
+            <glowRadius>6</glowRadius>
+            <glowColor>(255,255,149,0)</glowColor>
+          </li>
+        </colorOptions>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>25</heatPerSecond>
+        <heatPushMaxTemperature>33</heatPushMaxTemperature>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Temperature">
+        <auraRadius>2</auraRadius>
+        <auraStrength>24</auraStrength>
+        <locationMode>Both</locationMode>
+        <maxTemperature>28</maxTemperature>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Rest">
+        <auraRadius>2</auraRadius>
+        <auraStrength>0.011</auraStrength> <!-- Was 0.001 -->
+        <locationMode>Both</locationMode>
+        <minRest>0</minRest>
+        <maxRest>0.8</maxRest>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Food">
+        <auraRadius>2</auraRadius>
+        <auraStrength>0.011</auraStrength> <!-- Was 0.001 -->
+        <locationMode>Both</locationMode>
+        <minFood>0</minFood>
+        <maxFood>0.8</maxFood>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Joy">
+        <auraRadius>2</auraRadius>
+        <auraStrength>0.011</auraStrength> <!-- Was 0.001 -->
+        <locationMode>Both</locationMode>
+        <minJoy>0</minJoy>
+        <maxJoy>0.8</maxJoy>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+      <li Class="RimFantasy.CompProperties_Aura_Mood">
+        <auraRadius>2</auraRadius>
+        <auraStrength>8</auraStrength> <!-- Was 8 -->
+        <locationMode>Both</locationMode>
+        <minMood>0</minMood>
+        <maxMood>0.8</maxMood>
+        <workThroughWalls>false</workThroughWalls>
+      </li>
+    </comps>
+    <!--<researchPrerequisites>
+      <li>RF_MagicalLighting</li>
+    </researchPrerequisites>-->
+  </ThingDef>
+
+
+
+</Defs>
