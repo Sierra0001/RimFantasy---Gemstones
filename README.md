@@ -23,7 +23,7 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.4)
+- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.5)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2630669656)
 - [GitHub](https://github.com/Sierra0001/RimFantasy---Gemstones)
 
@@ -34,4 +34,4 @@ Taranchuk for his C# code magic that allows for various fancy features.
 
 ### Latest Changes
 
-- [DEV] Added support for RimFantasy - Arcane Weapons.
+- [Fix] Fixed an issue that can cause an infinite log spam when a corpse, raider, or trader is carrying an arcane weapon.

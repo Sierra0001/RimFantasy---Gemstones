@@ -14,7 +14,7 @@
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<description>
-[h1]Mod Version: v1.0.4[/h1]
+[h1]Mod Version: v1.0.5[/h1]
 
 
 This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
@@ -72,14 +72,6 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 
 [h1]Latest Changes:[/h1]
-[b]v1.0.2[/b]
-[list]
-[*][Fix] Disabled Industrial tier research and workbench. (Will cause a one-time harmless red error in existing games.)
-[*][Buff] Gem cutting workAmount reduced from 2700 to 2600.
-[*][Buff] Rough Gemstone mass reduced from 0.50 to 0.10.
-[*][Buff] Cut Gemstone mass reduced from 0.40 to 0.075.
-[/list]
-
 [b]v1.0.3[/b]
 [list]
 [*][DEV] Arcane Crafting Bench textures added.
@@ -89,6 +81,11 @@ Balance feedbacks are welcomed, please provide context when doing so.
 [b]v1.0.4[/b]
 [list]
 [*][DEV] Added support for RimFantasy - Arcane Weapons.
+[/list]
+
+[b]v1.0.5[/b]
+[list]
+[*][Fix] Fixed an issue that can cause an infinite log spam when a corpse, raider, or trader is carrying an arcane weapon.
 [/list]
 	</description>
 </ModMetaData>
