@@ -45,11 +45,11 @@ namespace RimFantasy
             {
                 return true;
             }
-            if (pawn.CurJob != null && pawn.CurJob.def.alwaysShowWeapon)
+            if (pawn.CurJob?.def?.alwaysShowWeapon ?? false)
             {
                 return true;
             }
-            if (pawn.mindState.duty != null && pawn.mindState.duty.def.alwaysShowWeapon)
+            if (pawn.mindState?.duty?.def?.alwaysShowWeapon ?? false)
             {
                 return true;
             }

@@ -169,21 +169,25 @@ namespace RimFantasy
         private bool ShouldGlow()
         {
             bool shouldGlow = false;
-            if (Props.glowWhileStockpiled.HasValue && InStockpile)
+            var pos = this.parent.PositionHeld;
+            if (pos.InBounds(this.parent.MapHeld))
             {
-                shouldGlow = Props.glowWhileStockpiled.Value;
-            }
-            if (Props.glowWhileOnGround.HasValue && this.parent.Spawned && Wearer is null && this.parent.ParentHolder is Map && !InStockpile)
-            {
-                shouldGlow = Props.glowWhileOnGround.Value;
-            }
-            if (Wearer != null && Props.glowWhileDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment?.Primary == this.parent)
-            {
-                shouldGlow = Props.glowWhileDrawn.Value;
-            }
-            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment?.Primary == this.parent)
-            {
-                shouldGlow = Props.glowWhileEquipped.Value;
+                if (Props.glowWhileStockpiled.HasValue && InStockpile)
+                {
+                    shouldGlow = Props.glowWhileStockpiled.Value;
+                }
+                if (Props.glowWhileOnGround.HasValue && this.parent.Spawned && Wearer is null && this.parent.ParentHolder is Map && !InStockpile)
+                {
+                    shouldGlow = Props.glowWhileOnGround.Value;
+                }
+                if (Wearer != null && Props.glowWhileDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment?.Primary == this.parent)
+                {
+                    shouldGlow = Props.glowWhileDrawn.Value;
+                }
+                if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment?.Primary == this.parent)
+                {
+                    shouldGlow = Props.glowWhileEquipped.Value;
+                }
             }
             return shouldGlow;
         }
