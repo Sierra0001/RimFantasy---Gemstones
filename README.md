@@ -35,3 +35,4 @@ Taranchuk for his C# code magic that allows for various fancy features.
 ### Latest Changes
 
 - [Fix] Fixed an issue that can cause an infinite log spam when a corpse, raider, or trader is carrying an arcane weapon.
+- [Change] Updated texture for Rough Sapphire.

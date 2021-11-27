@@ -86,6 +86,7 @@ Balance feedbacks are welcomed, please provide context when doing so.
 [b]v1.0.5[/b]
 [list]
 [*][Fix] Fixed an issue that can cause an infinite log spam when a corpse, raider, or trader is carrying an arcane weapon.
+[*][Change] Updated texture for Rough Sapphire.
 [/list]
 	</description>
 </ModMetaData>
