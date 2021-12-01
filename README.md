@@ -23,7 +23,7 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.5)
+- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.6)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2630669656)
 - [GitHub](https://github.com/Sierra0001/RimFantasy---Gemstones)
 
@@ -34,5 +34,5 @@ Taranchuk for his C# code magic that allows for various fancy features.
 
 ### Latest Changes
 
-- [Fix] Fixed an issue that can cause an infinite log spam when a corpse, raider, or trader is carrying an arcane weapon.
-- [Change] Updated texture for Rough Sapphire.
+- [Buff] Increased mineableYield for gemstones from 18 to 21.
+- [Buff] Decreased workAmount for gemstones from 2600 to 2400.
