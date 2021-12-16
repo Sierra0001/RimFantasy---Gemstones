@@ -116,7 +116,11 @@ namespace RimFantasy
         {
             if (prevMap != null && this.compGlower != null)
             {
-                prevMap.glowGrid.DeRegisterGlower(this.compGlower);
+                try
+                {
+                    prevMap.glowGrid.DeRegisterGlower(this.compGlower);
+                }
+                catch { }
                 this.compGlower = null;
             }
         }
@@ -124,24 +128,29 @@ namespace RimFantasy
         private float curRadius;
         public void UpdateGlower()
         {
-            RemoveGlower(this.parent.MapHeld);
-            if (ShouldGlow())
+            var position = GetPosition();
+            var map = this.parent.MapHeld;
+            if (map != null && position.IsValid)
             {
-                this.compGlower = new CompGlower();
-                var parent = GetParent();
-                var glow = GetGlowColor();
-                curRadius = GetRadius();
-                var position = GetPosition();
-                this.compGlower.Initialize(new CompProperties_Glower()
+                RemoveGlower(this.parent.MapHeld);
+                if (ShouldGlow())
                 {
-                    glowColor = glow,
-                    glowRadius = curRadius,
-                    overlightRadius = Props.overlightRadius
-                });
-                this.compGlower.parent = parent;
-                base.parent.MapHeld.mapDrawer.MapMeshDirty(position, MapMeshFlag.Things);
-                base.parent.MapHeld.glowGrid.RegisterGlower(this.compGlower);
+                    this.compGlower = new CompGlower();
+                    var parent = GetParent();
+                    var glow = GetGlowColor();
+                    curRadius = GetRadius();
+                    this.compGlower.Initialize(new CompProperties_Glower()
+                    {
+                        glowColor = glow,
+                        glowRadius = curRadius,
+                        overlightRadius = Props.overlightRadius
+                    });
+                    this.compGlower.parent = parent;
+                    base.parent.MapHeld.mapDrawer.MapMeshDirty(position, MapMeshFlag.Things);
+                    base.parent.MapHeld.glowGrid.RegisterGlower(this.compGlower);
+                }
             }
+
         }
         public Pawn Wearer
         {
