@@ -10,13 +10,13 @@
         <value>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_RoughGemstones</categoryDef>
-            <thingDefCountRange>0~3</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~6</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_Gemstones</categoryDef>
-            <thingDefCountRange>0~2</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~4</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
         </value>
       </li>
@@ -26,13 +26,13 @@
         <value>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_RoughGemstones</categoryDef>
-            <thingDefCountRange>0~2</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~4</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_Gemstones</categoryDef>
-            <thingDefCountRange>0~1</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~2</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
         </value>
       </li>
@@ -42,13 +42,13 @@
         <value>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_RoughGemstones</categoryDef>
-            <thingDefCountRange>0~2</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~4</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_Gemstones</categoryDef>
-            <thingDefCountRange>0~1</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~2</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
         </value>
       </li>
@@ -58,13 +58,13 @@
         <value>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_RoughGemstones</categoryDef>
-            <thingDefCountRange>0~2</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~4</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_Gemstones</categoryDef>
-            <thingDefCountRange>0~1</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~2</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
         </value>
       </li>
@@ -74,13 +74,13 @@
         <value>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_RoughGemstones</categoryDef>
-            <thingDefCountRange>0~2</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~4</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_Gemstones</categoryDef>
-            <thingDefCountRange>0~1</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~2</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
         </value>
       </li>
@@ -90,13 +90,13 @@
         <value>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_RoughGemstones</categoryDef>
-            <thingDefCountRange>0~1</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~2</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
           <li Class="StockGenerator_Category">
             <categoryDef>RF_Gemstones</categoryDef>
-            <thingDefCountRange>0~1</thingDefCountRange>
-            <countRange>0~1</countRange>
+            <thingDefCountRange>0~2</thingDefCountRange>
+            <countRange>0~2</countRange>
           </li>
         </value>
       </li>
