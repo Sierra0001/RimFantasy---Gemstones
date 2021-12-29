@@ -216,11 +216,11 @@ namespace RimFantasy
             {
                 radius = Props.glowRadiusStockpiled.Value;
             }
-            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment.Primary == this.parent)
+            if (Wearer != null && Props.glowWhileEquipped.HasValue && Wearer.equipment?.Primary == this.parent)
             {
                 radius = Props.glowRadiusEquipped.Value;
             }
-            if (Wearer != null && Props.glowRadiusDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment.Primary == this.parent)
+            if (Wearer != null && Props.glowRadiusDrawn.HasValue && Wearer.IsCarryingWeaponOpenly() && Wearer.equipment?.Primary == this.parent)
             {
                 radius = Props.glowRadiusDrawn.Value;
             }

@@ -16,7 +16,6 @@ namespace RimFantasy
     public class AuraManager : MapComponent
 	{
         public bool dirty = false;
-
         public Dictionary<IntVec3, List<CompTemperatureSource>> temperatureSources = new Dictionary<IntVec3, List<CompTemperatureSource>>();
         public List<CompAura> compAuras = new List<CompAura>();
         public HashSet<CompAura> compAurasToTick = new HashSet<CompAura>();
@@ -24,7 +23,39 @@ namespace RimFantasy
         public AuraManager(Map map) : base(map)
 		{
             HarmonyPatches.areaTemperatureManagers[map] = this;
-		}
+            PreInit();
+        }
+
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+            PreInit();
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            PreInit();
+        }
+        public void PreInit()
+        {
+            if (compAuras is null)
+            {
+                compAuras = new List<CompAura>();
+            }
+            if (compAurasToTick is null)
+            {
+                compAurasToTick = new HashSet<CompAura>();
+            }
+            if (temperatureSources is null)
+            {
+                temperatureSources = new Dictionary<IntVec3, List<CompTemperatureSource>>();
+            }
+            if (dirtyComps is null)
+            {
+                dirtyComps = new List<CompAura>();
+            }
+        }
         public void MarkDirty(CompAura comp)
         {
             dirtyComps.Add(comp);

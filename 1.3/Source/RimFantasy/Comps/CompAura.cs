@@ -66,14 +66,22 @@ namespace RimFantasy
 		protected Map MapHeld => base.parent.MapHeld;
 		protected IntVec3 PositionHeld => base.parent.PositionHeld;
 		public bool dirty = false;
-
 		public virtual void UnConnectFromManager()
         {
-			if (Manager.compAuras.Contains(this))
-			{
-				Manager.compAuras.Remove(this);
+			var manager = Manager;
+			if (manager != null)
+            {
+				if (manager.compAuras is null)
+                {
+					manager.compAuras = new List<CompAura>();
+                }
+				if (manager.compAuras.Contains(this))
+				{
+					manager.compAuras.Remove(this);
+				}
 			}
 		}
+
 		protected bool CanWorkIn(IntVec3 cell)
 		{
 			bool isOutdoor = cell.PsychologicallyOutdoors(MapHeld);
