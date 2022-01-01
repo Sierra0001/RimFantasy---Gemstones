@@ -23,7 +23,7 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.8)
+- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.9)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2630669656)
 - [GitHub](https://github.com/Sierra0001/RimFantasy---Gemstones)
 
@@ -34,5 +34,5 @@ Taranchuk for his C# code magic that allows for various fancy features.
 
 ### Latest Changes
 
-- [Buff] Increased mineableYield for gemstones from 21 to 24.
-- [Buff] Increased maximum amount of gemstones (rough and cut) that traders can carry by 2X.
+- [Fix] Fixed an issue related to RimFantasy.CompGlowerStuffable that could cause infinite log spam.
+- [Fix] Fixed an issue related to RimFantasy.CompAura that could interfere with pawn spawning with Hospitality.
