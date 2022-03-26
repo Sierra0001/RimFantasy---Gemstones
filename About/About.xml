@@ -14,7 +14,7 @@
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<description>
-[h1]Mod Version: v1.0.9[/h1]
+[h1]Mod Version: v1.1[/h1]
 
 
 This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
@@ -82,6 +82,13 @@ Balance feedbacks are welcomed, please provide context when doing so.
 [list]
 [*][Fix] Fixed an issue related to RimFantasy.CompGlowerStuffable that could cause infinite log spam.
 [*][Fix] Fixed an issue related to RimFantasy.CompAura that could interfere with pawn spawning with Hospitality.
+[/list]
+
+[b]v1.1[/b]
+[list]
+[*][New] Added 11 new recipes to allow bulk cutting of specific gem types. (10% bonus speed, level 8 crafting required)
+[*][Buff] Increased mineableYield for gemstones from 24 to 30.
+[*][Buff] Decreased workAmount for gem cutting from 2400 to 2000. (15% faster)
 [/list]
 	</description>
 </ModMetaData>

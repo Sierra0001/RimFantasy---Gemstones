@@ -23,7 +23,7 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Links
 
-- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.0.9)
+- [Current Version](https://github.com/Sierra0001/RimFantasy---Gemstones/releases/tag/v1.1)
 - [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2630669656)
 - [GitHub](https://github.com/Sierra0001/RimFantasy---Gemstones)
 
@@ -34,5 +34,6 @@ Taranchuk for his C# code magic that allows for various fancy features.
 
 ### Latest Changes
 
-- [Fix] Fixed an issue related to RimFantasy.CompGlowerStuffable that could cause infinite log spam.
-- [Fix] Fixed an issue related to RimFantasy.CompAura that could interfere with pawn spawning with Hospitality.
+- [New] Added 11 new recipes to allow bulk cutting of specific gem types. (10% bonus speed, level 8 crafting required)
+- [Buff] Increased mineableYield for gemstones from 24 to 30.
+- [Buff] Decreased workAmount for gem cutting from 2400 to 2000. (15% faster)
