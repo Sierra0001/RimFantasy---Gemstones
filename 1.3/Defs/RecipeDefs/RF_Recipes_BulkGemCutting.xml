@@ -3,10 +3,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutDiamond</defName>
-    <label>cut rough diamond x10</label>
+    <label>cut rough diamond x5</label>
     <description>Cut and polish a batch of rough diamonds into cut diamonds.</description>
     <jobString>Cutting diamond.</jobString>
-    <workAmount>18000</workAmount> <!--10% faster than single cut-->
+    <workAmount>9000</workAmount> <!--10% faster than single cut-->
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -24,7 +24,7 @@
 						<li>RF_RoughDiamond</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -33,7 +33,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Diamond>10</RF_Diamond>
+      <RF_Diamond>5</RF_Diamond>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -42,10 +42,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutRuby</defName>
-    <label>cut rough ruby x10</label>
+    <label>cut rough ruby x5</label>
     <description>Cut and polish a batch of rough rubies into cut rubies.</description>
     <jobString>Cutting ruby.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -63,7 +63,7 @@
 						<li>RF_RoughRuby</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -72,7 +72,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Ruby>10</RF_Ruby>
+      <RF_Ruby>5</RF_Ruby>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -81,10 +81,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutCarnelian</defName>
-    <label>cut rough carnelian x10</label>
+    <label>cut rough carnelian x5</label>
     <description>Cut and polish a batch of rough carnelians into cut carnelians.</description>
     <jobString>Cutting carnelian.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -102,7 +102,7 @@
 						<li>RF_RoughCarnelian</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -111,7 +111,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Carnelian>10</RF_Carnelian>
+      <RF_Carnelian>5</RF_Carnelian>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -120,10 +120,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutCitrine</defName>
-    <label>cut rough citrine x10</label>
+    <label>cut rough citrine x5</label>
     <description>Cut and polish a batch of rough citrines into cut citrines.</description>
     <jobString>Cutting citrine.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -141,7 +141,7 @@
 						<li>RF_RoughCitrine</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -150,7 +150,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Citrine>10</RF_Citrine>
+      <RF_Citrine>5</RF_Citrine>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -159,10 +159,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutPeridot</defName>
-    <label>cut rough peridot x10</label>
+    <label>cut rough peridot x5</label>
     <description>Cut and polish a batch of rough peridots into cut peridots.</description>
     <jobString>Cutting peridot.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -180,7 +180,7 @@
 						<li>RF_RoughPeridot</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -189,7 +189,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Peridot>10</RF_Peridot>
+      <RF_Peridot>5</RF_Peridot>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -198,10 +198,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutEmerald</defName>
-    <label>cut rough emerald x10</label>
+    <label>cut rough emerald x5</label>
     <description>Cut and polish a batch of rough emeralds into cut emeralds.</description>
     <jobString>Cutting emerald.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -219,7 +219,7 @@
 						<li>RF_RoughEmerald</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -228,7 +228,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Emerald>10</RF_Emerald>
+      <RF_Emerald>5</RF_Emerald>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -237,10 +237,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutAquamarine</defName>
-    <label>cut rough aquamarine x10</label>
+    <label>cut rough aquamarine x5</label>
     <description>Cut and polish a batch of rough aquamarines into cut aquamarines.</description>
     <jobString>Cutting aquamarine.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -258,7 +258,7 @@
 						<li>RF_RoughAquamarine</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -267,7 +267,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Aquamarine>10</RF_Aquamarine>
+      <RF_Aquamarine>5</RF_Aquamarine>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -276,10 +276,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutSapphire</defName>
-    <label>cut rough sapphire x10</label>
+    <label>cut rough sapphire x5</label>
     <description>Cut and polish a batch of rough sapphires into cut sapphires.</description>
     <jobString>Cutting sapphire.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -297,7 +297,7 @@
 						<li>RF_RoughSapphire</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -306,7 +306,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Sapphire>10</RF_Sapphire>
+      <RF_Sapphire>5</RF_Sapphire>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -315,10 +315,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutAmethyst</defName>
-    <label>cut rough amethyst x10</label>
+    <label>cut rough amethyst x5</label>
     <description>Cut and polish a batch of rough amethysts into cut amethysts.</description>
     <jobString>Cutting amethyst.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -336,7 +336,7 @@
 						<li>RF_RoughAmethyst</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -345,7 +345,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Amethyst>10</RF_Amethyst>
+      <RF_Amethyst>5</RF_Amethyst>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -354,10 +354,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutKunzite</defName>
-    <label>cut rough kunzite x10</label>
+    <label>cut rough kunzite x5</label>
     <description>Cut and polish a batch of rough kunzites into cut kunzites.</description>
     <jobString>Cutting kunzite.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -375,7 +375,7 @@
 						<li>RF_RoughKunzite</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -384,7 +384,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Kunzite>10</RF_Kunzite>
+      <RF_Kunzite>5</RF_Kunzite>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>
@@ -393,10 +393,10 @@
 
   <RecipeDef>
     <defName>RF_BulkCutOnyx</defName>
-    <label>cut rough onyx x10</label>
+    <label>cut rough onyx x5</label>
     <description>Cut and polish a batch of rough onyxes into cut onyxes.</description>
     <jobString>Cutting onyx.</jobString>
-    <workAmount>18000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>CutStone</effectWorking>
@@ -414,7 +414,7 @@
 						<li>RF_RoughOnyx</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
 			</li>
 		</ingredients>
     <fixedIngredientFilter>
@@ -423,7 +423,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <RF_Onyx>10</RF_Onyx>
+      <RF_Onyx>5</RF_Onyx>
     </products>
     <skillRequirements>
         <Crafting>8</Crafting>

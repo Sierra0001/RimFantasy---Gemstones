@@ -14,7 +14,7 @@
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 	<description>
-[h1]Mod Version: v1.1[/h1]
+[h1]Mod Version: v1.1.1[/h1]
 
 
 This mod adds 11 new minable gemstones, as well as the worktables (requires research) needed to craft the uncut gems into cut gems.
@@ -72,12 +72,6 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 
 [h1]Latest Changes:[/h1]
-[b]v1.0.8[/b]
-[list]
-[*][Buff] Increased mineableYield for gemstones from 21 to 24.
-[*][Buff] Increased maximum amount of gemstones (rough and cut) that traders can carry by 2X.
-[/list]
-
 [b]v1.0.9[/b]
 [list]
 [*][Fix] Fixed an issue related to RimFantasy.CompGlowerStuffable that could cause infinite log spam.
@@ -89,6 +83,11 @@ Balance feedbacks are welcomed, please provide context when doing so.
 [*][New] Added 11 new recipes to allow bulk cutting of specific gem types. (10% bonus speed, level 8 crafting required)
 [*][Buff] Increased mineableYield for gemstones from 24 to 30.
 [*][Buff] Decreased workAmount for gem cutting from 2400 to 2000. (15% faster)
+[/list]
+
+[b]v1.1.1[/b]
+[list]
+[*][Change] Changed bulk cutting recipes from x10 to x5.
 [/list]
 	</description>
 </ModMetaData>
