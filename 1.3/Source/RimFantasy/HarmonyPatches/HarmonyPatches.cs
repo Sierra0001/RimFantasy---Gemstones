@@ -15,7 +15,7 @@ using static Verse.DamageWorker;
 
 namespace RimFantasy
 {
-	[StaticConstructorOnStartup]
+    [StaticConstructorOnStartup]
 	internal static class HarmonyPatches
 	{
 		public static Dictionary<Map, AuraManager> areaTemperatureManagers = new Dictionary<Map, AuraManager>();
@@ -518,7 +518,30 @@ namespace RimFantasy
 				}
 			}
 		}
-
+        
+		[HarmonyPatch(typeof(Projectile_Explosive), "Impact")]
+		public static class Patch_Projectile_Explosive_Impact
+		{
+            public static void Prefix(Projectile_Explosive __instance)
+            {
+				var comp = CompArcaneWeapon.GetLinkedCompFor(__instance);
+				if (comp != null)
+				{
+					foreach (var trait in comp.TraitsListForReading)
+					{
+						if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
+						{
+                            foreach (var hitThing in GenRadial.RadialDistinctThingsAround(__instance.Position, __instance.Map,  __instance.def.projectile.explosionRadius, true))
+                            {
+								arcaneTraitDef.Worker.OnDamageDealt(comp.parent, new DamageInfo(__instance.def.projectile.damageDef,
+									__instance.def.projectile.GetDamageAmount(comp.parent)), comp, comp.Wearer, hitThing);
+							}
+						}
+					}
+				}
+			}
+		}
+        
 		[HarmonyPatch(typeof(Bullet), "Impact")]
 		public static class Patch_Bullet_Impact
 		{
@@ -526,7 +549,7 @@ namespace RimFantasy
 			{
 				bool found = false;
 				var associateWithLog = AccessTools.Method(typeof(DamageResult), "AssociateWithLog");
-				var applyEffects = AccessTools.Method(typeof(Patch_Bullet_Impact), "ApplyEffects");
+				var applyEffects = AccessTools.Method(typeof(Patch_Bullet_Impact), nameof(ApplyEffects));
 				var codes = instructions.ToList();
 				for (var i = 0; i < codes.Count; i++)
 				{
@@ -553,7 +576,7 @@ namespace RimFantasy
                         {
 							if (trait is ArcaneWeaponTraitDef arcaneTraitDef)
                             {
-								arcaneTraitDef.Worker.OnDamageDealt(projectile, damageInfo, comp, comp.Wearer, hitThing);
+								arcaneTraitDef.Worker.OnDamageDealt(comp.parent, damageInfo, comp, comp.Wearer, hitThing);
 							}
                         }
                     }

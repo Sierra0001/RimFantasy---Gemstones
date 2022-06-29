@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Comps\CompExplosiveStuffed.cs" />
     <Compile Include="Comps\CompArcaneWeapon.cs" />
+    <Compile Include="DamageWorker_CustomFlame.cs" />
+    <Compile Include="FireModified.cs" />
+    <Compile Include="RF_DefOf.cs" />
     <Compile Include="RimFantasyManager.cs" />
     <Compile Include="Comps\CompAura.cs" />
     <Compile Include="DefExtensions.cs" />

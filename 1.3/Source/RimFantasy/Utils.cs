@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +13,7 @@ using Verse.AI.Group;
 
 namespace RimFantasy
 {
-	public static class Utils
+    public static class Utils
 	{
         private static Dictionary<Type, Dictionary<ThingWithComps, ThingComp>> cachedComps = new Dictionary<Type, Dictionary<ThingWithComps, ThingComp>>();
         public static bool TryGetCachedComp<T>(this ThingWithComps thing, out T comp) where T : ThingComp
