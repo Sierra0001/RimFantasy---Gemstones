@@ -91,7 +91,7 @@
           "lib/net472/0Harmony.dll": {}
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/_._": {}
         }
       }
     },
@@ -185,7 +185,7 @@
           "lib/net472/0Harmony.dll": {}
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/_._": {}
         }
       }
     },
@@ -279,7 +279,7 @@
           "lib/net472/0Harmony.dll": {}
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/_._": {}
         }
       }
     },
@@ -373,7 +373,7 @@
           "lib/net472/0Harmony.dll": {}
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/_._": {}
         }
       }
     }
@@ -542,6 +542,7 @@
             "version": "[1.3.3200, )"
           },
           "Lib.Harmony": {
+            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[2.1.1, )"
           }

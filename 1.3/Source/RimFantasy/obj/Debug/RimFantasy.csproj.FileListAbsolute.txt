@@ -3,6 +3,5 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimFantasy---Core\1.
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimFantasy---Core\1.3\Source\RimFantasy\bin\Debug\RimFantasy.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimFantasy---Core\1.3\Source\RimFantasy\bin\Debug\RimFantasy.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimFantasy---Core\1.3\Source\RimFantasy\bin\Debug\0Harmony.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimFantasy---Core\1.3\Source\RimFantasy\obj\Debug\RimFantasy.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimFantasy---Core\1.3\Source\RimFantasy\obj\Debug\RimFantasy.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RimFantasy---Core\1.3\Assemblies\RimFantasy.dll

@@ -119,7 +119,8 @@ namespace RimFantasy
 			}
 			if (fireSize > 0.5f && parent == null)
 			{
-				FleckMaker.ThrowFireGlow(base.Position.ToVector3Shifted(), base.Map, fireSize);
+				var fireGlow = DefDatabase<FleckDef>.GetNamedSilentFail(this.def.defName + "Glow") ?? FleckDefOf.FireGlow;
+				ThrowFireGlow(fireGlow, base.Position.ToVector3Shifted(), base.Map, fireSize);
 			}
 			float num = fireSize / 2f;
 			if (num > 1f)
@@ -128,6 +129,23 @@ namespace RimFantasy
 			}
 			num = 1f - num;
 			ticksUntilSmoke = SmokeIntervalRange.Lerped(num) + (int)(10f * Rand.Value);
+		}
+
+		public static void ThrowFireGlow(FleckDef fireGlow, Vector3 c, Map map, float size)
+		{
+			Vector3 vector = c;
+			if (vector.ShouldSpawnMotesAt(map))
+			{
+				vector += size * new Vector3(Rand.Value - 0.5f, 0f, Rand.Value - 0.5f);
+				if (vector.InBounds(map))
+				{
+					FleckCreationData dataStatic = FleckMaker.GetDataStatic(vector, map, fireGlow, Rand.Range(4f, 6f) * size);
+					dataStatic.rotationRate = Rand.Range(-3f, 3f);
+					dataStatic.velocityAngle = Rand.Range(0, 360);
+					dataStatic.velocitySpeed = 0.12f;
+					map.flecks.CreateFleck(dataStatic);
+				}
+			}
 		}
 
 		private void DoComplexCalcs()
