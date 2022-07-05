@@ -64,6 +64,7 @@ namespace RimFantasy
 		{
 			base.SpawnSetup(map, respawningAfterLoad);
 			ticksSinceSpread = (int)(SpreadInterval * Rand.Value);
+			this.graphicInt = def.graphicData.GraphicColoredFor(this);
 		}
 
 		public override void Tick()
@@ -343,7 +344,7 @@ namespace RimFantasy
 
 	public class SparkCustom : Projectile
 	{
-		protected override void Impact(Thing hitThing)
+		public override void Impact(Thing hitThing)
 		{
 			Map map = base.Map;
 			base.Impact(hitThing);

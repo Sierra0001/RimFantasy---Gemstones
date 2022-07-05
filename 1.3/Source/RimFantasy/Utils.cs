@@ -13,9 +13,23 @@ using Verse.AI.Group;
 
 namespace RimFantasy
 {
+    [StaticConstructorOnStartup]
     public static class Utils
 	{
+        public static List<ThingDef> customFires = new List<ThingDef>();
+
         private static Dictionary<Type, Dictionary<ThingWithComps, ThingComp>> cachedComps = new Dictionary<Type, Dictionary<ThingWithComps, ThingComp>>();
+        
+        static Utils()
+        {
+            foreach (var def in DefDatabase<ThingDef>.AllDefs)
+            {
+                if (typeof(CustomFire).IsAssignableFrom(def.thingClass))
+                {
+                    customFires.Add(def);
+                }
+            }
+        }
         public static bool TryGetCachedComp<T>(this ThingWithComps thing, out T comp) where T : ThingComp
         {
             comp = null;

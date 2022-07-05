@@ -2,6 +2,7 @@
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -691,5 +692,119 @@ namespace RimFantasy
 				return true;
 			}
 		}
+
+        [HarmonyPatch(typeof(CompAttachBase), "HasAttachment")]
+		public static class CompAttachBase_HasAttachment_Patch
+        {
+			public static void Postfix(ref bool __result, CompAttachBase __instance, ThingDef def)
+            {
+				if (!__result && def == ThingDefOf.Fire)
+                {
+					foreach (var customFire in Utils.customFires)
+                    {
+						if (__instance.GetAttachment(customFire) != null)
+                        {
+							__result = true;
+							return;
+                        }
+                    }
+                }
+            }
+        }
+
+		[HarmonyPatch(typeof(CompAttachBase), "GetAttachment")]
+		public static class CompAttachBase_GetAttachment_Patch
+		{
+			public static void Postfix(ref Thing __result, CompAttachBase __instance, ThingDef def)
+			{
+				if (__result is null && def == ThingDefOf.Fire)
+				{
+					foreach (var customFire in Utils.customFires)
+					{
+						__result = __instance.GetAttachment(customFire);
+						if (__result != null)
+						{
+							return;
+						}
+					}
+				}
+			}
+		}
+
+		[HarmonyPatch(typeof(WorkGiver_Scanner), "PotentialWorkThingsGlobal")]
+		public static class ListerThings_ThingsMatching_Patch
+        {
+			public static IEnumerable<Thing> Postfix(IEnumerable<Thing> __result, WorkGiver_Scanner __instance, Pawn pawn)
+            {
+				if (__result != null)
+                {
+					foreach (var item in __result)
+					{
+						yield return item;
+					}
+				}
+
+				if (__instance is WorkGiver_FightFires)
+                {
+					foreach (var fire in Utils.customFires)
+                    {
+						if (pawn.Map.listerThings.listsByDef.TryGetValue(fire, out var value) && value.Any())
+                        {
+							foreach (var t in value)
+                            {
+								yield return t;
+                            }
+						}
+					}
+                }
+            }
+        }
 	}
+
+    [HarmonyPatch(typeof(Pawn), "DropAndForbidEverything")]
+	public static class Pawn_DropAndForbidEverything_Patch
+    {
+		public static bool shouldCheck;
+		public static void Prefix(Pawn __instance)
+        {
+			shouldCheck = true;
+        }
+
+		public static void Postfix()
+        {
+			shouldCheck = false;
+		}
+    }
+
+	public class WeaponDropExtension : DefModExtension
+    {
+		public bool preventDroppingWhenDowned;
+		public bool preventDroppingWhenDead;
+    }
+
+    [HarmonyPatch(typeof(Pawn_EquipmentTracker), "TryDropEquipment")]
+	public static class Pawn_EquipmentTracker_TryDropEquipment_Patch
+    {
+		public static bool Prefix(Pawn_EquipmentTracker __instance, ThingWithComps eq)
+        {
+			if (Pawn_DropAndForbidEverything_Patch.shouldCheck)
+            {
+				var extension = eq.def.GetModExtension<WeaponDropExtension>();
+				Log.Message("__instance.pawn.Downed: " + __instance.pawn.Downed);
+				Log.Message("__instance.pawn.Dead: " + __instance.pawn.Dead);
+				if (extension != null)
+				{
+					if (extension.preventDroppingWhenDowned && __instance.pawn.Downed)
+					{
+						return false;
+					}
+					else if (extension.preventDroppingWhenDead && __instance.pawn.Dead)
+					{
+						return false;
+					}
+				}
+			}
+			return true;
+        }
+    }
 }
