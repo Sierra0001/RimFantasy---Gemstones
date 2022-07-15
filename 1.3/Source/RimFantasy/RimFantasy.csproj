@@ -45,6 +45,7 @@
     <Compile Include="Comps\CompArcaneWeapon.cs" />
     <Compile Include="DamageWorker_CustomFlame.cs" />
     <Compile Include="CustomFire.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
     <Compile Include="RF_DefOf.cs" />
     <Compile Include="RimFantasyManager.cs" />
     <Compile Include="Comps\CompAura.cs" />
@@ -58,7 +59,6 @@
     <Compile Include="Comps\CompScheduleTickNormal.cs" />
     <Compile Include="Comps\CompExplosiveTickRare.cs" />
     <Compile Include="Comps\CompTemperatureSource.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
     <Compile Include="AuraManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Comps\CompWornWeapon.cs" />
@@ -82,5 +82,6 @@
   <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

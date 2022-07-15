@@ -99,9 +99,9 @@ namespace RimFantasy
 						{
 							foreach (var cell2 in GenRadial.RadialCellsAround(cell, Props.smeltSnowRadius, true))
 							{
-								if (cell2.GetSnowDepth(MapHeld) > 0 && HarmonyPatches.areaTemperatureManagers.TryGetValue(MapHeld, out AuraManager proxyHeatManager))
+								if (cell2.GetSnowDepth(MapHeld) > 0 && HarmonyPatches.areaTemperatureManagers.TryGetValue(MapHeld, out AuraManager auraManager))
 								{
-									var finalTemperature = proxyHeatManager.GetTemperatureOutcomeFor(cell2, cell2.GetTemperature(MapHeld));
+									var finalTemperature = auraManager.GetTemperatureOutcomeFor(cell2, cell2.GetTemperature(MapHeld));
 									if (finalTemperature >= Props.smeltSnowAtTemperature)
 									{
 										cellToSmeltSnow.Add(cell2);

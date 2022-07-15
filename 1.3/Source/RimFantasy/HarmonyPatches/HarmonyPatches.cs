@@ -49,7 +49,7 @@ namespace RimFantasy
                 }
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Need_Rest), "NeedInterval")]
 		internal static class Patch_RestNeedInterval
 		{
@@ -68,7 +68,7 @@ namespace RimFantasy
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Need_Joy), "NeedInterval")]
 		public static class FallNeedInterval_Patch
 		{
@@ -87,7 +87,7 @@ namespace RimFantasy
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(ThoughtHandler), "TotalMoodOffset")]
 		public static class TotalMoodOffset_Patch
 		{
@@ -105,7 +105,7 @@ namespace RimFantasy
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Pawn), nameof(Pawn.SpawnSetup))]
 		public static class Patch_Pawn_SpawnSetup
 		{
@@ -162,153 +162,94 @@ namespace RimFantasy
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Building), nameof(Building.SpawnSetup))]
 		public static class Patch_SpawnSetup
 		{
 			private static void Postfix(Building __instance)
 			{
-				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AuraManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AuraManager auraManager))
 				{
-					foreach (var comp in proxyHeatManager.compAuras)
+					foreach (var comp in auraManager.compAuras)
 					{
 						if (comp.InRangeAndActive(__instance.Position))
 						{
-							proxyHeatManager.MarkDirty(comp);
+							auraManager.MarkDirty(comp);
 						}
 					}
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Building), nameof(Building.DeSpawn))]
 		public static class Patch_DeSpawn
 		{
 			private static void Prefix(Building __instance)
 			{
-				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AuraManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(__instance.Map, out AuraManager auraManager))
 				{
-					foreach (var comp in proxyHeatManager.compAuras)
+					foreach (var comp in auraManager.compAuras)
 					{
 						if (comp.InRangeAndActive(__instance.Position))
 						{
-							proxyHeatManager.MarkDirty(comp);
+							auraManager.MarkDirty(comp);
 						}
 					}
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(GlobalControls), "TemperatureString")]
-		public static class Patch_TemperatureString
+		public static class GlobalControls_TemperatureString_Patch
 		{
-			private static string indoorsUnroofedStringCached;
-
-			private static int indoorsUnroofedStringCachedRoofCount = -1;
-
-			private static bool Prefix(ref string __result)
+			[HarmonyPriority(int.MinValue)]
+			public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> codeInstructions)
 			{
-				IntVec3 intVec = UI.MouseCell();
-				IntVec3 c = intVec;
-				Room room = intVec.GetRoom(Find.CurrentMap);
-				if (room == null)
+				var codes = codeInstructions.ToList();
+				for (var i = 0; i < codes.Count; i++)
 				{
-					for (int i = 0; i < 9; i++)
+					var code = codes[i];
+					yield return code;
+					if (code.opcode == OpCodes.Stloc_S && code.operand is LocalBuilder lb && lb.LocalIndex == 4)
 					{
-						IntVec3 intVec2 = intVec + GenAdj.AdjacentCellsAndInside[i];
-						if (intVec2.InBounds(Find.CurrentMap))
-						{
-							Room room2 = intVec2.GetRoom(Find.CurrentMap);
-							if (room2 != null && ((!room2.PsychologicallyOutdoors && !room2.UsesOutdoorTemperature) || (!room2.PsychologicallyOutdoors && (room == null || room.PsychologicallyOutdoors)) || (room2.PsychologicallyOutdoors && room == null)))
-							{
-								c = intVec2;
-								room = room2;
-							}
-						}
+						yield return new CodeInstruction(OpCodes.Ldloca_S, 4);
+						yield return new CodeInstruction(OpCodes.Ldloc_1);
+						yield return new CodeInstruction(OpCodes.Call, AccessTools.PropertyGetter(typeof(Find), nameof(Find.CurrentMap)));
+						yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(GlobalControls_TemperatureString_Patch), nameof(ModifyTemperatureIfNeeded)));
 					}
 				}
-				if (room == null && intVec.InBounds(Find.CurrentMap))
-				{
-					Building edifice = intVec.GetEdifice(Find.CurrentMap);
-					if (edifice != null)
-					{
-						foreach (IntVec3 item in edifice.OccupiedRect().ExpandedBy(1).ClipInsideMap(Find.CurrentMap))
-						{
-							room = item.GetRoom(Find.CurrentMap);
-							if (room != null && !room.PsychologicallyOutdoors)
-							{
-								c = item;
-								break;
-							}
-						}
-					}
-				}
-				string text;
-				if (c.InBounds(Find.CurrentMap) && !c.Fogged(Find.CurrentMap) && room != null && !room.PsychologicallyOutdoors)
-				{
-					if (room.OpenRoofCount == 0)
-					{
-						text = "Indoors".Translate();
-					}
-					else
-					{
-						if (indoorsUnroofedStringCachedRoofCount != room.OpenRoofCount)
-						{
-							indoorsUnroofedStringCached = "IndoorsUnroofed".Translate() + " (" + room.OpenRoofCount.ToStringCached() + ")";
-							indoorsUnroofedStringCachedRoofCount = room.OpenRoofCount;
-						}
-						text = indoorsUnroofedStringCached;
-					}
-				}
-				else
-				{
-					text = "Outdoors".Translate();
-				}
-				var map = Find.CurrentMap;
-				float num = 0f;
-				if (room == null || c.Fogged(map))
-				{
-					num = GetOutDoorTemperature(Find.CurrentMap.mapTemperature.OutdoorTemp, map, c);
-				}
-				else
-				{
-					num = GetOutDoorTemperature(room.Temperature, map, c);
-				}
-				__result = text + " " + num.ToStringTemperature("F0");
-				return false;
 			}
 
-			private static float GetOutDoorTemperature(float result, Map map, IntVec3 cell)
+			public static void ModifyTemperatureIfNeeded(ref float result, IntVec3 cell, Map map)
 			{
-				if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(map, out AuraManager auraManager))
 				{
-					return proxyHeatManager.GetTemperatureOutcomeFor(cell, result);
+					result = auraManager.GetTemperatureOutcomeFor(cell, result);
 				}
-				return result;
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Thing), nameof(Thing.AmbientTemperature), MethodType.Getter)]
 		public static class Patch_AmbientTemperature
 		{
 			private static void Postfix(Thing __instance, ref float __result)
 			{
 				var map = __instance.Map;
-				if (map != null && areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
+				if (map != null && areaTemperatureManagers.TryGetValue(map, out AuraManager auraManager))
 				{
-					__result = proxyHeatManager.GetTemperatureOutcomeFor(__instance.Position, __result);
+					__result = auraManager.GetTemperatureOutcomeFor(__instance.Position, __result);
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(PlantUtility), nameof(PlantUtility.GrowthSeasonNow))]
 		public static class Patch_GrowthSeasonNow
 		{
 			private static bool Prefix(ref bool __result, IntVec3 c, Map map, bool forSowing = false)
 			{
-				if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
+				if (areaTemperatureManagers.TryGetValue(map, out AuraManager auraManager))
 				{
-					var tempResult = proxyHeatManager.GetTemperatureOutcomeFor(c, 0f);
+					var tempResult = auraManager.GetTemperatureOutcomeFor(c, 0f);
 					if (tempResult != 0)
 					{
 						float temperature = c.GetTemperature(map) + tempResult;
@@ -326,7 +267,7 @@ namespace RimFantasy
 				return true;
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(GenTemperature), "TryGetTemperatureForCell")]
 		public static class Patch_TryGetTemperatureForCell
 		{
@@ -334,14 +275,14 @@ namespace RimFantasy
 			{
 				if (__result)
 				{
-					if (areaTemperatureManagers.TryGetValue(map, out AuraManager proxyHeatManager))
+					if (areaTemperatureManagers.TryGetValue(map, out AuraManager auraManager))
 					{
-						tempResult = proxyHeatManager.GetTemperatureOutcomeFor(c, tempResult);
+						tempResult = auraManager.GetTemperatureOutcomeFor(c, tempResult);
 					}
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(PawnRenderer))]
 		[HarmonyPatch("DrawEquipment")]
 		public static class DrawEquipment_Patch
@@ -382,7 +323,7 @@ namespace RimFantasy
 					yield return codes[i];
                 }
 			}
-
+		
 			public static void DrawSheathOnlyGraphic(Pawn pawn, Vector3 rootLoc)
             {
 				var eq = pawn.equipment.Primary;
@@ -391,7 +332,7 @@ namespace RimFantasy
 					DrawWornWeapon(comp, pawn, rootLoc, comp.SheathOnlyGraphic);
 				}
 			}
-
+		
 			public static void DrawWornWeapon(CompWornWeapon CompWornWeapon, Pawn pawn, Vector3 drawLoc, Graphic graphic)
 			{
 				switch (CompWornWeapon.Props.drawPosition)
@@ -490,7 +431,7 @@ namespace RimFantasy
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Verb_LaunchProjectile), "TryCastShot")]
 		public static class Patch_TryCastShot
 		{
@@ -504,7 +445,7 @@ namespace RimFantasy
 				verbSource = null;
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Projectile), "Launch", new Type[]
 		{
 			typeof(Thing), typeof(Vector3), typeof(LocalTargetInfo), typeof(LocalTargetInfo), typeof(ProjectileHitFlags), typeof(bool), typeof(Thing), typeof(ThingDef)
@@ -565,7 +506,7 @@ namespace RimFantasy
                     }
 				}
 			}
-
+		
 			public static void ApplyEffects(Projectile projectile, Thing hitThing, DamageInfo damageInfo)
             {
 				if (hitThing != null)
@@ -584,7 +525,7 @@ namespace RimFantasy
                 }
             }
 		}
-
+		
 		[HarmonyPatch(typeof(VerbProperties), "AdjustedCooldown", new Type[]
 		{
 			typeof(Verb), typeof(Pawn)
@@ -607,7 +548,7 @@ namespace RimFantasy
                 }
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Pawn), "GetGizmos")]
 		public class Pawn_GetGizmos_Patch
 		{
@@ -629,7 +570,7 @@ namespace RimFantasy
 				}
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(Pawn_HealthTracker), "PreApplyDamage")]
 		public class Pawn_PreApplyDamage_Patch
 		{
@@ -678,7 +619,7 @@ namespace RimFantasy
 				return true;
 			}
 		}
-
+		
 		[HarmonyPatch(typeof(CompExplosive), "StartWick")]
 		public static class Patch_StartWick
 		{
@@ -711,7 +652,7 @@ namespace RimFantasy
                 }
             }
         }
-
+		
 		[HarmonyPatch(typeof(CompAttachBase), "GetAttachment")]
 		public static class CompAttachBase_GetAttachment_Patch
 		{
@@ -732,32 +673,26 @@ namespace RimFantasy
 		}
 
 		[HarmonyPatch(typeof(WorkGiver_Scanner), "PotentialWorkThingsGlobal")]
-		public static class ListerThings_ThingsMatching_Patch
-        {
-			public static IEnumerable<Thing> Postfix(IEnumerable<Thing> __result, WorkGiver_Scanner __instance, Pawn pawn)
+		public static class WorkGiver_Scanner_PotentialWorkThingsGlobal_Patch
+		{
+			public static void Postfix(ref IEnumerable<Thing> __result, WorkGiver_Scanner __instance, Pawn pawn)
             {
-				if (__result != null)
-                {
-					foreach (var item in __result)
-					{
-						yield return item;
-					}
-				}
-
 				if (__instance is WorkGiver_FightFires)
-                {
+				{
 					foreach (var fire in Utils.customFires)
-                    {
+					{
 						if (pawn.Map.listerThings.listsByDef.TryGetValue(fire, out var value) && value.Any())
-                        {
+						{
+							var list = __result is null ? new List<Thing>() : __result.ToList();
 							foreach (var t in value)
-                            {
-								yield return t;
-                            }
+							{
+								list.Add(t);
+							}
+							__result = list;
 						}
 					}
-                }
-            }
+				}
+			}
         }
 	}
 
