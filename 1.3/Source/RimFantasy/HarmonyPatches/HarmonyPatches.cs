@@ -672,7 +672,20 @@ namespace RimFantasy
 			}
 		}
 
-		[HarmonyPatch(typeof(WorkGiver_Scanner), "PotentialWorkThingsGlobal")]
+        [HarmonyPatch(typeof(Verb_BeatFire), "TryCastShot")]
+        public static class Verb_BeatFire_TryCastShot_Patch
+        {
+            public static void Prefix(Verb_BeatFire __instance, bool __result)
+			{
+                Fire fire = (Fire)__instance.currentTarget.Thing;
+				if (fire.ticksSinceSpawn == 0)
+				{
+					fire.ticksSinceSpawn = 1;
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(WorkGiver_Scanner), "PotentialWorkThingsGlobal")]
 		public static class WorkGiver_Scanner_PotentialWorkThingsGlobal_Patch
 		{
 			public static void Postfix(ref IEnumerable<Thing> __result, WorkGiver_Scanner __instance, Pawn pawn)
