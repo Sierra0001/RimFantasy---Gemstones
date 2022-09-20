@@ -53,7 +53,8 @@ namespace RimFantasy
             if (setsTargetOnFire && target.HasThing && !target.ThingDestroyed)
             {
                 var extension = attackSource.def.GetModExtension<RimFantasyExtension>();
-                var def = DefDatabase<ThingDef>.GetNamedSilentFail("RF_" + extension.stuffKey + "Fire") ?? ThingDefOf.Fire;
+                var fireDefName = extension != null ? "RF_" + extension.stuffKey + "Fire" : "Fire";
+                var def = DefDatabase<ThingDef>.GetNamedSilentFail(fireDefName) ?? ThingDefOf.Fire;
                 CustomFire.TryAttachFire(target.Thing, def, fireSize.RandomInRange);
             }
             base.DoEffect(attackSource, damageInfo, comp, attacker, target);

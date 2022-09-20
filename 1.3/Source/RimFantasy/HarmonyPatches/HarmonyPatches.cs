@@ -652,13 +652,37 @@ namespace RimFantasy
                 }
             }
         }
-		
-		[HarmonyPatch(typeof(CompAttachBase), "GetAttachment")]
+
+		[HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
+		public static class Patch_Pawn_Kill
+        {
+			public static Pawn isBeingKilled;
+
+            private static void Prefix(Pawn __instance, out CustomFire __state)
+            {
+                __state = __instance.GetAttachment(ThingDefOf.Fire) as CustomFire;
+                isBeingKilled = __instance;
+            }
+            private static void Postfix(Pawn __instance, CustomFire __state)
+			{
+                isBeingKilled = null;
+				if (__instance.Dead && __instance.Corpse != null && __state != null)
+				{
+                    var num = __state.CurrentSize();
+                    if (num > 0f)
+                    {
+                        CustomFire.TryStartFireIn(__state.def, __instance.Corpse.Position, __instance.Corpse.Map, num);
+                    }
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(CompAttachBase), "GetAttachment")]
 		public static class CompAttachBase_GetAttachment_Patch
 		{
 			public static void Postfix(ref Thing __result, CompAttachBase __instance, ThingDef def)
 			{
-				if (__result is null && def == ThingDefOf.Fire)
+				if (__result is null && def == ThingDefOf.Fire && Patch_Pawn_Kill.isBeingKilled != __instance.parent)
 				{
 					foreach (var customFire in Utils.customFires)
 					{
@@ -738,8 +762,6 @@ namespace RimFantasy
 			if (Pawn_DropAndForbidEverything_Patch.shouldCheck)
             {
 				var extension = eq.def.GetModExtension<WeaponDropExtension>();
-				Log.Message("__instance.pawn.Downed: " + __instance.pawn.Downed);
-				Log.Message("__instance.pawn.Dead: " + __instance.pawn.Dead);
 				if (extension != null)
 				{
 					if (extension.preventDroppingWhenDowned && __instance.pawn.Downed)
