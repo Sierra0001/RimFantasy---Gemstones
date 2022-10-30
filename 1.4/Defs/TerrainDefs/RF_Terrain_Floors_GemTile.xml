@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef Abstract="True" ParentName="RF_FloorBase" Name="RF_TileStoneBase_RoughGemstone">
+    <renderPrecedence>220</renderPrecedence>
+    <description>Carefully-cut and fit gemstone tiles for a castle feeling. They are pretty to look at, but they take a long time to lay. Due to the destructive nature of the work, much of the gemstones spent will be lost upon deconstruction of the tiles.</description>
+    <texturePath>Terrain/Surfaces/TileStone</texturePath>
+    <resourcesFractionWhenDeconstructed>0.5</resourcesFractionWhenDeconstructed>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <Beauty>2</Beauty>
+    </statBases>
+    <designatorDropdown>Floor_Tile</designatorDropdown>
+    <researchPrerequisites>
+      <li>RF_MedievalGemCutting</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughDiamond</defName>
+    <label>diamond tile</label>
+    <color>(211,211,211)</color>
+    <costList>
+      <RF_RoughDiamond>4</RF_RoughDiamond>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughRuby</defName>
+    <label>ruby tile</label>
+    <color>(189,25,60)</color>
+    <costList>
+      <RF_RoughRuby>4</RF_RoughRuby>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughCarnelian</defName>
+    <label>carnelian tile</label>
+    <color>(255,127,80)</color>
+    <costList>
+      <RF_RoughCarnelian>4</RF_RoughCarnelian>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughCitrine</defName>
+    <label>citrine tile</label>
+    <color>(201,193,34)</color>
+    <costList>
+      <RF_RoughCitrine>4</RF_RoughCitrine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughPeridot</defName>
+    <label>peridot tile</label>
+    <color>(150,225,90)</color>
+    <costList>
+      <RF_RoughPeridot>4</RF_RoughPeridot>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughEmerald</defName>
+    <label>emerald tile</label>
+    <color>(50,150,50)</color>
+    <costList>
+      <RF_RoughEmerald>4</RF_RoughEmerald>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughAquamarine</defName>
+    <label>aquamarine tile</label>
+    <color>(51,255,255)</color>
+    <costList>
+      <RF_RoughAquamarine>4</RF_RoughAquamarine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughSapphire</defName>
+    <label>sapphire tile</label>
+    <color>(0,125,225)</color>
+    <costList>
+      <RF_RoughSapphire>4</RF_RoughSapphire>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughAmethyst</defName>
+    <label>amethyst tile</label>
+    <color>(115,64,166)</color>
+    <costList>
+      <RF_RoughAmethyst>4</RF_RoughAmethyst>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughKunzite</defName>
+    <label>kunzite tile</label>
+    <color>(235,180,237)</color>
+    <costList>
+      <RF_RoughKunzite>4</RF_RoughKunzite>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_TileStoneBase_RoughGemstone">
+    <defName>RF_TileRoughOnyx</defName>
+    <label>onyx tile</label>
+    <color>(64,62,1)</color>
+    <costList>
+      <RF_RoughOnyx>4</RF_RoughOnyx>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef Abstract="True" ParentName="RF_FloorBase" Name="RF_FlagstoneBase_RoughGemstone">
+    <renderPrecedence>220</renderPrecedence>
+    <description>Roughly-cut gemstone tiles. These are not beautiful, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</description>
+    <texturePath>Terrain/Surfaces/Flagstone</texturePath>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <statBases>
+      <WorkToBuild>750</WorkToBuild>
+      <Beauty>1</Beauty>
+    </statBases>
+    <designatorDropdown>Floor_Flagstone</designatorDropdown>
+    <tags>
+      <li>Road</li>
+    </tags>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughDiamond</defName>
+    <label>diamond flagstone</label>
+    <color>(211,211,211)</color>
+    <costList>
+      <RF_RoughDiamond>4</RF_RoughDiamond>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughRuby</defName>
+    <label>ruby flagstone</label>
+    <color>(189,25,60)</color>
+    <costList>
+      <RF_RoughRuby>4</RF_RoughRuby>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughCarnelian</defName>
+    <label>carnelian flagstone</label>
+    <color>(255,127,80)</color>
+    <costList>
+      <RF_RoughCarnelian>4</RF_RoughCarnelian>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughCitrine</defName>
+    <label>citrine flagstone</label>
+    <color>(201,193,34)</color>
+    <costList>
+      <RF_RoughCitrine>4</RF_RoughCitrine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughPeridot</defName>
+    <label>peridot flagstone</label>
+    <color>(150,225,90)</color>
+    <costList>
+      <RF_RoughPeridot>4</RF_RoughPeridot>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughEmerald</defName>
+    <label>emerald flagstone</label>
+    <color>(50,150,50)</color>
+    <costList>
+      <RF_RoughEmerald>4</RF_RoughEmerald>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughAquamarine</defName>
+    <label>aquamarine flagstone</label>
+    <color>(51,255,255)</color>
+    <costList>
+      <RF_RoughAquamarine>4</RF_RoughAquamarine>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughSapphire</defName>
+    <label>sapphire flagstone</label>
+    <color>(0,125,225)</color>
+    <costList>
+      <RF_RoughSapphire>4</RF_RoughSapphire>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughAmethyst</defName>
+    <label>amethyst flagstone</label>
+    <color>(115,64,166)</color>
+    <costList>
+      <RF_RoughAmethyst>4</RF_RoughAmethyst>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughKunzite</defName>
+    <label>kunzite flagstone</label>
+    <color>(235,180,237)</color>
+    <costList>
+      <RF_RoughKunzite>4</RF_RoughKunzite>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RF_FlagstoneBase_RoughGemstone">
+    <defName>RF_FlagstoneRoughOnyx</defName>
+    <label>onyx flagstone</label>
+    <color>(64,62,1)</color>
+    <costList>
+      <RF_RoughOnyx>4</RF_RoughOnyx>
+    </costList>
+  </TerrainDef>
+
+</Defs>

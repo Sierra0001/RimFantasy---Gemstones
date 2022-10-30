@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>RF_DoBillsGemCutting</defName>
+    <label>cut rough gemstones</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>RF_MedievalGemCuttingBench</li>
+      <!--<li>RF_IndustrialGemCuttingBench</li>-->
+    </fixedBillGiverDefs>
+    <verb>cut gemstones</verb>
+    <gerund>cutting gemstones at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>
