@@ -29,9 +29,9 @@ Balance feedbacks are welcomed, please provide context when doing so.
 
 ### Credits
 
-SirLalaPyon for his amazing, high-quality vanilla styled art.
-Taranchuk for his C# code magic that allows for various fancy features.
-Mascot inspired and based on Geneforge by Spiderweb Software (Go play the series, it's great).
+- SirLalaPyon for his amazing, high-quality vanilla styled art.
+- Taranchuk for his C# code magic that allows for various fancy features.
+- Mascot inspired and based on Geneforge by Spiderweb Software (Go play the series, it's great).
 
 ### Latest Changes
 
