@@ -777,4 +777,16 @@ namespace RimFantasy
 			return true;
         }
     }
+
+	[HarmonyPatch(typeof(CompBladelinkWeapon), "CanAddTrait")]
+	public static class CompBladelinkWeapon_CanAddTrait_Patch
+	{
+		public static void Postfix(ref bool __result, WeaponTraitDef trait)
+		{
+			if (__result && trait is ArcaneWeaponTraitDef) 
+			{
+				__result = false;
+			}
+		}
+	}
 }
